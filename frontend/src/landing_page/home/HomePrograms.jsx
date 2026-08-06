@@ -85,6 +85,7 @@ function HomePrograms() {
               age={program.age}
               image={program.image}
               bgColor={program.bgColor}
+              linkTo="/programs"
             />
           ))}
         </div>
