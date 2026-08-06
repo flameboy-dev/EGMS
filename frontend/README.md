@@ -1,16 +1,83 @@
-# React + Vite
+# 🏫 Ever Green Model School (E.G.M.S)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the official web application for **Ever Green Model School (E.G.M.S)**, Narayanpur, South 24 Parganas.
 
-Currently, two official plugins are available:
+> **"Where Little Minds Grow Into Bright Futures"**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🎨 Features & Design Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Modern & Responsive UI**: Clean, engaging layout tailored for students, parents, and visitors.
+- **Custom Color Palette**: Integrated design system (`#ECF39E` Primary Lime, `#344E41` Forest Secondary, `#F6FAEF` Light Cream, `#1E3F20` Deep Forest).
+- **Typography**: Custom `@fontsource` typography featuring **Fredoka** for headings and **Poppins** for body content.
+- **Sticky Dynamic Navigation**: Transparent header that transitions into a clean white sticky navbar on scroll.
+- **Tailwind CSS v4 & shadcn/ui**: Built with the latest CSS-first configuration and reusable UI components.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🛠️ Tech Stack
+
+- **Frontend Framework**: [React 19](https://react.dev/) + [Vite](https://vitejs.dev/)
+- **Routing**: [React Router v7](https://reactrouter.com/)
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)
+- **Icons**: [Lucide React](https://lucide.dev/)
+- **Package Manager & Runtime**: [Bun](https://bun.sh/)
+
+---
+
+## 📂 Project Structure
+
+```text
+frontend/
+├── public/                # Static assets (favicons, icons)
+├── src/
+│   ├── assets/            # Brand crests, images, illustrations
+│   ├── components/ui/     # Reusable shadcn UI components
+│   ├── landing_page/      # Page views & sections
+│   │   ├── home/          # Hero, Programs, About, Facilities, FAQs, Contact
+│   │   ├── Navbar.jsx     # Header navigation bar
+│   │   └── Footer.jsx     # Footer component
+│   ├── index.css          # Tailwind CSS v4 setup & theme design tokens
+│   ├── main.jsx           # React app entry point & routes
+│   └── App.jsx
+└── package.json
+```
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+Ensure you have [Bun](https://bun.sh/) installed on your system.
+
+### Installation
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/your-username/EGMS-Website.git
+   cd EGMS/Website/frontend
+   ```
+
+2. **Install dependencies**:
+   ```bash
+   bun install
+   ```
+
+3. **Start the development server**:
+   ```bash
+   bun dev
+   ```
+
+4. **Build for production**:
+   ```bash
+   bun run build
+   ```
+
+---
+
+## 📄 License
+
+Distributed under the MIT License. See `LICENSE` for more information.
