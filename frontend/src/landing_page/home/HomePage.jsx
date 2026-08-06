@@ -1,4 +1,5 @@
 import React from 'react';
+import Navbar from '../Navbar';
 import Hero from './Hero';
 import HomePrograms from './HomePrograms';
 import About from './About';
@@ -10,6 +11,7 @@ import Contact from './Contact';
 function HomePage() {
     return (
         <>
+            <Navbar />
             <Hero />
             <HomePrograms />
             <About />

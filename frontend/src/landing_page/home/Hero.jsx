@@ -1,16 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Navbar from '../Navbar';
 import heroImage from '@/assets/images/HeroImage.png';
 
 function Hero() {
   return (
-    <div className="w-full bg-[#ECF39E] min-h-[778px] lg:min-h-[778px] flex flex-col justify-between">
-      {/* Navigation Bar */}
-      <Navbar />
-
+    <div className="w-full bg-[#ECF39E] pt-2 pb-10 md:pt-3 md:pb-14 lg:pt-3 lg:pb-16 flex flex-col justify-center">
       {/* Hero Section */}
-      <section className="flex-1 px-6 pt-1 pb-6 md:px-12 md:pt-2 md:pb-8 lg:px-16 lg:pt-2 lg:pb-10 flex items-start justify-center">
+      <section className="w-full px-6 pt-0 pb-4 md:px-12 lg:px-16 flex items-start justify-center">
         <div className="mx-auto grid w-full max-w-7xl items-center gap-8 lg:grid-cols-12 lg:gap-12">
           {/* Left Content Column */}
           <div className="flex flex-col items-start justify-center lg:col-span-6">

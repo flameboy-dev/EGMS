@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logoImg from '@/assets/images/Logo.png';
 
-function Navbar() {
+function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
@@ -34,7 +34,7 @@ function Navbar() {
       className={`sticky top-0 z-50 w-full px-6 pt-1 pb-3 md:px-12 md:pt-2 md:pb-3 lg:px-16 lg:pt-2 lg:pb-3 transition-all duration-300 ${
         isScrolled
           ? 'bg-white shadow-md'
-          : 'bg-[#ECF39E]'
+          : defaultBg
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
