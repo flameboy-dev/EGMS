@@ -11,19 +11,15 @@ function ProgramCard({
   bgColor = 'bg-[#9CC5A1]',
   linkTo = null,
 }) {
-  // If description exists, it's an About Feature Card with exact design specs
+  // If description exists, it's an About Feature Card (Image on Left)
   if (description) {
     return (
       <div
         className={`relative flex min-h-[331px] w-full max-w-[387px] flex-col justify-between rounded-[45px] border-2 border-[#191A23] px-[35px] py-[40px] shadow-[0_5px_0_0_#191A23] transition-all duration-300 hover:-translate-y-1 ${bgColor}`}
       >
         <div>
-          {/* Top Row: Title on Left, Image on Right & Top-Right Icon Badge */}
-          <div className="relative flex items-center justify-between gap-4">
-            <h3 className="mt-2 pr-6 font-fredoka text-lg font-semibold leading-snug text-[#000000] sm:text-xl">
-              {title}
-            </h3>
-
+          {/* Top Row: Image on Left, Title on Right & Top-Right Icon Badge */}
+          <div className="relative flex items-center gap-4">
             {image && (
               <ImageWithSkeleton
                 src={image}
@@ -32,6 +28,10 @@ function ProgramCard({
                 className="h-[97.82px] w-[97.82px] object-contain"
               />
             )}
+
+            <h3 className="mt-2 pr-8 font-fredoka text-lg font-semibold leading-snug text-[#000000] sm:text-xl">
+              {title}
+            </h3>
 
             {/* Top Right Black Icon Badge */}
             {IconComponent && (
@@ -53,7 +53,7 @@ function ProgramCard({
     );
   }
 
-  // Program Card Layout (Nursery, LKG, UKG, STD-I to STD-IV)
+  // Program Card Layout (Nursery, LKG, UKG, STD-I to STD-IV - Image on Right)
   const programCardClasses = `relative flex h-[331px] w-full max-w-[387px] flex-col justify-between overflow-hidden rounded-[32px] border-2 border-[#191A23] p-8 shadow-[0_5px_0_0_#191A23] transition-all duration-300 hover:-translate-y-1 ${bgColor}`;
 
   const ProgramContent = (
