@@ -19,6 +19,7 @@ function HomeFacilities({ isLoading = false }) {
       cardBg: 'bg-[#F3F3F3]',
       image: smartClassImg,
       isDarkCard: false,
+      linkTo: '/facilities/smartclass',
     },
     {
       id: 'art-craft',
@@ -27,6 +28,7 @@ function HomeFacilities({ isLoading = false }) {
       cardBg: 'bg-[#94ECBE]',
       image: paintingImg,
       isDarkCard: false,
+      linkTo: '/facilities/art',
     },
     {
       id: 'transport-facility',
@@ -35,6 +37,7 @@ function HomeFacilities({ isLoading = false }) {
       cardBg: 'bg-[#1E3F20]',
       image: schoolBusImg,
       isDarkCard: true,
+      linkTo: '/facilities/transport',
     },
     {
       id: 'computer-basics',
@@ -43,6 +46,7 @@ function HomeFacilities({ isLoading = false }) {
       cardBg: 'bg-[#F3F3F3]',
       image: codingImg,
       isDarkCard: false,
+      linkTo: '/facilities/computer',
     },
     {
       id: 'indoor-activities',
@@ -51,6 +55,7 @@ function HomeFacilities({ isLoading = false }) {
       cardBg: 'bg-[#94ECBE]',
       image: boardGamesImg,
       isDarkCard: false,
+      linkTo: '/facilities/indoor',
     },
     {
       id: 'healthy-environment',
@@ -59,6 +64,7 @@ function HomeFacilities({ isLoading = false }) {
       cardBg: 'bg-[#1E3F20]',
       image: familyImg,
       isDarkCard: true,
+      linkTo: '/facilities/healthenv',
     },
   ];
 
@@ -75,7 +81,7 @@ function HomeFacilities({ isLoading = false }) {
           </p>
         </div>
 
-        {/* Facilities Grid with Skeleton Support */}
+        {/* Facilities Grid */}
         <div className="grid grid-cols-1 justify-items-center gap-8 lg:grid-cols-2 lg:gap-10">
           {isLoading
             ? Array.from({ length: 6 }).map((_, idx) => (
@@ -89,7 +95,7 @@ function HomeFacilities({ isLoading = false }) {
                   cardBg={facility.cardBg}
                   image={facility.image}
                   isDarkCard={facility.isDarkCard}
-                  linkTo="/facilities"
+                  linkTo={facility.linkTo}
                 />
               ))}
         </div>

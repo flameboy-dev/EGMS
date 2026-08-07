@@ -25,11 +25,11 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
 
   const navLinks = [
     { name: 'Home', path: '/', hash: 'home' },
-    { name: 'About us', path: '/about', hash: 'about' },
-    { name: 'Programs', path: '/programs', hash: 'programs' },
-    { name: 'Facilities', path: '/facilities', hash: 'facilities' },
+    { name: 'About us', path: '/#about', hash: 'about' },
+    { name: 'Programs', path: '/#programs', hash: 'programs' },
+    { name: 'Facilities', path: '/#facilities', hash: 'facilities' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact', hash: 'contact' },
+    { name: 'Contact', path: '/#contact', hash: 'contact' },
   ];
 
   const handleNavClick = (e, link) => {
@@ -39,10 +39,8 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
       e.preventDefault();
       scrollToSection(link.hash);
     } else if (!isHomePage && link.hash) {
-      if (link.name === 'About us' || link.name === 'Contact' || link.name === 'Home') {
-        e.preventDefault();
-        navigate(`/#${link.hash}`);
-      }
+      e.preventDefault();
+      navigate(`/#${link.hash}`);
     }
   };
 

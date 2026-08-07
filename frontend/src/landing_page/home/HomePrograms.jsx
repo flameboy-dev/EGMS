@@ -19,6 +19,7 @@ function HomePrograms({ isLoading = false }) {
       age: 'Age: 3+',
       image: nurseryImg,
       bgColor: 'bg-[#9CC5A1]',
+      linkTo: '/programs/nursery',
     },
     {
       id: 'lkg',
@@ -26,6 +27,7 @@ function HomePrograms({ isLoading = false }) {
       age: 'Age: 4+',
       image: lkgImg,
       bgColor: 'bg-[#ECF39E]',
+      linkTo: '/programs/lkg',
     },
     {
       id: 'ukg',
@@ -33,6 +35,7 @@ function HomePrograms({ isLoading = false }) {
       age: 'Age: 5+',
       image: ukgImg,
       bgColor: 'bg-[#9CC5A1]',
+      linkTo: '/programs/ukg',
     },
     {
       id: 'std1',
@@ -40,6 +43,7 @@ function HomePrograms({ isLoading = false }) {
       age: 'Age: 6+',
       image: std1Img,
       bgColor: 'bg-[#ECF39E]',
+      linkTo: '/programs/stdone',
     },
     {
       id: 'std2',
@@ -47,6 +51,7 @@ function HomePrograms({ isLoading = false }) {
       age: 'Age: 7+',
       image: std2Img,
       bgColor: 'bg-[#9CC5A1]',
+      linkTo: '/programs/stdtwo',
     },
     {
       id: 'std3',
@@ -54,6 +59,7 @@ function HomePrograms({ isLoading = false }) {
       age: 'Age: 8+',
       image: std3Img,
       bgColor: 'bg-[#ECF39E]',
+      linkTo: '/programs/stdthree',
     },
     {
       id: 'std4',
@@ -61,6 +67,7 @@ function HomePrograms({ isLoading = false }) {
       age: 'Age: 9+',
       image: std4Img,
       bgColor: 'bg-[#9CC5A1]',
+      linkTo: '/programs/stdfour',
     },
   ];
 
@@ -77,7 +84,7 @@ function HomePrograms({ isLoading = false }) {
           </p>
         </div>
 
-        {/* Program Cards Grid with Skeleton Support */}
+        {/* Program Cards Grid */}
         <div className="grid grid-cols-1 justify-items-center gap-[40px] md:grid-cols-2 lg:grid-cols-3">
           {isLoading
             ? Array.from({ length: 6 }).map((_, idx) => (
@@ -90,7 +97,7 @@ function HomePrograms({ isLoading = false }) {
                   age={program.age}
                   image={program.image}
                   bgColor={program.bgColor}
-                  linkTo="/programs"
+                  linkTo={program.linkTo}
                 />
               ))}
         </div>
