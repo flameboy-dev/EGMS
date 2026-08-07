@@ -1,17 +1,34 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoImg from '@/assets/images/Logo.png';
+import { scrollToSection } from '@/lib/scrollUtils';
 
 function Footer({ defaultBg = 'bg-white' }) {
   const currentYear = new Date().getFullYear();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const footerLinks = [
-    { name: 'About us', path: '/about' },
-    { name: 'Programs', path: '/programs' },
-    { name: 'Facilities', path: '/facilities' },
+    { name: 'About us', path: '/about', hash: 'about' },
+    { name: 'Programs', path: '/programs', hash: 'programs' },
+    { name: 'Facilities', path: '/facilities', hash: 'facilities' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: '/contact', hash: 'contact' },
   ];
+
+  const handleNavClick = (e, link) => {
+    const isHomePage = location.pathname === '/';
+
+    if (isHomePage && link.hash) {
+      e.preventDefault();
+      scrollToSection(link.hash);
+    } else if (!isHomePage && link.hash) {
+      if (link.name === 'About us' || link.name === 'Contact') {
+        e.preventDefault();
+        navigate(`/#${link.hash}`);
+      }
+    }
+  };
 
   return (
     <footer className={`w-full ${defaultBg} px-4 sm:px-6 pt-4`}>
@@ -19,7 +36,16 @@ function Footer({ defaultBg = 'bg-white' }) {
         {/* Top Header Row: Logo, Navigation Links & Social Media Icons */}
         <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between border-b border-white/10 pb-6 md:pb-7">
           {/* Logo & School Name */}
-          <Link to="/" className="flex items-center gap-3">
+          <Link
+            to="/"
+            onClick={(e) => {
+              if (location.pathname === '/') {
+                e.preventDefault();
+                scrollToSection('home');
+              }
+            }}
+            className="flex items-center gap-3"
+          >
             <img
               src={logoImg}
               alt="E.G.M.S Crest Logo"
@@ -36,6 +62,7 @@ function Footer({ defaultBg = 'bg-white' }) {
               <Link
                 key={link.name}
                 to={link.path}
+                onClick={(e) => handleNavClick(e, link)}
                 className="font-poppins text-base font-medium text-white underline underline-offset-4 transition-colors hover:text-[#B9FF66]"
               >
                 {link.name}

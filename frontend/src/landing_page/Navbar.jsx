@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 import logoImg from '@/assets/images/Logo.png';
+import { scrollToSection } from '@/lib/scrollUtils';
 
 function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,13 +24,27 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About us', path: '/about' },
-    { name: 'Programs', path: '/programs' },
-    { name: 'Facilities', path: '/facilities' },
+    { name: 'Home', path: '/', hash: 'home' },
+    { name: 'About us', path: '/about', hash: 'about' },
+    { name: 'Programs', path: '/programs', hash: 'programs' },
+    { name: 'Facilities', path: '/facilities', hash: 'facilities' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'Contact', path: '/contact', hash: 'contact' },
   ];
+
+  const handleNavClick = (e, link) => {
+    const isHomePage = location.pathname === '/';
+
+    if (isHomePage && link.hash) {
+      e.preventDefault();
+      scrollToSection(link.hash);
+    } else if (!isHomePage && link.hash) {
+      if (link.name === 'About us' || link.name === 'Contact' || link.name === 'Home') {
+        e.preventDefault();
+        navigate(`/#${link.hash}`);
+      }
+    }
+  };
 
   return (
     <nav
@@ -38,8 +55,17 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between">
-        {/* Brand Logo & Title with exact Figma dimensions */}
-        <Link to="/" className="flex items-center gap-2">
+        {/* Brand Logo & Title */}
+        <Link
+          to="/"
+          onClick={(e) => {
+            if (location.pathname === '/') {
+              e.preventDefault();
+              scrollToSection('home');
+            }
+          }}
+          className="flex items-center gap-2"
+        >
           <img
             src={logoImg}
             alt="E.G.M.S Crest Logo"
@@ -50,12 +76,13 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
           </span>
         </Link>
 
-        {/* Desktop Navigation Links matching Figma layout */}
+        {/* Desktop Navigation Links */}
         <div className="hidden items-center gap-6 lg:flex xl:gap-8 ml-auto mr-4 lg:mr-5 xl:mr-6">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.path}
+              onClick={(e) => handleNavClick(e, link)}
               className="font-poppins text-lg font-medium text-[#000000] transition-colors hover:text-[#344E41]"
             >
               {link.name}
@@ -90,7 +117,10 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
             <Link
               key={link.name}
               to={link.path}
-              onClick={() => setIsOpen(false)}
+              onClick={(e) => {
+                setIsOpen(false);
+                handleNavClick(e, link);
+              }}
               className="font-poppins text-lg font-semibold text-[#000000] transition-colors hover:text-[#344E41]"
             >
               {link.name}
