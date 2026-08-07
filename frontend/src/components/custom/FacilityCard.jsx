@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
+import ImageWithSkeleton from './ImageWithSkeleton';
 
 function FacilityCard({
   titleLines = [],
@@ -48,9 +49,10 @@ function FacilityCard({
       {/* Right Side Illustration Image (210px x 192.68px) */}
       {image && (
         <div className="pointer-events-none absolute right-0 bottom-0 sm:right-2 flex h-[192.68px] w-[210px] items-center justify-center">
-          <img
+          <ImageWithSkeleton
             src={image}
             alt={imageAlt || titleLines.join(' ')}
+            wrapperClassName="h-[192.68px] w-[210px] flex items-center justify-center"
             className="max-h-[192.68px] max-w-[210px] w-auto h-auto object-contain"
           />
         </div>

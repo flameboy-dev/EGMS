@@ -1,5 +1,6 @@
 import React from 'react';
 import ProgramCard from '@/components/custom/ProgramCard';
+import { ProgramCardSkeleton } from '@/components/custom/CardSkeletons';
 
 // Import Program Illustrations
 import nurseryImg from '@/assets/images/Nursery.png';
@@ -10,7 +11,7 @@ import std2Img from '@/assets/images/STD-II.png';
 import std3Img from '@/assets/images/STD-III.png';
 import std4Img from '@/assets/images/STD-IV.png';
 
-function HomePrograms() {
+function HomePrograms({ isLoading = false }) {
   const programsData = [
     {
       id: 'nursery',
@@ -76,18 +77,22 @@ function HomePrograms() {
           </p>
         </div>
 
-        {/* Program Cards Grid with exact 40px gap */}
+        {/* Program Cards Grid with Skeleton Support */}
         <div className="grid grid-cols-1 justify-items-center gap-[40px] md:grid-cols-2 lg:grid-cols-3">
-          {programsData.map((program) => (
-            <ProgramCard
-              key={program.id}
-              title={program.title}
-              age={program.age}
-              image={program.image}
-              bgColor={program.bgColor}
-              linkTo="/programs"
-            />
-          ))}
+          {isLoading
+            ? Array.from({ length: 6 }).map((_, idx) => (
+                <ProgramCardSkeleton key={idx} />
+              ))
+            : programsData.map((program) => (
+                <ProgramCard
+                  key={program.id}
+                  title={program.title}
+                  age={program.age}
+                  image={program.image}
+                  bgColor={program.bgColor}
+                  linkTo="/programs"
+                />
+              ))}
         </div>
       </div>
     </section>

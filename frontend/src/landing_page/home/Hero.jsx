@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import heroImage from '@/assets/images/HeroImage.png';
+import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
 
 function Hero() {
   return (
@@ -36,11 +37,12 @@ function Hero() {
             </div>
           </div>
 
-          {/* Right Illustration Column */}
+          {/* Right Illustration Column with Skeleton Loading */}
           <div className="flex justify-center lg:col-span-6 lg:justify-end">
-            <img
+            <ImageWithSkeleton
               src={heroImage}
               alt="Ever Green Model School Classroom Illustration"
+              wrapperClassName="h-auto w-full max-w-md max-h-[560px] sm:max-w-lg lg:max-w-xl"
               className="h-auto w-full max-w-md max-h-[560px] object-contain sm:max-w-lg lg:max-w-xl"
             />
           </div>

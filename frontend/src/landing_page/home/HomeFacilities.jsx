@@ -1,5 +1,6 @@
 import React from 'react';
 import FacilityCard from '@/components/custom/FacilityCard';
+import { FacilityCardSkeleton } from '@/components/custom/CardSkeletons';
 
 // Import Facility Illustrations
 import smartClassImg from '@/assets/images/Smart Class.png';
@@ -9,7 +10,7 @@ import codingImg from '@/assets/images/Coding.png';
 import boardGamesImg from '@/assets/images/Board Games.png';
 import familyImg from '@/assets/images/Family.png';
 
-function HomeFacilities() {
+function HomeFacilities({ isLoading = false }) {
   const facilitiesData = [
     {
       id: 'smart-classrooms',
@@ -74,19 +75,23 @@ function HomeFacilities() {
           </p>
         </div>
 
-        {/* Facilities Grid */}
+        {/* Facilities Grid with Skeleton Support */}
         <div className="grid grid-cols-1 justify-items-center gap-8 lg:grid-cols-2 lg:gap-10">
-          {facilitiesData.map((facility) => (
-            <FacilityCard
-              key={facility.id}
-              titleLines={facility.titleLines}
-              titleBadgeBg={facility.titleBadgeBg}
-              cardBg={facility.cardBg}
-              image={facility.image}
-              isDarkCard={facility.isDarkCard}
-              linkTo="/facilities"
-            />
-          ))}
+          {isLoading
+            ? Array.from({ length: 6 }).map((_, idx) => (
+                <FacilityCardSkeleton key={idx} />
+              ))
+            : facilitiesData.map((facility) => (
+                <FacilityCard
+                  key={facility.id}
+                  titleLines={facility.titleLines}
+                  titleBadgeBg={facility.titleBadgeBg}
+                  cardBg={facility.cardBg}
+                  image={facility.image}
+                  isDarkCard={facility.isDarkCard}
+                  linkTo="/facilities"
+                />
+              ))}
         </div>
       </div>
     </section>

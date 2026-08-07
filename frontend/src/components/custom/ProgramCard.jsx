@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ImageWithSkeleton from './ImageWithSkeleton';
 
 function ProgramCard({
   title,
@@ -20,10 +21,11 @@ function ProgramCard({
           {/* Top Row: Image (97.82x97.82), Title & Top-Right Badge */}
           <div className="relative flex items-center gap-4">
             {image && (
-              <img
+              <ImageWithSkeleton
                 src={image}
                 alt={title}
-                className="h-[97.82px] w-[97.82px] shrink-0 object-contain"
+                wrapperClassName="h-[97.82px] w-[97.82px] shrink-0"
+                className="h-[97.82px] w-[97.82px] object-contain"
               />
             )}
             <h3 className="mt-2 pr-8 font-fredoka text-lg font-semibold leading-snug text-[#000000] sm:text-xl">
@@ -67,10 +69,11 @@ function ProgramCard({
       </div>
 
       {image && (
-        <img
+        <ImageWithSkeleton
           src={image}
           alt={`${title} Illustration`}
-          className="pointer-events-none absolute bottom-3 right-3 z-0 h-auto max-h-[175px] max-w-[210px] object-contain"
+          wrapperClassName="pointer-events-none absolute bottom-3 right-3 z-0 max-h-[175px] max-w-[210px]"
+          className="h-auto max-h-[175px] max-w-[210px] object-contain"
         />
       )}
     </>

@@ -8,6 +8,7 @@ import {
   Heart,
 } from 'lucide-react';
 import ProgramCard from '@/components/custom/ProgramCard';
+import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
 
 // Import Illustrations
 import bannerImg from '@/assets/images/STD-III.png';
@@ -98,10 +99,11 @@ function About() {
 
             {/* Illustration Column */}
             <div className="flex justify-center lg:col-span-6 lg:justify-end">
-              <img
+              <ImageWithSkeleton
                 src={bannerImg}
                 alt="Nurturing Young Minds Classroom"
-                className="h-auto w-full max-w-md object-contain lg:absolute lg:right-2 lg:top-1/2 lg:w-[612.51px] lg:h-[577.92px] lg:max-w-none lg:-translate-y-1/2 pointer-events-none"
+                wrapperClassName="h-auto w-full max-w-md lg:absolute lg:right-2 lg:top-1/2 lg:w-[612.51px] lg:h-[577.92px] lg:max-w-none lg:-translate-y-1/2"
+                className="h-auto w-full max-w-md object-contain lg:w-[612.51px] lg:h-[577.92px] lg:max-w-none pointer-events-none"
               />
             </div>
           </div>
