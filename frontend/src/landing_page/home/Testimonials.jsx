@@ -41,7 +41,7 @@ function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-16 md:px-12 lg:px-16 lg:py-24">
+    <section className="w-full bg-[#F6FAEF] px-6 py-16 md:px-12 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-[1240px]">
         {/* Section Header */}
         <div className="mb-12 flex flex-col items-start space-y-3">
