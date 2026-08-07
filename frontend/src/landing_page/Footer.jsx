@@ -9,22 +9,24 @@ function Footer({ defaultBg = 'bg-white' }) {
   const navigate = useNavigate();
 
   const footerLinks = [
-    { name: 'About us', path: '/#about', hash: 'about' },
-    { name: 'Programs', path: '/#programs', hash: 'programs' },
-    { name: 'Facilities', path: '/#facilities', hash: 'facilities' },
+    { name: 'About us', path: '/about', sectionId: 'about' },
+    { name: 'Programs', path: '/programs', sectionId: 'programs' },
+    { name: 'Facilities', path: '/facilities', sectionId: 'facilities' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/#contact', hash: 'contact' },
+    { name: 'Contact', path: '/contact', sectionId: 'contact' },
   ];
 
-  const handleNavClick = (e, link) => {
-    const isHomePage = location.pathname === '/';
+  const homeSectionPaths = ['/', '/about', '/programs', '/facilities', '/contact'];
 
-    if (isHomePage && link.hash) {
+  const handleNavClick = (e, link) => {
+    const isHomePage = homeSectionPaths.includes(location.pathname);
+
+    if (isHomePage && link.sectionId) {
       e.preventDefault();
-      scrollToSection(link.hash);
-    } else if (!isHomePage && link.hash) {
-      e.preventDefault();
-      navigate(`/#${link.hash}`);
+      scrollToSection(link.sectionId);
+      if (location.pathname !== link.path) {
+        navigate(link.path);
+      }
     }
   };
 
@@ -37,9 +39,12 @@ function Footer({ defaultBg = 'bg-white' }) {
           <Link
             to="/"
             onClick={(e) => {
-              if (location.pathname === '/') {
+              if (homeSectionPaths.includes(location.pathname)) {
                 e.preventDefault();
                 scrollToSection('home');
+                if (location.pathname !== '/') {
+                  navigate('/');
+                }
               }
             }}
             className="flex items-center gap-3"

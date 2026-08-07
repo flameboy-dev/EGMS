@@ -24,29 +24,38 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
   }, []);
 
   const navLinks = [
-    { name: 'Home', path: '/', hash: 'home' },
-    { name: 'About us', path: '/#about', hash: 'about' },
-    { name: 'Programs', path: '/#programs', hash: 'programs' },
-    { name: 'Facilities', path: '/#facilities', hash: 'facilities' },
+    { name: 'Home', path: '/', sectionId: 'home' },
+    { name: 'About us', path: '/about', sectionId: 'about' },
+    { name: 'Programs', path: '/programs', sectionId: 'programs' },
+    { name: 'Facilities', path: '/facilities', sectionId: 'facilities' },
     { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/#contact', hash: 'contact' },
+    { name: 'Contact', path: '/contact', sectionId: 'contact' },
   ];
 
-  const handleNavClick = (e, link) => {
-    const isHomePage = location.pathname === '/';
+  const homeSectionPaths = ['/', '/about', '/programs', '/facilities', '/contact'];
 
-    if (isHomePage && link.hash) {
+  const handleNavClick = (e, link) => {
+    const isHomePage = homeSectionPaths.includes(location.pathname);
+
+    if (isHomePage && link.sectionId) {
       e.preventDefault();
-      scrollToSection(link.hash);
-    } else if (!isHomePage && link.hash) {
-      e.preventDefault();
-      navigate(`/#${link.hash}`);
+      if (link.sectionId === 'home') {
+        scrollToSection('home');
+        if (location.pathname !== '/') {
+          navigate('/');
+        }
+      } else {
+        scrollToSection(link.sectionId);
+        if (location.pathname !== link.path) {
+          navigate(link.path);
+        }
+      }
     }
   };
 
   return (
     <nav
-      className={`sticky top-0 z-50 w-full px-6 pt-1 pb-3 md:px-12 md:pt-2 md:pb-3 lg:px-16 lg:pt-2 lg:pb-3 transition-all duration-300 ${
+      className={`sticky top-0 z-50 w-full px-6 py-1.5 md:px-12 md:py-2 lg:px-16 lg:py-2 transition-all duration-300 ${
         isScrolled
           ? 'bg-white shadow-md'
           : defaultBg
@@ -57,9 +66,12 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
         <Link
           to="/"
           onClick={(e) => {
-            if (location.pathname === '/') {
+            if (homeSectionPaths.includes(location.pathname)) {
               e.preventDefault();
               scrollToSection('home');
+              if (location.pathname !== '/') {
+                navigate('/');
+              }
             }
           }}
           className="flex items-center gap-2"
@@ -67,9 +79,9 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
           <img
             src={logoImg}
             alt="E.G.M.S Crest Logo"
-            className="h-[60px] w-[60px] object-contain md:h-[93.27px] md:w-[93.27px]"
+            className="h-[48px] w-[48px] object-contain md:h-[72px] md:w-[72px]"
           />
-          <span className="font-fredoka text-[28px] font-extrabold leading-none tracking-tight text-[#000000] md:text-[38.43px]">
+          <span className="font-fredoka text-[24px] font-extrabold leading-none tracking-tight text-[#000000] md:text-[32px]">
             E.G.M.S
           </span>
         </Link>
@@ -81,7 +93,7 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
               key={link.name}
               to={link.path}
               onClick={(e) => handleNavClick(e, link)}
-              className="font-poppins text-lg font-medium text-[#000000] transition-colors hover:text-[#344E41]"
+              className="font-poppins text-base font-medium text-[#000000] transition-colors hover:text-[#344E41] md:text-lg"
             >
               {link.name}
             </Link>
@@ -92,7 +104,7 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
         <div className="hidden lg:block">
           <Link
             to="/enroll"
-            className="inline-flex items-center justify-center rounded-2xl border-2 border-[#1E3F20] bg-transparent px-8 py-3.5 font-poppins text-lg font-medium text-[#000000] transition-all hover:bg-[#1E3F20] hover:text-[#F6FAEF]"
+            className="inline-flex items-center justify-center rounded-2xl border-2 border-[#1E3F20] bg-transparent px-6 py-2.5 font-poppins text-base font-medium text-[#000000] transition-all hover:bg-[#1E3F20] hover:text-[#F6FAEF] md:text-lg"
           >
             Enroll Now
           </Link>
@@ -104,13 +116,13 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
           className="rounded-lg p-2 text-[#000000] lg:hidden hover:bg-[#344E41]/10 focus:outline-none"
           aria-label="Toggle Navigation Menu"
         >
-          {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
+          {isOpen ? <X className="h-7 w-7" /> : <Menu className="h-7 w-7" />}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {isOpen && (
-        <div className="mt-4 flex flex-col space-y-4 rounded-2xl bg-[#F6FAEF] p-6 shadow-xl lg:hidden">
+        <div className="mt-3 flex flex-col space-y-4 rounded-2xl bg-[#F6FAEF] p-6 shadow-xl lg:hidden">
           {navLinks.map((link) => (
             <Link
               key={link.name}

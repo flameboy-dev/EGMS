@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import HomePage from './landing_page/home/HomePage'
 import GalleryPage from './landing_page/gallery/GalleryPage'
+import NotFound from './landing_page/NotFound'
 
 // Individual Program Pages
 import Nursery from './landing_page/programs/Nursery'
@@ -24,7 +25,14 @@ import HealthEnv from './landing_page/facilities/HealthEnv'
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
+      {/* Home & Section Routes */}
       <Route path="/" element={<HomePage />} />
+      <Route path="/about" element={<HomePage />} />
+      <Route path="/programs" element={<HomePage />} />
+      <Route path="/facilities" element={<HomePage />} />
+      <Route path="/contact" element={<HomePage />} />
+
+      {/* Gallery Route */}
       <Route path="/gallery" element={<GalleryPage />} />
 
       {/* Program Routes */}
@@ -43,6 +51,9 @@ createRoot(document.getElementById('root')).render(
       <Route path="/facilities/computer" element={<Computer />} />
       <Route path="/facilities/indoor" element={<Indoor />} />
       <Route path="/facilities/healthenv" element={<HealthEnv />} />
+
+      {/* Wildcard 404 Route */}
+      <Route path="*" element={<NotFound />} />
     </Routes>
   </BrowserRouter>
 )

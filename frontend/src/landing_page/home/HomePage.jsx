@@ -14,14 +14,28 @@ import { scrollToSection } from '@/lib/scrollUtils';
 function HomePage() {
   const location = useLocation();
 
+  const pathToSectionMap = {
+    '/about': 'about',
+    '/programs': 'programs',
+    '/facilities': 'facilities',
+    '/contact': 'contact',
+  };
+
   useEffect(() => {
-    if (location.hash) {
-      const sectionId = location.hash.replace('#', '');
+    const sectionId = pathToSectionMap[location.pathname];
+    if (sectionId) {
       setTimeout(() => {
         scrollToSection(sectionId);
       }, 150);
+    } else if (location.hash) {
+      const hashId = location.hash.replace('#', '');
+      setTimeout(() => {
+        scrollToSection(hashId);
+      }, 150);
+    } else {
+      scrollToSection('home');
     }
-  }, [location]);
+  }, [location.pathname, location.hash]);
 
   return (
     <>
