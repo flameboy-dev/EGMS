@@ -7,6 +7,7 @@ import HomeFacilities from './HomeFacilities';
 import Testimonials from './Testimonials';
 import FAQs from './FAQs';
 import Contact from './Contact';
+import Footer from '../Footer';
 
 function HomePage() {
     return (
@@ -19,8 +20,9 @@ function HomePage() {
             <Testimonials />
             <FAQs />
             <Contact />
+            <Footer />
         </>
     );
 }
 
-export default HomePage;
+export default HomePage;
