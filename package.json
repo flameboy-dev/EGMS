@@ -1,5 +1,15 @@
 {
-  "dependencies": {
-    "": "."
+  "name": "egms-monorepo",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "bun --filter '*' dev",
+    "dev:frontend": "bun --filter frontend dev",
+    "dev:backend": "bun --filter backend dev",
+    "build": "bun --filter '*' build",
+    "lint": "bun --filter '*' lint"
   }
 }
