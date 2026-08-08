@@ -1,0 +1,28 @@
+# Auto-detect text files and normalize line endings to LF
+* text=auto eol=lf
+
+# Explicit text files
+*.js       text eol=lf
+*.jsx      text eol=lf
+*.ts       text eol=lf
+*.tsx      text eol=lf
+*.json     text eol=lf
+*.html     text eol=lf
+*.css      text eol=lf
+*.md       text eol=lf
+*.env*     text eol=lf
+
+# Lockfile
+bun.lock   text eol=lf diff=lockfile
+
+# Binary formats (do not modify line endings)
+*.png      binary
+*.jpg      binary
+*.jpeg     binary
+*.gif      binary
+*.ico      binary
+*.svg      text eol=lf
+*.woff     binary
+*.woff2    binary
+*.eot      binary
+*.ttf      binary
