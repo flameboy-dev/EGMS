@@ -20,6 +20,27 @@ import growthImg from '@/assets/images/Growth.png';
 import partnershipImg from '@/assets/images/Partnership.png';
 
 function About() {
+  const authorities = [
+    {
+      id: 'goutam-giri',
+      name: 'Goutam Giri',
+      role: 'School Authority',
+      image: teacherImg,
+    },
+    {
+      id: 'soma-jana-giri',
+      name: 'Soma Jana Giri',
+      role: 'School Authority',
+      image: familyImg,
+    },
+    {
+      id: 'pankaj-samanta',
+      name: 'Pankaj Samanta',
+      role: 'School Authority',
+      image: partnershipImg,
+    },
+  ];
+
   const features = [
     {
       id: 'teachers',
@@ -109,12 +130,53 @@ function About() {
           </div>
         </div>
 
+        {/* School Authorities Section */}
+        <div className="mb-24">
+          <div className="mb-10 flex flex-col items-start space-y-3">
+            <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+              School Authorities
+            </h2>
+            <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
+              Guiding Ever Green Model School towards educational excellence and holistic growth.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 justify-items-center gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            {authorities.map((person) => (
+              <div
+                key={person.id}
+                className="flex w-full max-w-[300px] flex-col overflow-hidden rounded-[32px] border-2 border-[#191A23] bg-[#EBF1E5] shadow-[0_5px_0_0_#191A23]"
+              >
+                {/* Portrait Image Frame */}
+                <div className="relative h-[320px] w-full border-b-2 border-[#191A23] bg-white">
+                  <ImageWithSkeleton
+                    src={person.image}
+                    alt={person.name}
+                    wrapperClassName="h-full w-full"
+                    className="h-full w-full object-cover"
+                  />
+                </div>
+
+                {/* Profile Details */}
+                <div className="flex flex-col items-center p-6 text-center">
+                  <h3 className="font-fredoka text-2xl font-semibold text-[#000000]">
+                    {person.name}
+                  </h3>
+                  <p className="mt-1 font-poppins text-sm font-medium text-[#1E3F20]/80">
+                    {person.role}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+
         {/* Why Choose Us Section Header */}
         <div className="mb-10 flex flex-col items-start space-y-3">
           <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Why Choose Us?
           </h2>
-          <p className="max-w-3xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg">
+          <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
             We believe every child deserves the best start in life. Our learning environment is designed to help children feel safe, happy, and excited to learn every day.
           </p>
         </div>
