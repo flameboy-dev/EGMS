@@ -48,7 +48,7 @@ function Testimonials() {
           <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Testimonials
           </h2>
-          <p className="max-w-2xl font-poppins text-base text-[#000000]/80 sm:text-lg">
+          <p className="max-w-4xl font-poppins text-base text-[#000000]/80 sm:text-lg lg:max-w-none">
             Hear what parents have to say about their children’s joyful learning journey at Ever Green Model School.
           </p>
         </div>

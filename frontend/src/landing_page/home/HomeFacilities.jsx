@@ -76,7 +76,7 @@ function HomeFacilities({ isLoading = false }) {
           <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Facilities That We Offer
           </h2>
-          <p className="max-w-2xl font-poppins text-base text-[#000000]/80 sm:text-lg">
+          <p className="max-w-4xl font-poppins text-base text-[#000000]/80 sm:text-lg lg:max-w-none">
             Everything your child needs to learn, play, and grow in a safe and nurturing environment.
           </p>
         </div>

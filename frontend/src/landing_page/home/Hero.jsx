@@ -15,7 +15,7 @@ function Hero() {
               Where Little Minds Grow <br className="hidden sm:inline" /> Into Bright Futures
             </h1>
 
-            <p className="mt-5 max-w-xl font-poppins text-base leading-relaxed text-[#1E3F20] sm:text-lg">
+            <p className="mt-5 max-w-2xl font-poppins text-base leading-relaxed text-[#1E3F20] sm:text-lg lg:max-w-none">
               At <span className="font-bold text-[#000000]">Ever Green Model School</span>, we provide a safe, joyful, and nurturing environment where every child learns through play, creativity, and discovery.
             </p>
 

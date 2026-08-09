@@ -79,7 +79,7 @@ function HomePrograms({ isLoading = false }) {
           <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Our Learning Programs
           </h2>
-          <p className="max-w-2xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg">
+          <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
             Every program is thoughtfully designed to help children learn, explore, create, and grow with confidence.
           </p>
         </div>
