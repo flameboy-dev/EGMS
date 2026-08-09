@@ -2,15 +2,15 @@ import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 
-function HealthEnv() {
+function Yoga() {
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
         <Navbar defaultBg="bg-[#F6FAEF]" />
         <div className="mx-auto max-w-7xl px-6 py-16 font-fredoka">
-          <h1 className="text-4xl font-bold text-[#000000]">Healthy Environment</h1>
+          <h1 className="text-4xl font-bold text-[#000000]">Yoga & Meditation</h1>
           <p className="mt-4 font-poppins text-lg text-[#1E3F20]">
-            Hygienic campus, green surroundings, clean drinking water, and supportive care.
+            Mindfulness sessions, daily yoga practice, breathing exercises, and physical and mental wellness routines.
           </p>
         </div>
       </div>
@@ -19,4 +19,4 @@ function HealthEnv() {
   );
 }
 
-export default HealthEnv;
+export default Yoga;

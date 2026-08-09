@@ -20,7 +20,7 @@ import Art from './landing_page/facilities/Art'
 import Transport from './landing_page/facilities/Transport'
 import Computer from './landing_page/facilities/Computer'
 import Indoor from './landing_page/facilities/Indoor'
-import HealthEnv from './landing_page/facilities/HealthEnv'
+import Yoga from './landing_page/facilities/Yoga'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -50,7 +50,7 @@ createRoot(document.getElementById('root')).render(
       <Route path="/facilities/transport" element={<Transport />} />
       <Route path="/facilities/computer" element={<Computer />} />
       <Route path="/facilities/indoor" element={<Indoor />} />
-      <Route path="/facilities/healthenv" element={<HealthEnv />} />
+      <Route path="/facilities/yoga" element={<Yoga />} />
 
       {/* Wildcard 404 Route */}
       <Route path="*" element={<NotFound />} />

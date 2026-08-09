@@ -58,13 +58,13 @@ function HomeFacilities({ isLoading = false }) {
       linkTo: '/facilities/indoor',
     },
     {
-      id: 'healthy-environment',
-      titleLines: ['Healthy', 'Environment'],
+      id: 'yoga-meditation',
+      titleLines: ['Yoga &', 'Meditation'],
       titleBadgeBg: 'bg-[#B9FF66]',
       cardBg: 'bg-[#1E3F20]',
       image: familyImg,
       isDarkCard: true,
-      linkTo: '/facilities/healthenv',
+      linkTo: '/facilities/yoga',
     },
   ];
 
