@@ -1,18 +1,169 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import Hero from './Hero';
+import Curriculum from './Curriculum';
+import Activities from './Activities';
+import ClassInfo from './ClassInfo';
+import ProgramGallery from './ProgramGallery';
+import TeacherProfiles from './TeacherProfiles';
+import std3Img from '@/assets/images/STD-III.png';
+
+import teacherImg from '@/assets/images/Teacher.png';
+import smartClassImg from '@/assets/images/Smart Class.png';
+import boardGamesImg from '@/assets/images/Board Games.png';
+import paintingImg from '@/assets/images/Painting.png';
+import growthImg from '@/assets/images/Growth.png';
+import familyImg from '@/assets/images/Family.png';
+import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDThree() {
+  const std3Paragraphs = [
+    <>
+      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, Class III fosters deeper critical thinking and subject mastery across languages, dual mathematics, sciences, and social studies.
+    </>,
+    <>
+      The curriculum includes Bengali & Bengali Grammar, English Reader & English Grammar, Bengali Math & English Math, Science, History, Geography, Bengali G.K., Conversation practice, Computer, and Drawing.
+    </>,
+  ];
+
+  const std3Subjects = [
+    'Bengali',
+    'Bengali Grammar',
+    'English Reader',
+    'English Grammar',
+    'Bengali Math',
+    'English Math',
+    'Science',
+    'History',
+    'Geography',
+    'Bengali G.K. (B.G.K.)',
+    'Conversation',
+    'Computer',
+    'Drawing',
+  ];
+
+  const std3Activities = [
+    {
+      id: 'std3-essay',
+      title: 'Essay Writing & Reading',
+      description:
+        'Prose literature, Bengali & English grammar exercises, essay writing, and story reviews.',
+      image: teacherImg,
+      icon: UserCheck,
+    },
+    {
+      id: 'std3-poetry',
+      title: 'Poetry Recitation & Music',
+      description:
+        'Stage poem recitation, patriotic songs, group music, and cultural performance practice.',
+      image: smartClassImg,
+      icon: BookOpen,
+    },
+    {
+      id: 'std3-math',
+      title: 'Math Problems & Logic Games',
+      description:
+        'Long multiplication & division, fraction exercises, word problems, and math games.',
+      image: boardGamesImg,
+      icon: ShieldCheck,
+    },
+    {
+      id: 'std3-art',
+      title: 'Drawing & Poster Craft',
+      description:
+        'Drawing landscapes, poster making, clay models, and creative art projects.',
+      image: paintingImg,
+      icon: Palette,
+    },
+    {
+      id: 'std3-science',
+      title: 'Science & Social Studies',
+      description:
+        'Simple science experiments, history timelines, map reading, and geography facts.',
+      image: growthImg,
+      icon: Sprout,
+    },
+    {
+      id: 'std3-tech',
+      title: 'Computer Lab & Sports',
+      description:
+        'Computer lab practice, typing exercises, track games, and playground sports.',
+      image: familyImg,
+      icon: Heart,
+    },
+  ];
+
+  const std3InfoCards = [
+    { title: "Age Group", value: "8 - 9 years" },
+    { title: "Learning Approach", value: "Problem-Solving & Analytical" },
+    { title: "Medium of Instruction", value: "English & Bengali" },
+    { title: "Class Environment", value: "Tech-Enabled & Disciplined" },
+  ];
+
+  const std3Teachers = [
+    {
+      name: 'Goutam Giri',
+      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Soma Jana Giri',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Suparna Jana',
+      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Moumita Bera',
+      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Swapan Mondal',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Ankita Pandit Rout',
+      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Modhusudan Maity',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
+    },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
         <Navbar defaultBg="bg-[#F6FAEF]" />
-        <div className="mx-auto max-w-7xl px-6 py-16 font-fredoka">
-          <h1 className="text-4xl font-bold text-[#000000]">STD - III Program</h1>
-          <p className="mt-4 font-poppins text-lg text-[#1E3F20]">
-            Age: 8+ | Developing critical thinking, language fluency, and science exploration.
-          </p>
-        </div>
+        <Hero
+          title="STD - III Program"
+          subTagline="Age: 8+ | Specialized subject streams, analytical reasoning, and digital skills."
+          aboutTitle="About STD - III"
+          aboutParagraphs={std3Paragraphs}
+          image={std3Img}
+          prevLink="/programs/stdtwo"
+          nextLink="/programs/stdfour"
+        />
+        <Curriculum
+          title="STD - III Curriculum & Subjects"
+          subtitle="Advanced primary subject streams promoting analytical reasoning, language fluency, and tech literacy."
+          subjects={std3Subjects}
+        />
+        <Activities
+          title="STD - III Class Activities"
+          subtitle="Practical classroom activities promoting subject fluency, problem solving, and sports."
+          activities={std3Activities}
+        />
+        <ClassInfo
+          title="Class Information"
+          subtitle="Everything parents need to know about the STD - III program at a glance."
+          infoCards={std3InfoCards}
+        />
+        <ProgramGallery
+          subtitle="A glimpse into the joyful moments, activities, and learning experiences of our STD - III students."
+        />
+        <TeacherProfiles teachers={std3Teachers} />
       </div>
       <Footer defaultBg="bg-[#F6FAEF]" />
     </div>

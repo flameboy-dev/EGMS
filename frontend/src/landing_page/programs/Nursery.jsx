@@ -1,18 +1,155 @@
 import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import Hero from './Hero';
+import Curriculum from './Curriculum';
+import Activities from './Activities';
+import ClassInfo from './ClassInfo';
+import ProgramGallery from './ProgramGallery';
+import TeacherProfiles from './TeacherProfiles';
+import nurseryImg from '@/assets/images/Nursery.png';
+
+import teacherImg from '@/assets/images/Teacher.png';
+import smartClassImg from '@/assets/images/Smart Class.png';
+import boardGamesImg from '@/assets/images/Board Games.png';
+import paintingImg from '@/assets/images/Painting.png';
+import growthImg from '@/assets/images/Growth.png';
+import familyImg from '@/assets/images/Family.png';
+import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function Nursery() {
+  const nurseryParagraphs = [
+    <>
+      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, our Nursery Program is thoughtfully designed to provide children with a joyful and nurturing introduction to education. We create a safe, caring, and stimulating environment where every child feels valued, encouraged, and excited to learn.
+    </>,
+    <>
+      Our Nursery curriculum introduces basic Bengali and English Alphabets, Math Numbers, engaging Bengali & English Rhymes, General Knowledge, and Drawing activities to build early language skills, numerical curiosity, and creative expression.
+    </>,
+  ];
+
+  const nurserySubjects = [
+    'Bengali (Alphabets)',
+    'English (Alphabets)',
+    'Math (Numbers)',
+    'General Knowledge',
+    'Bengali Rhyme',
+    'English Rhyme',
+    'Drawing',
+  ];
+
+  const nurseryActivities = [
+    {
+      id: 'nursery-storytelling',
+      title: 'Storytelling & Picture Books',
+      description:
+        'Little ones listen to fun stories, look at colorful picture books, and learn new words in a cozy setting.',
+      image: teacherImg,
+      icon: UserCheck,
+    },
+    {
+      id: 'nursery-rhymes',
+      title: 'Nursery Rhymes & Music',
+      description:
+        'Singing along to Bengali and English rhymes, clapping hands, and dancing to fun music beats.',
+      image: smartClassImg,
+      icon: BookOpen,
+    },
+    {
+      id: 'nursery-puzzles',
+      title: 'Puzzles & Playing Blocks',
+      description:
+        'Shape sorters, big colorful building blocks, and fun matching games to play and learn together.',
+      image: boardGamesImg,
+      icon: ShieldCheck,
+    },
+    {
+      id: 'nursery-art',
+      title: 'Finger Painting & Clay',
+      description:
+        'Finger painting, playing with soft playdough clay, paper tearing, and coloring freely with crayons.',
+      image: paintingImg,
+      icon: Palette,
+    },
+    {
+      id: 'nursery-nature',
+      title: 'Garden & Nature Walks',
+      description:
+        'Walking in the school garden, touching green leaves, looking at flowers, and discovering nature.',
+      image: growthImg,
+      icon: Sprout,
+    },
+    {
+      id: 'nursery-play',
+      title: 'Fun Indoor & Outdoor Games',
+      description:
+        'Sandpit fun, running around safely, tossing soft balls, and playing happy group games.',
+      image: familyImg,
+      icon: Heart,
+    },
+  ];
+
+  const nurseryInfoCards = [
+    { title: "Age Group", value: "3 - 4 years" },
+    { title: "Learning Approach", value: "Play-Based & Activity-Oriented" },
+    { title: "Medium of Instruction", value: "Bengali & English" },
+    { title: "Class Environment", value: "Child-Friendly & Interactive" },
+  ];
+
+  const nurseryTeachers = [
+    {
+      name: 'Soma Jana Giri',
+      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Suparna Jana',
+      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Ankita Pandit Rout',
+      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Modhusudan Maity',
+      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Shrabani Guchhait',
+      image: 'https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&q=80&w=400',
+    },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
         <Navbar defaultBg="bg-[#F6FAEF]" />
-        <div className="mx-auto max-w-7xl px-6 py-16 font-fredoka">
-          <h1 className="text-4xl font-bold text-[#000000]">Nursery Program</h1>
-          <p className="mt-4 font-poppins text-lg text-[#1E3F20]">
-            Age: 3+ | Foundation learning through play, creativity, and exploration.
-          </p>
-        </div>
+        <Hero
+          title="Nursery Program"
+          subTagline="Age: 3+ | Early phonics, numbers, nursery rhymes, and creative drawing."
+          aboutTitle="About Nursery"
+          aboutParagraphs={nurseryParagraphs}
+          image={nurseryImg}
+          prevLink={null}
+          nextLink="/programs/lkg"
+        />
+        <Curriculum
+          title="Nursery Curriculum & Subjects"
+          subtitle="Foundational subjects introducing early language, numbers, rhymes, and art."
+          subjects={nurserySubjects}
+        />
+        <Activities
+          title="Nursery Class Activities"
+          subtitle="Playful and gentle activities designed for little ones to explore and enjoy."
+          activities={nurseryActivities}
+        />
+        <ClassInfo
+          title="Class Information"
+          subtitle="Everything parents need to know about the Nursery program at a glance."
+          infoCards={nurseryInfoCards}
+        />
+        <ProgramGallery
+          subtitle="A glimpse into the joyful moments, activities, and learning experiences of our Nursery students."
+        />
+        <TeacherProfiles teachers={nurseryTeachers} />
       </div>
       <Footer defaultBg="bg-[#F6FAEF]" />
     </div>
