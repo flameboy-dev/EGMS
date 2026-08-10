@@ -1,0 +1,17 @@
+{
+  "name": "Ever Green Model School (E.G.M.S)",
+  "short_name": "E.G.M.S",
+  "description": "Ever Green Model School Official Portal",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1E3F20",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "192x192 512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
