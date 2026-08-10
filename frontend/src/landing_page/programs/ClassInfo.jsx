@@ -26,7 +26,7 @@ function ClassInfo({
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
         <div className="mb-10 flex flex-col items-start space-y-2">
-          <h2 className="font-fredoka text-3xl font-bold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+          <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             {title}
           </h2>
           <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
@@ -43,7 +43,7 @@ function ClassInfo({
                 key={idx}
                 className={`flex flex-col justify-center rounded-[32px] border-2 border-[#191A23] ${cardBg} p-6 sm:p-7 shadow-[0_5px_0_0_#191A23] min-h-[160px] sm:min-h-[180px] transition-all duration-200 hover:-translate-y-1`}
               >
-                <h3 className="font-fredoka text-xl font-bold text-[#000000] sm:text-2xl leading-snug">
+                <h3 className="font-fredoka text-xl font-semibold text-[#000000] sm:text-2xl leading-snug">
                   {card.title}
                 </h3>
                 <p className="mt-2 font-poppins text-sm font-medium text-[#1E3F20] sm:text-base leading-relaxed">

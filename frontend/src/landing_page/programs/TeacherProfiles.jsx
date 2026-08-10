@@ -47,7 +47,7 @@ function TeacherProfiles({
         {/* Top Header Row with Title and Slider Navigation Controls */}
         <div className="mb-8 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div className="flex flex-col items-start space-y-2">
-            <h2 className="font-fredoka text-3xl font-bold tracking-tight text-[#000000] sm:text-4xl md:text-[40px] uppercase">
+            <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px] uppercase">
               {title}
             </h2>
             <p className="max-w-3xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">

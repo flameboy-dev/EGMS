@@ -39,7 +39,7 @@ function Curriculum({
       <div className="mx-auto max-w-7xl">
         {/* Section Title & Subtitle */}
         <div className="mb-10 flex flex-col items-start space-y-2">
-          <h2 className="font-fredoka text-3xl font-bold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+          <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             {title}
           </h2>
           <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
