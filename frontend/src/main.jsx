@@ -22,8 +22,11 @@ import Computer from './landing_page/facilities/Computer'
 import Indoor from './landing_page/facilities/Indoor'
 import Yoga from './landing_page/facilities/Yoga'
 
+import ScrollToTop from './components/custom/ScrollToTop'
+
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
+    <ScrollToTop />
     <Routes>
       {/* Home & Section Routes */}
       <Route path="/" element={<HomePage />} />
