@@ -141,7 +141,7 @@ function ContactForm() {
       {/* Submit Button */}
       <button
         type="submit"
-        className="mt-2 flex h-[56px] w-full items-center justify-center rounded-[16px] bg-[#1E3F20] px-6 font-fredoka text-lg font-semibold text-white shadow-md transition-all duration-200 hover:bg-[#152e17] active:scale-[0.99] md:text-[20px] cursor-pointer"
+        className="mt-2 flex h-[56px] w-full items-center justify-center rounded-[16px] bg-[#1E3F20] px-6 font-fredoka text-lg font-medium text-white shadow-md transition-all duration-200 hover:bg-[#152e17] active:scale-[0.99] md:text-[20px] cursor-pointer"
       >
         Request Admission Information
       </button>

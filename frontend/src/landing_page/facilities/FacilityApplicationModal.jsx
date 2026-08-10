@@ -60,7 +60,7 @@ function FacilityApplicationModal({
             </p>
             <button
               onClick={handleReset}
-              className="mt-6 rounded-2xl border-2 border-[#191A23] bg-[#1E3F20] px-6 py-3 font-poppins text-sm font-semibold text-white shadow-[0_4px_0_0_#191A23] transition-all hover:bg-[#344E41]"
+              className="mt-6 rounded-2xl border-2 border-[#191A23] bg-[#1E3F20] px-6 py-3 font-poppins text-sm font-medium text-white shadow-[0_4px_0_0_#191A23] transition-all hover:bg-[#344E41]"
             >
               Done & Close
             </button>
@@ -157,7 +157,7 @@ function FacilityApplicationModal({
 
               <button
                 type="submit"
-                className="mt-2 w-full rounded-2xl border-2 border-[#191A23] bg-[#B9FF66] py-3 font-fredoka text-base font-semibold text-[#000000] shadow-[0_4px_0_0_#191A23] transition-transform hover:-translate-y-0.5 active:translate-y-0"
+                className="mt-2 w-full rounded-2xl border-2 border-[#191A23] bg-[#B9FF66] py-3 font-fredoka text-base font-medium text-[#000000] shadow-[0_4px_0_0_#191A23] transition-transform hover:-translate-y-0.5 active:translate-y-0"
               >
                 Submit Application
               </button>

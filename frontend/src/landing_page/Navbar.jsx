@@ -138,7 +138,7 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
           <Link
             to="/enroll"
             onClick={() => setIsOpen(false)}
-            className="mt-2 inline-block w-full text-center rounded-xl border-2 border-[#1E3F20] bg-[#344E41] py-2.5 font-poppins text-[15px] font-semibold text-[#F6FAEF] transition-all hover:bg-[#1E3F20]"
+            className="mt-2 inline-block w-full text-center rounded-xl border-2 border-[#1E3F20] bg-[#344E41] py-2.5 font-poppins text-[15px] font-medium text-[#F6FAEF] transition-all hover:bg-[#1E3F20]"
           >
             Enroll Now
           </Link>

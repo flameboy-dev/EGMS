@@ -38,7 +38,7 @@ function FacilityHero({
             {prevLink ? (
               <Link
                 to={prevLink}
-                className="inline-flex items-center justify-center rounded-xl border-2 border-[#1E3F20] bg-white px-4 py-2 sm:px-5 sm:py-2.5 font-poppins text-xs sm:text-sm font-semibold text-[#1E3F20] shadow-sm transition-all hover:bg-[#1E3F20] hover:text-white"
+                className="inline-flex items-center justify-center rounded-xl border-2 border-[#1E3F20] bg-white px-4 py-2 sm:px-5 sm:py-2.5 font-poppins text-xs sm:text-sm font-medium text-[#1E3F20] shadow-sm transition-all hover:bg-[#1E3F20] hover:text-white"
               >
                 ← Prev
               </Link>
@@ -48,7 +48,7 @@ function FacilityHero({
             {nextLink ? (
               <Link
                 to={nextLink}
-                className="inline-flex items-center justify-center rounded-xl bg-[#1E3F20] px-4 py-2 sm:px-5 sm:py-2.5 font-poppins text-xs sm:text-sm font-semibold text-white shadow-sm transition-all hover:bg-[#344E41]"
+                className="inline-flex items-center justify-center rounded-xl bg-[#1E3F20] px-4 py-2 sm:px-5 sm:py-2.5 font-poppins text-xs sm:text-sm font-medium text-white shadow-sm transition-all hover:bg-[#344E41]"
               >
                 Next →
               </Link>

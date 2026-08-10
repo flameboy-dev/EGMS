@@ -181,7 +181,7 @@ function GalleryPage() {
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`flex items-center gap-2 rounded-xl px-4 py-2 font-poppins text-xs font-semibold transition-all sm:text-sm ${isActive
+                    className={`flex items-center gap-2 rounded-xl px-4 py-2 font-poppins text-xs font-medium transition-all sm:text-sm ${isActive
                         ? 'bg-[#1E3F20] text-white shadow-xs'
                         : 'border border-[#191A23]/15 bg-white text-[#191A23] hover:bg-[#ECF39E]'
                       }`}
@@ -261,7 +261,7 @@ function GalleryPage() {
             </div>
             <a
               href="/contact"
-              className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#B9FF66] px-7 py-3.5 font-fredoka text-base font-semibold text-[#000000] shadow-sm transition-all hover:bg-white md:mt-0"
+              className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#B9FF66] px-7 py-3.5 font-fredoka text-base font-medium text-[#000000] shadow-sm transition-all hover:bg-white md:mt-0"
             >
               <span>Schedule a Campus Tour</span>
               <ArrowRight className="h-4 w-4" />

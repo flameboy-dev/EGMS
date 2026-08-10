@@ -164,7 +164,7 @@ function Computer() {
             </div>
             <a
               href="/contact"
-              className="mt-6 inline-flex shrink-0 items-center justify-center rounded-2xl border-2 border-[#191A23] bg-[#B9FF66] px-8 py-4 font-fredoka text-base font-bold text-[#000000] shadow-[0_4px_0_0_#191A23] transition-all hover:-translate-y-1 md:mt-0"
+              className="mt-6 inline-flex shrink-0 items-center justify-center rounded-2xl border-2 border-[#191A23] bg-[#B9FF66] px-8 py-4 font-fredoka text-base font-medium text-[#000000] shadow-[0_4px_0_0_#191A23] transition-all hover:-translate-y-1 md:mt-0"
             >
               Learn More
             </a>
