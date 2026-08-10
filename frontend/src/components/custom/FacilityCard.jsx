@@ -29,18 +29,16 @@ function FacilityCard({
       {/* Bottom Section: Action Link (Arrow + Learn More) */}
       <div className="flex items-center space-x-3">
         <div
-          className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 ${
-            isDarkCard
-              ? 'bg-white text-[#191A23]'
-              : 'bg-[#191A23] text-[#B9FF66]'
-          }`}
+          className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 ${isDarkCard
+            ? 'bg-white text-[#191A23]'
+            : 'bg-[#191A23] text-[#B9FF66]'
+            }`}
         >
           <ArrowUpRight className="h-6 w-6 stroke-[2.5]" />
         </div>
         <span
-          className={`font-poppins text-base font-medium md:text-lg ${
-            isDarkCard ? 'text-white' : 'text-[#000000]'
-          }`}
+          className={`font-poppins text-base font-medium md:text-lg ${isDarkCard ? 'text-white' : 'text-[#000000]'
+            }`}
         >
           Learn more
         </span>

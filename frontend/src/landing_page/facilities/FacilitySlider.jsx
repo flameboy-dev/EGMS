@@ -76,11 +76,10 @@ function FacilitySlider({ title = "Facility Photo Gallery", subtitle, slides = [
               return (
                 <div
                   key={idx}
-                  className={`absolute inset-0 h-full w-full transition-opacity duration-700 ease-in-out ${
-                    idx === currentIndex
-                      ? 'opacity-100 z-10 pointer-events-auto'
-                      : 'opacity-0 z-0 pointer-events-none'
-                  }`}
+                  className={`absolute inset-0 h-full w-full transition-opacity duration-700 ease-in-out ${idx === currentIndex
+                    ? 'opacity-100 z-10 pointer-events-auto'
+                    : 'opacity-0 z-0 pointer-events-none'
+                    }`}
                 >
                   <ImageWithSkeleton
                     src={imageSrc}
@@ -133,11 +132,10 @@ function FacilitySlider({ title = "Facility Photo Gallery", subtitle, slides = [
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 aria-label={`Go to slide ${idx + 1}`}
-                className={`h-2.5 rounded-full transition-all duration-300 ${
-                  idx === currentIndex
-                    ? 'w-7 bg-[#1E3F20]'
-                    : 'w-2.5 bg-[#191A23]/30 hover:bg-[#191A23]/60'
-                }`}
+                className={`h-2.5 rounded-full transition-all duration-300 ${idx === currentIndex
+                  ? 'w-7 bg-[#1E3F20]'
+                  : 'w-2.5 bg-[#191A23]/30 hover:bg-[#191A23]/60'
+                  }`}
               />
             ))}
           </div>

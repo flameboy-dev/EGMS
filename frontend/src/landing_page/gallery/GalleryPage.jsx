@@ -181,17 +181,15 @@ function GalleryPage() {
                   <button
                     key={cat}
                     onClick={() => setActiveCategory(cat)}
-                    className={`flex items-center gap-2 rounded-xl px-4 py-2 font-poppins text-xs font-semibold transition-all sm:text-sm ${
-                      isActive
+                    className={`flex items-center gap-2 rounded-xl px-4 py-2 font-poppins text-xs font-semibold transition-all sm:text-sm ${isActive
                         ? 'bg-[#1E3F20] text-white shadow-xs'
                         : 'border border-[#191A23]/15 bg-white text-[#191A23] hover:bg-[#ECF39E]'
-                    }`}
+                      }`}
                   >
                     <span>{cat}</span>
                     <span
-                      className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${
-                        isActive ? 'bg-[#B9FF66] text-[#000000]' : 'bg-[#EBF1E5] text-[#1E3F20]'
-                      }`}
+                      className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${isActive ? 'bg-[#B9FF66] text-[#000000]' : 'bg-[#EBF1E5] text-[#1E3F20]'
+                        }`}
                     >
                       {count}
                     </span>
