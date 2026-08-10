@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
 import HomePage from './landing_page/home/HomePage'
 import GalleryPage from './landing_page/gallery/GalleryPage'
+import EnrollPage from './landing_page/enroll/EnrollPage'
 import NotFound from './landing_page/NotFound'
 
 // Individual Program Pages
@@ -35,8 +36,9 @@ createRoot(document.getElementById('root')).render(
       <Route path="/facilities" element={<HomePage />} />
       <Route path="/contact" element={<HomePage />} />
 
-      {/* Gallery Route */}
+      {/* Gallery & Enrollment Routes */}
       <Route path="/gallery" element={<GalleryPage />} />
+      <Route path="/enroll" element={<EnrollPage />} />
 
       {/* Program Routes */}
       <Route path="/programs/nursery" element={<Nursery />} />
