@@ -41,14 +41,14 @@ function Testimonials() {
   ];
 
   return (
-    <section className="w-full bg-[#F6FAEF] px-6 py-16 md:px-12 lg:px-16 lg:py-24">
+    <section className="w-full bg-[#F6FAEF] px-6 py-10 sm:py-16 md:px-12 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-[1240px]">
         {/* Section Header */}
-        <div className="mb-12 flex flex-col items-start space-y-3">
-          <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+        <div className="mb-8 sm:mb-12 flex flex-col items-start space-y-2 sm:space-y-3">
+          <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Testimonials
           </h2>
-          <p className="max-w-4xl font-poppins text-base text-[#000000]/80 sm:text-lg lg:max-w-none">
+          <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#000000]/80 sm:text-lg lg:max-w-none">
             Hear what parents have to say about their children’s joyful learning journey at Ever Green Model School.
           </p>
         </div>

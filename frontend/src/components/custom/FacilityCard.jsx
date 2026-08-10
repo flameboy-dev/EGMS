@@ -46,19 +46,19 @@ function FacilityCard({
 
       {/* Right Side Illustration Image (210px x 192.68px) */}
       {image && (
-        <div className="pointer-events-none absolute right-0 bottom-0 sm:right-2 flex h-[192.68px] w-[210px] items-center justify-center">
+        <div className="pointer-events-none absolute right-0 bottom-0 sm:right-2 flex h-[130px] w-[140px] xs:h-[155px] xs:w-[170px] sm:h-[192.68px] sm:w-[210px] items-center justify-center">
           <ImageWithSkeleton
             src={image}
             alt={imageAlt || titleLines.join(' ')}
-            wrapperClassName="h-[192.68px] w-[210px] flex items-center justify-center"
-            className="max-h-[192.68px] max-w-[210px] w-auto h-auto object-contain"
+            wrapperClassName="h-full w-full flex items-center justify-center"
+            className="max-h-full max-w-full w-auto h-auto object-contain"
           />
         </div>
       )}
     </div>
   );
 
-  const containerClasses = `group relative flex h-[306px] w-full max-w-[600px] flex-col justify-between overflow-hidden rounded-[45px] border-2 border-[#191A23] p-8 md:p-10 shadow-[0_5px_0_0_#191A23] transition-all duration-300 hover:-translate-y-1 ${cardBg}`;
+  const containerClasses = `group relative flex h-[240px] xs:h-[265px] sm:h-[306px] w-full max-w-[600px] flex-col justify-between overflow-hidden rounded-[24px] sm:rounded-[45px] border-2 border-[#191A23] p-5 sm:p-8 md:p-10 shadow-[0_4px_0_0_#191A23] sm:shadow-[0_5px_0_0_#191A23] transition-all duration-300 hover:-translate-y-1 ${cardBg}`;
 
   if (linkTo) {
     return (

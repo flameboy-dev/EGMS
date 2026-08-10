@@ -67,7 +67,7 @@ function TestimonialSlider({ testimonials = [] }) {
   };
 
   return (
-    <div className="relative w-full rounded-[40px] md:rounded-[45px] bg-[#1E3F20] py-12 md:py-16 overflow-hidden shadow-xl border border-[#191A23]">
+    <div className="relative w-full rounded-[24px] sm:rounded-[40px] md:rounded-[45px] bg-[#1E3F20] py-8 sm:py-12 md:py-16 overflow-hidden shadow-xl border border-[#191A23]">
       {/* Sliding Track Window */}
       <div ref={containerRef} className="w-full overflow-hidden">
         <div
@@ -89,18 +89,18 @@ function TestimonialSlider({ testimonials = [] }) {
       </div>
 
       {/* Navigation Controls */}
-      <div className="mt-12 flex items-center justify-center space-x-6 sm:space-x-8">
+      <div className="mt-8 sm:mt-12 flex items-center justify-center space-x-6 sm:space-x-8">
         {/* Previous Button */}
         <button
           onClick={handlePrev}
           aria-label="Previous Testimonial"
           className="flex h-10 w-10 items-center justify-center text-white hover:text-[#B9FF66] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
         >
-          <ArrowLeft className="h-6 w-6 stroke-[2.5]" />
+          <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.5]" />
         </button>
 
         {/* 4-Pointed Star / Diamond Indicators */}
-        <div className="flex items-center space-x-3">
+        <div className="flex items-center space-x-2 sm:space-x-3">
           {testimonials.map((_, idx) => (
             <button
               key={idx}
@@ -109,7 +109,7 @@ function TestimonialSlider({ testimonials = [] }) {
               className="p-1 cursor-pointer transition-all duration-200 hover:scale-125 focus:outline-none"
             >
               <Sparkle
-                className={`h-4 w-4 sm:h-5 sm:w-5 transition-all duration-300 ${
+                className={`h-3 w-3 sm:h-5 sm:w-5 transition-all duration-300 ${
                   idx === activeRealIndex
                     ? 'fill-[#B9FF66] text-[#B9FF66] scale-110'
                     : 'fill-white text-white opacity-70 hover:opacity-100'
@@ -125,7 +125,7 @@ function TestimonialSlider({ testimonials = [] }) {
           aria-label="Next Testimonial"
           className="flex h-10 w-10 items-center justify-center text-white hover:text-[#B9FF66] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
         >
-          <ArrowRight className="h-6 w-6 stroke-[2.5]" />
+          <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.5]" />
         </button>
       </div>
     </div>

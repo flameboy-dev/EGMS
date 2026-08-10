@@ -3,20 +3,20 @@ import ContactForm from '@/components/custom/ContactForm';
 
 function Contact() {
   return (
-    <section className="w-full bg-white px-6 py-16 md:px-12 lg:px-16 lg:py-24">
+    <section className="w-full bg-white px-6 py-10 sm:py-16 md:px-12 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-[1240px]">
         {/* Section Header */}
-        <div className="mb-12 flex flex-col items-start space-y-3">
-          <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+        <div className="mb-8 sm:mb-12 flex flex-col items-start space-y-2 sm:space-y-3">
+          <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Contact Us
           </h2>
-          <p className="max-w-2xl font-poppins text-base text-[#000000]/80 sm:text-lg">
+          <p className="max-w-2xl font-poppins text-sm text-[#000000]/80 sm:text-lg">
             Let's Build Your Child's Bright Future Together
           </p>
         </div>
 
         {/* Main Card Container */}
-        <div className="w-full rounded-[40px] md:rounded-[45px] bg-[#F3F3F3] p-8 sm:p-10 md:p-14 shadow-sm border border-[#191A23]/10">
+        <div className="w-full rounded-[24px] sm:rounded-[40px] md:rounded-[45px] bg-[#F3F3F3] p-5 sm:p-10 md:p-14 shadow-sm border border-[#191A23]/10">
           <div className="grid grid-cols-1 gap-12 lg:grid-cols-12 lg:gap-16">
             {/* Left Column: Contact Info */}
             <div className="flex flex-col space-y-8 lg:col-span-5">

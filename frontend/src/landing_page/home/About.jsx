@@ -93,14 +93,14 @@ function About() {
   ];
 
   return (
-    <section className="w-full bg-white px-6 py-16 md:px-12 lg:px-16 lg:py-24">
+    <section className="w-full bg-white px-6 py-10 sm:py-16 md:px-12 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Top Header & Sub-badge */}
         <div className="mb-6 flex flex-col items-start space-y-2">
-          <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+          <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             About Us
           </h2>
-          <span className="font-poppins text-sm font-medium text-[#1E3F20]/80">
+          <span className="font-poppins text-xs sm:text-sm font-medium text-[#1E3F20]/80">
             🌱 About Ever Green Model School
           </span>
         </div>
@@ -131,12 +131,12 @@ function About() {
         </div>
 
         {/* School Authorities Section */}
-        <div className="mb-24">
-          <div className="mb-10 flex flex-col items-start space-y-3">
-            <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+        <div className="mb-20 sm:mb-24">
+          <div className="mb-8 sm:mb-10 flex flex-col items-start space-y-2 sm:space-y-3">
+            <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
               School Authorities
             </h2>
-            <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
+            <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
               Guiding Ever Green Model School towards educational excellence and holistic growth.
             </p>
           </div>
@@ -145,10 +145,10 @@ function About() {
             {authorities.map((person) => (
               <div
                 key={person.id}
-                className="flex w-full max-w-[300px] flex-col overflow-hidden rounded-[32px] border-2 border-[#191A23] bg-[#EBF1E5] shadow-[0_5px_0_0_#191A23]"
+                className="flex w-full max-w-[300px] flex-col overflow-hidden rounded-[24px] sm:rounded-[32px] border-2 border-[#191A23] bg-[#EBF1E5] shadow-[0_4px_0_0_#191A23] sm:shadow-[0_5px_0_0_#191A23]"
               >
                 {/* Portrait Image Frame */}
-                <div className="relative h-[320px] w-full border-b-2 border-[#191A23] bg-white">
+                <div className="relative h-[280px] sm:h-[320px] w-full border-b-2 border-[#191A23] bg-white">
                   <ImageWithSkeleton
                     src={person.image}
                     alt={person.name}
@@ -158,11 +158,11 @@ function About() {
                 </div>
 
                 {/* Profile Details */}
-                <div className="flex flex-col items-center p-6 text-center">
-                  <h3 className="font-fredoka text-2xl font-semibold text-[#000000]">
+                <div className="flex flex-col items-center p-5 sm:p-6 text-center">
+                  <h3 className="font-fredoka text-xl sm:text-2xl font-semibold text-[#000000]">
                     {person.name}
                   </h3>
-                  <p className="mt-1 font-poppins text-sm font-medium text-[#1E3F20]/80">
+                  <p className="mt-1 font-poppins text-xs sm:text-sm font-medium text-[#1E3F20]/80">
                     {person.role}
                   </p>
                 </div>
@@ -172,11 +172,11 @@ function About() {
         </div>
 
         {/* Why Choose Us Section Header */}
-        <div className="mb-10 flex flex-col items-start space-y-3">
-          <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+        <div className="mb-8 sm:mb-10 flex flex-col items-start space-y-2 sm:space-y-3">
+          <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Why Choose Us?
           </h2>
-          <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
+          <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
             We believe every child deserves the best start in life. Our learning environment is designed to help children feel safe, happy, and excited to learn every day.
           </p>
         </div>

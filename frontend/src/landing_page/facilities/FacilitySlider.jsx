@@ -60,14 +60,14 @@ function FacilitySlider({ title = "Facility Photo Gallery", subtitle, slides = [
 
         {/* Main Slider Container */}
         <div
-          className="relative w-full overflow-hidden rounded-[36px] border-2 border-[#191A23] bg-white shadow-[0_8px_0_0_#191A23] transition-all hover:shadow-[0_12px_0_0_#191A23]"
+          className="relative w-full overflow-hidden rounded-[20px] sm:rounded-[36px] border-2 border-[#191A23] bg-white shadow-[0_4px_0_0_#191A23] sm:shadow-[0_8px_0_0_#191A23] transition-all hover:shadow-[0_12px_0_0_#191A23]"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
         >
-          <div className="relative h-[300px] w-full sm:h-[400px] md:h-[480px] lg:h-[520px]">
+          <div className="relative h-[200px] xs:h-[240px] w-full sm:h-[400px] md:h-[480px] lg:h-[520px]">
             {slides.map((slide, idx) => {
               const imageSrc = typeof slide === 'string' ? slide : slide.src;
               const captionText = typeof slide === 'object' ? slide.caption : null;

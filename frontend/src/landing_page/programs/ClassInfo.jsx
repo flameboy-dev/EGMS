@@ -41,7 +41,7 @@ function ClassInfo({
             return (
               <div
                 key={idx}
-                className={`flex flex-col justify-center rounded-[32px] border-2 border-[#191A23] ${cardBg} p-6 sm:p-7 shadow-[0_5px_0_0_#191A23] min-h-[160px] sm:min-h-[180px] transition-all duration-200 hover:-translate-y-1`}
+                className={`flex flex-col justify-center rounded-[24px] sm:rounded-[32px] border-2 border-[#191A23] ${cardBg} p-5 sm:p-7 shadow-[0_5px_0_0_#191A23] min-h-[140px] sm:min-h-[180px] transition-all duration-200 hover:-translate-y-1`}
               >
                 <h3 className="font-fredoka text-xl font-semibold text-[#000000] sm:text-2xl leading-snug">
                   {card.title}

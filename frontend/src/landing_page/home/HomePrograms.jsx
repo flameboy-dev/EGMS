@@ -72,14 +72,14 @@ function HomePrograms({ isLoading = false }) {
   ];
 
   return (
-    <section className="w-full bg-[#F6FAEF] px-6 py-16 md:px-12 lg:px-16 lg:py-24">
+    <section className="w-full bg-[#F6FAEF] px-6 py-10 sm:py-16 md:px-12 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-7xl">
         {/* Section Header */}
-        <div className="mb-12 flex flex-col items-start space-y-3">
-          <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
+        <div className="mb-8 sm:mb-12 flex flex-col items-start space-y-2 sm:space-y-3">
+          <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
             Our Learning Programs
           </h2>
-          <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
+          <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
             Every program is thoughtfully designed to help children learn, explore, create, and grow with confidence.
           </p>
         </div>
