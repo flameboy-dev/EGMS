@@ -530,7 +530,16 @@ export default app;
 
 // Start Express Server
 if (!process.env.VERCEL) {
-  app.listen(port, () => {
+  const server = app.listen(port, () => {
     console.log(`🚀 EGMS Backend API Server running on port ${port}`);
+  });
+
+  server.on('error', (err) => {
+    if (err.code === 'EADDRINUSE') {
+      console.warn(`⚠️ Port ${port} is in use by another running process.`);
+      console.warn(`💡 Your backend API is already active on port ${port}.`);
+    } else {
+      console.error('Server error:', err);
+    }
   });
 }

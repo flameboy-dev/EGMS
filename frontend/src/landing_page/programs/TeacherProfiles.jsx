@@ -3,6 +3,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
 import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
 import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
+import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
 
 function TeacherProfiles({
   title = "MEET YOUR TEACHERS",
@@ -19,12 +20,12 @@ function TeacherProfiles({
       image: somaJanaGiriImg,
     },
     {
-      name: 'Suparna Jana',
-      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
+      name: 'Moumita Bera',
+      image: moumitaBeraImg,
     },
     {
-      name: 'Moumita Bera',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+      name: 'Suparna Jana',
+      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
     },
   ];
 

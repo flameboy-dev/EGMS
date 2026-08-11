@@ -13,15 +13,15 @@ import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
 // Import Illustrations
 import bannerImg from '@/assets/images/STD-III.png';
 import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
 import familyImg from '@/assets/images/Family.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import partnershipImg from '@/assets/images/Partnership.png';
 
 // Import Authority Images
-import goutamGiriImg from '@/assets/images/Goutam Giri.jpg';
-import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
+import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
+import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
 
 function About() {
   const authorities = [

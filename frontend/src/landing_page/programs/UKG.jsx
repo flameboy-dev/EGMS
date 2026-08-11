@@ -10,8 +10,8 @@ import TeacherProfiles from './TeacherProfiles';
 import ukgImg from '@/assets/images/U.K.G.png';
 
 import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import boardGamesImg from '@/assets/images/Board Games.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
@@ -21,6 +21,8 @@ import art1Img from '@/assets/images/Art1.jpg';
 import sports3Img from '@/assets/images/sports3.jpg';
 import annualFunc5Img from '@/assets/images/Annual_Function5.jpg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
+
+import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
 
 function UKG() {
   const ukgParagraphs = [
@@ -110,7 +112,7 @@ function UKG() {
     },
     {
       name: 'Moumita Bera',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+      image: moumitaBeraImg,
     },
     {
       name: 'Swapan Mondal',

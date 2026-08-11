@@ -10,8 +10,8 @@ import TeacherProfiles from './TeacherProfiles';
 import lkgImg from '@/assets/images/L.K.G.png';
 
 import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import boardGamesImg from '@/assets/images/Board Games.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
@@ -20,7 +20,8 @@ import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
 import sports5Img from '@/assets/images/sports5.jpg';
 import annualFunc13Img from '@/assets/images/Annual_Function13.jpg';
 import art1Img from '@/assets/images/Art1.jpg';
-import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
+import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
+import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function LKG() {
@@ -113,7 +114,7 @@ function LKG() {
     },
     {
       name: 'Moumita Bera',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+      image: moumitaBeraImg,
     },
     {
       name: 'Swapan Mondal',

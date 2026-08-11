@@ -11,8 +11,8 @@ import ProgramCard from '@/components/custom/ProgramCard';
 
 // Import Illustrations
 import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import boardGamesImg from '@/assets/images/Board Games.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';

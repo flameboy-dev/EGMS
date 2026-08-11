@@ -10,8 +10,8 @@ import TeacherProfiles from './TeacherProfiles';
 import std3Img from '@/assets/images/STD-III.png';
 
 import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import boardGamesImg from '@/assets/images/Board Games.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
@@ -20,8 +20,9 @@ import academicProg3Img from '@/assets/images/Academic_Programs3.jpg';
 import sports9Img from '@/assets/images/sports9.jpg';
 import annualFunc6Img from '@/assets/images/Annual_Function6.jpg';
 import talentExam1Img from '@/assets/images/TalentExamAwards1.jpg';
-import goutamGiriImg from '@/assets/images/Goutam Giri.jpg';
-import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
+import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
+import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
+import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDThree() {
@@ -123,7 +124,7 @@ function STDThree() {
     },
     {
       name: 'Moumita Bera',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+      image: moumitaBeraImg,
     },
     {
       name: 'Swapan Mondal',

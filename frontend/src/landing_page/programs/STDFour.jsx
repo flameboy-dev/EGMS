@@ -10,8 +10,8 @@ import TeacherProfiles from './TeacherProfiles';
 import std4Img from '@/assets/images/STD-IV.png';
 
 import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import boardGamesImg from '@/assets/images/Board Games.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
@@ -19,6 +19,7 @@ import academicProg7Img from '@/assets/images/Academic_Programs7.jpg';
 import sports8Img from '@/assets/images/sports8.jpg';
 import annualFunc17Img from '@/assets/images/Annual_Function17.jpg';
 import awards2Img from '@/assets/images/Awards2.jpg';
+import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDFour() {
@@ -108,7 +109,7 @@ function STDFour() {
   const std4Teachers = [
     {
       name: 'Moumita Bera',
-      image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+      image: moumitaBeraImg,
     },
     {
       name: 'Swapan Mondal',

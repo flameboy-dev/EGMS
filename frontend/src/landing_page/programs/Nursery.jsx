@@ -10,8 +10,8 @@ import TeacherProfiles from './TeacherProfiles';
 import nurseryImg from '@/assets/images/Nursery.png';
 
 import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import boardGamesImg from '@/assets/images/Board Games.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
@@ -20,7 +20,7 @@ import healthyEnv4Img from '@/assets/images/Healthy_Environment4.jpg';
 import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
 import sports6Img from '@/assets/images/sports6.jpg';
 import annualFunc14Img from '@/assets/images/Annual_Function14.jpg';
-import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
+import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function Nursery() {
