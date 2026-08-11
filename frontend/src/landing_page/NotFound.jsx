@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import notFoundImg from '../assets/images/404 Page.png';
+import notFoundImg from '../assets/images/404_Page.png';
 
 function NotFound() {
   return (

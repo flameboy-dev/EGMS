@@ -1,8 +1,8 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
-import goutamGiriImg from '@/assets/images/Goutam Giri.jpg';
-import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
+import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
+import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
 
 function TeacherProfiles({
   title = "MEET YOUR TEACHERS",

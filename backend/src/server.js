@@ -529,6 +529,8 @@ app.post('/api/facility-application', async (req, res) => {
 export default app;
 
 // Start Express Server
-app.listen(port, () => {
-  console.log(`🚀 EGMS Backend API Server running on port ${port}`);
-});
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`🚀 EGMS Backend API Server running on port ${port}`);
+  });
+}

@@ -3,11 +3,11 @@ import FacilityCard from '@/components/custom/FacilityCard';
 import { FacilityCardSkeleton } from '@/components/custom/CardSkeletons';
 
 // Import Facility Illustrations
-import smartClassImg from '@/assets/images/Smart Class.png';
+import smartClassImg from '@/assets/images/Smart_Class.png';
 import paintingImg from '@/assets/images/Painting.png';
-import schoolBusImg from '@/assets/images/School Bus.png';
+import schoolBusImg from '@/assets/images/School_Bus.png';
 import codingImg from '@/assets/images/Coding.png';
-import boardGamesImg from '@/assets/images/Board Games.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import familyImg from '@/assets/images/Family.png';
 
 function HomeFacilities({ isLoading = false }) {
