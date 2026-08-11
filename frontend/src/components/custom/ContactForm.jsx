@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronDown, CheckCircle2, AlertCircle, Loader2, Send, X } from 'lucide-react';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -20,6 +20,7 @@ function ContactForm() {
     verifying: false,
     verified: false,
     verificationToken: '',
+    challengeToken: '',
     error: '',
     successMsg: '',
   });
@@ -48,6 +49,7 @@ function ContactForm() {
         verifying: false,
         verified: false,
         verificationToken: '',
+        challengeToken: '',
         error: '',
         successMsg: '',
       });
@@ -83,6 +85,7 @@ function ContactForm() {
         ...prev,
         sending: false,
         sent: true,
+        challengeToken: resData.challengeToken || '',
         successMsg: `A 6-digit code has been sent to ${formData.email}.`,
       }));
     } catch (err) {
@@ -107,7 +110,11 @@ function ContactForm() {
       const response = await fetch(`${API_BASE_URL}/otp/verify`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email: formData.email.trim(), otp: otpState.code.trim() }),
+        body: JSON.stringify({
+          email: formData.email.trim(),
+          otp: otpState.code.trim(),
+          challengeToken: otpState.challengeToken,
+        }),
       });
 
       const resData = await response.json();

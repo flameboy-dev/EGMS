@@ -7,6 +7,7 @@ import rateLimit from 'express-rate-limit';
 import jwt from 'jsonwebtoken';
 import dotenv from 'dotenv';
 import path from 'path';
+import crypto from 'crypto';
 import { fileURLToPath } from 'url';
 
 dotenv.config();
@@ -102,6 +103,14 @@ app.post('/api/otp/send', otpLimiter, async (req, res) => {
 
     otpStore.set(email.toLowerCase(), { otp, expiresAt });
 
+    // Generate stateless challenge token for serverless compatibility
+    const otpHash = crypto.createHash('sha256').update(`${otp.trim()}:${email.toLowerCase()}:${JWT_SECRET}`).digest('hex');
+    const challengeToken = jwt.sign(
+      { email: email.toLowerCase(), otpHash },
+      JWT_SECRET,
+      { expiresIn: '5m' }
+    );
+
     const transporter = createTransporter();
 
     if (transporter) {
@@ -128,6 +137,7 @@ app.post('/api/otp/send', otpLimiter, async (req, res) => {
     return res.json({
       status: 'success',
       message: 'A 6-digit verification code has been sent to your email address.',
+      challengeToken,
     });
   } catch (error) {
     console.error('Error sending OTP:', error);
@@ -140,28 +150,42 @@ app.post('/api/otp/send', otpLimiter, async (req, res) => {
 // ----------------------------------------------------
 app.post('/api/otp/verify', (req, res) => {
   try {
-    const { email, otp } = req.body;
+    const { email, otp, challengeToken } = req.body;
     if (!email || !otp) {
       return res.status(400).json({ status: 'error', message: 'Email and OTP are required.' });
     }
 
-    const record = otpStore.get(email.toLowerCase());
-    if (!record) {
-      return res.status(400).json({ status: 'error', message: 'No verification code was sent to this email or it has expired.' });
+    let isValid = false;
+
+    // Method 1: Check stateless challengeToken (Vercel Serverless safe)
+    if (challengeToken) {
+      try {
+        const decoded = jwt.verify(challengeToken, JWT_SECRET);
+        if (decoded.email === email.toLowerCase()) {
+          const expectedHash = crypto.createHash('sha256').update(`${otp.trim()}:${email.toLowerCase()}:${JWT_SECRET}`).digest('hex');
+          if (decoded.otpHash === expectedHash) {
+            isValid = true;
+          }
+        }
+      } catch (err) {
+        // Token expired or invalid
+      }
     }
 
-    if (Date.now() > record.expiresAt) {
-      otpStore.delete(email.toLowerCase());
-      return res.status(400).json({ status: 'error', message: 'Verification code has expired. Please request a new code.' });
+    // Method 2: Check in-memory store fallback (Local Dev / Dedicated server)
+    if (!isValid) {
+      const record = otpStore.get(email.toLowerCase());
+      if (record && Date.now() <= record.expiresAt && record.otp === otp.trim()) {
+        isValid = true;
+        otpStore.delete(email.toLowerCase());
+      }
     }
 
-    if (record.otp !== otp.trim()) {
-      return res.status(400).json({ status: 'error', message: 'Invalid verification code. Please check and try again.' });
+    if (!isValid) {
+      return res.status(400).json({ status: 'error', message: 'Invalid or expired verification code. Please request a new code.' });
     }
 
-    // OTP is valid - clear it and generate a single-use JWT token
-    otpStore.delete(email.toLowerCase());
-
+    // OTP is valid - generate a single-use JWT token
     const verificationToken = jwt.sign(
       { email: email.toLowerCase(), verifiedAt: Date.now() },
       JWT_SECRET,
@@ -500,7 +524,12 @@ app.post('/api/facility-application', async (req, res) => {
   }
 });
 
-// Start Express Server
-app.listen(port, () => {
-  console.log(`🚀 EGMS Backend API Server running on http://localhost:${port}`);
-});
+// Export Express App for Vercel / Serverless Environments
+export default app;
+
+// Start Express Server locally if not running as a Vercel Serverless Function
+if (!process.env.VERCEL) {
+  app.listen(port, () => {
+    console.log(`🚀 EGMS Backend API Server running on http://localhost:${port}`);
+  });
+}
