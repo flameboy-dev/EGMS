@@ -9,6 +9,7 @@ import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
 import academicProg3Img from '@/assets/images/Academic_Programs3.jpg';
 import academicProg4Img from '@/assets/images/Academic_Programs4.jpg';
 import academicProg5Img from '@/assets/images/Academic_Programs5.jpg';
+import smartClassImg from '@/assets/images/Smart Class.png';
 import { Tv, Film, MessageCircle, Calculator, MonitorCheck, Zap, Sparkles } from 'lucide-react';
 
 function SmartClass() {

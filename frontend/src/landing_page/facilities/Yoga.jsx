@@ -9,6 +9,7 @@ import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
 import healthyEnv3Img from '@/assets/images/Healthy_Environment3.jpg';
 import healthyEnv5Img from '@/assets/images/Healthy_Environment5.jpg';
 import healthyEnv6Img from '@/assets/images/Healthy_Environment6.jpg';
+import familyImg from '@/assets/images/Family.png';
 import { Sun, Heart, Sparkles, Smile, ShieldCheck, Flame } from 'lucide-react';
 
 function Yoga() {

@@ -13,7 +13,7 @@ function FacilityHero({
   badgeText = 'Facility Overview',
 }) {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [title]);
 
   return (

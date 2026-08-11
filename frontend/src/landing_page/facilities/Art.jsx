@@ -9,6 +9,7 @@ import awards1Img from '@/assets/images/Awards1.jpg';
 import annualFunc15Img from '@/assets/images/Annual_Function15.jpg';
 import annualFunc11Img from '@/assets/images/Annual_Function11.jpg';
 import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
+import paintingImg from '@/assets/images/Painting.png';
 import { Palette, Calendar, Trophy, Award, Scissors, Sparkles, Layers } from 'lucide-react';
 
 function Art() {

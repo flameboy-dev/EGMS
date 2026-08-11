@@ -19,19 +19,23 @@ import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import partnershipImg from '@/assets/images/Partnership.png';
 
+// Import Authority Images
+import goutamGiriImg from '@/assets/images/Goutam Giri.jpg';
+import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
+
 function About() {
   const authorities = [
     {
       id: 'goutam-giri',
       name: 'Goutam Giri',
       role: 'School Authority',
-      image: teacherImg,
+      image: goutamGiriImg,
     },
     {
       id: 'soma-jana-giri',
       name: 'Soma Jana Giri',
       role: 'School Authority',
-      image: familyImg,
+      image: somaJanaGiriImg,
     },
     {
       id: 'pankaj-samanta',

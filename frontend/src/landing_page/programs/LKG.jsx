@@ -20,6 +20,7 @@ import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
 import sports5Img from '@/assets/images/sports5.jpg';
 import annualFunc13Img from '@/assets/images/Annual_Function13.jpg';
 import art1Img from '@/assets/images/Art1.jpg';
+import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function LKG() {
@@ -104,7 +105,7 @@ function LKG() {
   const lkgTeachers = [
     {
       name: 'Soma Jana Giri',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+      image: somaJanaGiriImg,
     },
     {
       name: 'Suparna Jana',

@@ -7,6 +7,7 @@ import FacilityApplicationModal from './FacilityApplicationModal';
 import transpotImg from '@/assets/images/Transpot.jpg';
 import transport2Img from '@/assets/images/Transport2.jpg';
 import healthyEnv1Img from '@/assets/images/Healthy_Environment1.jpg';
+import schoolBusImg from '@/assets/images/School Bus.png';
 import { Car, ShieldCheck, Flag, MapPin, Clock, UserCheck, Sparkles } from 'lucide-react';
 
 function Transport() {

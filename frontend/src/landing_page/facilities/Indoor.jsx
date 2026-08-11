@@ -9,6 +9,7 @@ import sports1Img from '@/assets/images/sports1.jpg';
 import sports5Img from '@/assets/images/sports5.jpg';
 import sports6Img from '@/assets/images/sports6.jpg';
 import healthyEnv3Img from '@/assets/images/Healthy_Environment3.jpg';
+import boardGamesImg from '@/assets/images/Board Games.png';
 import { Gamepad2, Puzzle, Sparkles, Smile, Sun, Trophy } from 'lucide-react';
 
 function Indoor() {

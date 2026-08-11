@@ -8,6 +8,7 @@ import academicProgImg from '@/assets/images/Academic_Programs.jpg';
 import academicProg2Img from '@/assets/images/Academic_Programs2.jpg';
 import academicProg6Img from '@/assets/images/Academic_Programs6.jpg';
 import academicProg7Img from '@/assets/images/Academic_Programs7.jpg';
+import codingImg from '@/assets/images/Coding.png';
 import { Monitor, Keyboard, FileText, Terminal, Palette, Grid, Presentation, Sparkles } from 'lucide-react';
 
 function Computer() {

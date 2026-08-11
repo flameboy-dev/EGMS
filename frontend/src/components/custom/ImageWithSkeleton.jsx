@@ -34,6 +34,7 @@ function ImageWithSkeleton({
         loading={loading}
         decoding={decoding}
         onLoad={() => setIsLoaded(true)}
+        onError={() => setIsLoaded(true)}
         className={`transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         } ${className}`}

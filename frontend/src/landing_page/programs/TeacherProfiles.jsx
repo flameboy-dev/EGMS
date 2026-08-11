@@ -1,6 +1,8 @@
 import React, { useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
+import goutamGiriImg from '@/assets/images/Goutam Giri.jpg';
+import somaJanaGiriImg from '@/assets/images/Soma Jana Giri.jpeg';
 
 function TeacherProfiles({
   title = "MEET YOUR TEACHERS",
@@ -10,11 +12,11 @@ function TeacherProfiles({
   const defaultTeachers = [
     {
       name: 'Goutam Giri',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400',
+      image: goutamGiriImg,
     },
     {
       name: 'Soma Jana Giri',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
+      image: somaJanaGiriImg,
     },
     {
       name: 'Suparna Jana',
