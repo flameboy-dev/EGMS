@@ -16,6 +16,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const app = express();
+app.set('trust proxy', 1);
 const port = process.env.PORT || 5000;
 const JWT_SECRET = process.env.OTP_JWT_SECRET || 'egms_fallback_secret_key_2026';
 const SCHOOL_EMAIL = process.env.NOTIFICATION_EMAIL || 'evergreenmodelschool58@gmail.com';
