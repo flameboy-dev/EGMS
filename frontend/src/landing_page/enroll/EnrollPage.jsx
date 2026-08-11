@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
@@ -340,12 +341,12 @@ function EnrollPage() {
               Our admissions desk will review the uploaded documents and contact you on <strong className="text-[#000000]">{formData.mobileNumber}</strong> within 24-48 hours.
             </p>
 
-            <a
-              href="/"
+            <Link
+              to="/"
               className="mt-8 inline-flex items-center justify-center rounded-2xl border-2 border-[#191A23] bg-[#1E3F20] px-8 py-3.5 font-fredoka text-base font-medium text-white shadow-[0_4px_0_0_#191A23] transition-all hover:-translate-y-1 hover:bg-[#344E41]"
             >
               Return to Homepage
-            </a>
+            </Link>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col space-y-8">

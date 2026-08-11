@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import FacilityHero from './FacilityHero';
@@ -168,12 +169,12 @@ function SmartClass() {
                 Discover how our visual animations, Smart TV modules, and interactive sessions inspire a lifelong passion for learning.
               </p>
             </div>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="mt-6 inline-flex shrink-0 items-center justify-center rounded-2xl border-2 border-[#191A23] bg-[#B9FF66] px-8 py-4 font-fredoka text-base font-medium text-[#000000] shadow-[0_4px_0_0_#191A23] transition-all hover:-translate-y-1 md:mt-0"
             >
               Book a Campus Visit
-            </a>
+            </Link>
           </div>
         </section>
       </div>

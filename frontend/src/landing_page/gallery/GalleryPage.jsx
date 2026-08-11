@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import GalleryLightboxModal from './GalleryLightboxModal';
@@ -259,13 +260,13 @@ function GalleryPage() {
                 Schedule a campus tour to see our Smart Classrooms, Computer Lab, Art Studio, and Play Zone live!
               </p>
             </div>
-            <a
-              href="/contact"
+            <Link
+              to="/contact"
               className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#B9FF66] px-7 py-3.5 font-fredoka text-base font-medium text-[#000000] shadow-sm transition-all hover:bg-white md:mt-0"
             >
               <span>Schedule a Campus Tour</span>
               <ArrowRight className="h-4 w-4" />
-            </a>
+            </Link>
           </div>
         </section>
       </div>
