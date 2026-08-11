@@ -524,12 +524,10 @@ app.post('/api/facility-application', async (req, res) => {
   }
 });
 
-// Export Express App for Vercel / Serverless Environments
+// Export Express App
 export default app;
 
-// Start Express Server locally if not running as a Vercel Serverless Function
-if (!process.env.VERCEL) {
-  app.listen(port, () => {
-    console.log(`🚀 EGMS Backend API Server running on http://localhost:${port}`);
-  });
-}
+// Start Express Server
+app.listen(port, () => {
+  console.log(`🚀 EGMS Backend API Server running on port ${port}`);
+});
