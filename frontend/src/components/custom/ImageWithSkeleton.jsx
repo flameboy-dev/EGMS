@@ -7,17 +7,12 @@ function ImageWithSkeleton({
   className = '',
   wrapperClassName = '',
   skeletonClassName = 'rounded-2xl bg-gray-300/60 dark:bg-gray-700/60',
+  loading = 'lazy',
+  decoding = 'async',
   ...props
 }) {
   const imgRef = useRef(null);
-  const [isLoaded, setIsLoaded] = useState(() => {
-    if (typeof window !== 'undefined' && src) {
-      const img = new Image();
-      img.src = src;
-      return img.complete;
-    }
-    return false;
-  });
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     if (imgRef.current && imgRef.current.complete) {
@@ -36,8 +31,10 @@ function ImageWithSkeleton({
         ref={imgRef}
         src={src}
         alt={alt}
+        loading={loading}
+        decoding={decoding}
         onLoad={() => setIsLoaded(true)}
-        className={`transition-opacity duration-200 ${
+        className={`transition-opacity duration-300 ${
           isLoaded ? 'opacity-100' : 'opacity-0'
         } ${className}`}
         {...props}
