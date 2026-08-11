@@ -352,7 +352,7 @@ function FacilityApplicationModal({
                     value={formData.email}
                     onChange={handleChange}
                     placeholder="parent@gmail.com"
-                    className={`h-10 sm:h-11 flex-1 rounded-xl border-2 border-[#191A23] bg-[#F6FAEF] px-3.5 text-xs sm:text-sm text-[#000000] focus:border-[#1E3F20] focus:bg-white focus:outline-none transition-all placeholder:text-gray-400 ${
+                    className={`h-10 sm:h-11 flex-1 min-w-0 rounded-xl border-2 border-[#191A23] bg-[#F6FAEF] px-3 sm:px-3.5 text-xs sm:text-sm text-[#000000] focus:border-[#1E3F20] focus:bg-white focus:outline-none transition-all placeholder:text-gray-400 ${
                       otpState.verified ? 'bg-[#EBF1E5] font-semibold text-[#1E3F20]' : ''
                     }`}
                   />
@@ -361,7 +361,7 @@ function FacilityApplicationModal({
                       type="button"
                       onClick={handleSendOtp}
                       disabled={otpState.sending || !formData.email}
-                      className="h-10 sm:h-11 shrink-0 rounded-xl border-2 border-[#191A23] bg-[#1E3F20] px-3.5 font-fredoka text-xs font-medium text-white shadow-[0_2px_0_0_#191A23] transition-all hover:bg-[#344E41] disabled:opacity-50 cursor-pointer flex items-center gap-1.5"
+                      className="h-10 sm:h-11 shrink-0 whitespace-nowrap rounded-xl border-2 border-[#191A23] bg-[#1E3F20] px-2.5 sm:px-3.5 font-fredoka text-xs font-medium text-white shadow-[0_2px_0_0_#191A23] transition-all hover:bg-[#344E41] disabled:opacity-50 cursor-pointer flex items-center gap-1 sm:gap-1.5"
                     >
                       {otpState.sending ? (
                         <>
@@ -377,7 +377,7 @@ function FacilityApplicationModal({
                     <button
                       type="button"
                       onClick={() => setOtpState((prev) => ({ ...prev, verified: false, sent: false }))}
-                      className="h-10 sm:h-11 px-3 rounded-xl border-2 border-[#191A23] bg-[#ECF39E] text-xs font-semibold text-[#191A23] hover:bg-[#FFD6D6]"
+                      className="h-10 sm:h-11 px-3 shrink-0 whitespace-nowrap rounded-xl border-2 border-[#191A23] bg-[#ECF39E] text-xs font-semibold text-[#191A23] hover:bg-[#FFD6D6]"
                     >
                       Change
                     </button>

@@ -559,7 +559,7 @@ function EnrollPage() {
                       placeholder="e.g. parent@gmail.com"
                       value={formData.email}
                       onChange={handleInputChange}
-                      className={`h-11 sm:h-12 flex-1 rounded-xl border-2 border-[#191A23] bg-[#F6FAEF] px-3.5 sm:px-4 font-poppins text-xs sm:text-sm text-[#000000] outline-none transition-all focus:border-[#1E3F20] focus:bg-white ${
+                      className={`h-11 sm:h-12 flex-1 min-w-0 rounded-xl border-2 border-[#191A23] bg-[#F6FAEF] px-3 sm:px-4 font-poppins text-xs sm:text-sm text-[#000000] outline-none transition-all focus:border-[#1E3F20] focus:bg-white ${
                         otpState.verified ? 'bg-[#EBF1E5] font-semibold text-[#1E3F20]' : ''
                       }`}
                     />
@@ -569,7 +569,7 @@ function EnrollPage() {
                         type="button"
                         onClick={handleSendOtp}
                         disabled={otpState.sending || !formData.email}
-                        className="h-11 sm:h-12 shrink-0 rounded-xl border-2 border-[#191A23] bg-[#1E3F20] px-3 sm:px-4 font-fredoka text-xs sm:text-sm font-medium text-white shadow-[0_3px_0_0_#191A23] transition-all hover:bg-[#344E41] disabled:opacity-50 cursor-pointer flex items-center gap-1.5"
+                        className="h-11 sm:h-12 shrink-0 whitespace-nowrap rounded-xl border-2 border-[#191A23] bg-[#1E3F20] px-2.5 sm:px-4 font-fredoka text-xs sm:text-sm font-medium text-white shadow-[0_3px_0_0_#191A23] transition-all hover:bg-[#344E41] disabled:opacity-50 cursor-pointer flex items-center gap-1 sm:gap-1.5"
                       >
                         {otpState.sending ? (
                           <>
@@ -585,7 +585,7 @@ function EnrollPage() {
                       <button
                         type="button"
                         onClick={() => setOtpState((prev) => ({ ...prev, verified: false, sent: false }))}
-                        className="h-11 sm:h-12 px-3 rounded-xl border-2 border-[#191A23] bg-[#ECF39E] text-xs font-poppins font-semibold text-[#191A23] hover:bg-[#FFD6D6]"
+                        className="h-11 sm:h-12 px-3 shrink-0 whitespace-nowrap rounded-xl border-2 border-[#191A23] bg-[#ECF39E] text-xs font-poppins font-semibold text-[#191A23] hover:bg-[#FFD6D6]"
                         title="Change Email"
                       >
                         Change

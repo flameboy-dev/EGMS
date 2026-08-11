@@ -277,7 +277,7 @@ function ContactForm() {
             placeholder="e.g. parent@gmail.com"
             value={formData.email}
             onChange={handleChange}
-            className={`h-[52px] flex-1 rounded-[14px] border border-[#191A23] bg-white px-4 py-3 font-poppins text-sm text-[#000000] outline-none transition-all focus:border-[#1E3F20] md:text-base ${
+            className={`h-[52px] flex-1 min-w-0 rounded-[14px] border border-[#191A23] bg-white px-3 sm:px-4 py-3 font-poppins text-xs sm:text-sm text-[#000000] outline-none transition-all focus:border-[#1E3F20] md:text-base ${
               otpState.verified ? 'bg-[#EBF1E5] font-semibold text-[#1E3F20]' : ''
             }`}
           />
@@ -286,7 +286,7 @@ function ContactForm() {
               type="button"
               onClick={handleSendOtp}
               disabled={otpState.sending || !formData.email}
-              className="h-[52px] shrink-0 rounded-[14px] border border-[#191A23] bg-[#1E3F20] px-4 font-fredoka text-xs sm:text-sm font-medium text-white shadow-sm transition-all hover:bg-[#344E41] disabled:opacity-50 cursor-pointer flex items-center gap-1.5"
+              className="h-[52px] shrink-0 whitespace-nowrap rounded-[14px] border border-[#191A23] bg-[#1E3F20] px-3 sm:px-4 font-fredoka text-xs sm:text-sm font-medium text-white shadow-sm transition-all hover:bg-[#344E41] disabled:opacity-50 cursor-pointer flex items-center gap-1.5"
             >
               {otpState.sending ? (
                 <>
@@ -302,7 +302,7 @@ function ContactForm() {
             <button
               type="button"
               onClick={() => setOtpState((prev) => ({ ...prev, verified: false, sent: false }))}
-              className="h-[52px] px-3 rounded-[14px] border border-[#191A23] bg-[#ECF39E] text-xs font-poppins font-semibold text-[#191A23] hover:bg-[#FFD6D6]"
+              className="h-[52px] px-3 shrink-0 whitespace-nowrap rounded-[14px] border border-[#191A23] bg-[#ECF39E] text-xs font-poppins font-semibold text-[#191A23] hover:bg-[#FFD6D6]"
               title="Change Email"
             >
               Change
