@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap Location
+Sitemap: https://egms-website.vercel.app/sitemap.xml
