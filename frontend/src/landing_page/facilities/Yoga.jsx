@@ -4,9 +4,11 @@ import Footer from '../Footer';
 import FacilityHero from './FacilityHero';
 import FacilitySlider from './FacilitySlider';
 import FacilityApplicationModal from './FacilityApplicationModal';
-import familyImg from '@/assets/images/Family.png';
-import nurseryProgImg from '@/assets/images/NurseryPrograms.png';
-import heroImg from '@/assets/images/HeroImage.png';
+import healthyEnv1Img from '@/assets/images/Healthy_Environment1.jpg';
+import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
+import healthyEnv3Img from '@/assets/images/Healthy_Environment3.jpg';
+import healthyEnv5Img from '@/assets/images/Healthy_Environment5.jpg';
+import healthyEnv6Img from '@/assets/images/Healthy_Environment6.jpg';
 import { Sun, Heart, Sparkles, Smile, ShieldCheck, Flame } from 'lucide-react';
 
 function Yoga() {
@@ -23,19 +25,29 @@ function Yoga() {
 
   const yogaPhotos = [
     {
-      src: familyImg,
-      caption: 'Sunday Morning Yoga & Meditation Sessions',
+      src: healthyEnv3Img,
+      caption: 'Open Air Morning Assembly & Student Physical Exercises',
+      tag: 'Morning Fitness',
+    },
+    {
+      src: healthyEnv1Img,
+      caption: 'Serene Green Campus Lawn for Outdoor Pranayama',
+      tag: 'Green Campus',
+    },
+    {
+      src: healthyEnv2Img,
+      caption: 'Mindfulness & Physical Balance Assembly',
       tag: 'Mindfulness',
     },
     {
-      src: heroImg,
-      caption: 'Pranayama Breathing & Mental Focus Exercises',
-      tag: 'Breath Control',
+      src: healthyEnv6Img,
+      caption: 'Spacious Fresh Air Environment for Physical Balance',
+      tag: 'Holistic Health',
     },
     {
-      src: nurseryProgImg,
-      caption: 'Child-Friendly Asanas for Flexibility & Posture',
-      tag: 'Flexibility & Health',
+      src: healthyEnv5Img,
+      caption: 'Pranayama Breathing & Mental Focus Exercises',
+      tag: 'Breath Control',
     },
   ];
 

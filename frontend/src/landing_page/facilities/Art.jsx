@@ -4,10 +4,11 @@ import Footer from '../Footer';
 import FacilityHero from './FacilityHero';
 import FacilitySlider from './FacilitySlider';
 import FacilityApplicationModal from './FacilityApplicationModal';
-import paintingImg from '@/assets/images/Painting.png';
-import nurseryProgImg from '@/assets/images/NurseryPrograms.png';
-import lkgProgImg from '@/assets/images/LKGPrograms.png';
-import ukgProgImg from '@/assets/images/UKGPrograms.png';
+import art1Img from '@/assets/images/Art1.jpg';
+import awards1Img from '@/assets/images/Awards1.jpg';
+import annualFunc15Img from '@/assets/images/Annual_Function15.jpg';
+import annualFunc11Img from '@/assets/images/Annual_Function11.jpg';
+import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
 import { Palette, Calendar, Trophy, Award, Scissors, Sparkles, Layers } from 'lucide-react';
 
 function Art() {
@@ -24,24 +25,29 @@ function Art() {
 
   const artPhotos = [
     {
-      src: paintingImg,
-      caption: 'Pastel Drawing & Fine Art Workshop',
-      tag: 'Pastel Art',
+      src: art1Img,
+      caption: 'Sunday Academic Drawing School Studio & Exam Practice',
+      tag: 'Academic Art',
     },
     {
-      src: nurseryProgImg,
-      caption: 'Finger Painting & Color Exploration for Little Ones',
-      tag: 'Pre-Primary Art',
+      src: annualFunc11Img,
+      caption: 'Annual Cultural Festival Traditional Costume & Stage Art',
+      tag: 'Festive Art',
     },
     {
-      src: ukgProgImg,
-      caption: 'Paper Crafting, Origami & 3D Artwork',
-      tag: 'Paper Craft',
+      src: awards1Img,
+      caption: 'Annual Art Competition Award Presentation & Trophies',
+      tag: 'Art Awards',
     },
     {
-      src: lkgProgImg,
-      caption: 'Annual Drawing Exhibition & Award Ceremony Showcase',
+      src: annualFunc15Img,
+      caption: 'Exhibition Stage Felicitation & Student Recognition',
       tag: 'Annual Exhibition',
+    },
+    {
+      src: academicProg1Img,
+      caption: 'Creative Crafting & Classroom Art Workshops',
+      tag: 'Creative Craft',
     },
   ];
 

@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
 
-// Existing Images for Gallery
-import nurseryProgImg from '@/assets/images/NurseryPrograms.png';
-import lkgProgImg from '@/assets/images/LKGPrograms.png';
-import ukgProgImg from '@/assets/images/UKGPrograms.png';
-import heroImg from '@/assets/images/HeroImage.png';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import paintingImg from '@/assets/images/Painting.png';
+import academicProgImg from '@/assets/images/Academic_Programs.jpg';
+import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
+import sports1Img from '@/assets/images/sports1.jpg';
+import annualFunc1Img from '@/assets/images/Annual_Function1.jpg';
+import puja1Img from '@/assets/images/swaraswatipuja1.jpg';
+import awards1Img from '@/assets/images/Awards1.jpg';
+import healthyEnv1Img from '@/assets/images/Healthy_Environment1.jpg';
 
 function ProgramGallery({
   title = "Gallery",
@@ -16,12 +16,13 @@ function ProgramGallery({
   images = [],
 }) {
   const defaultImages = [
-    { src: nurseryProgImg, caption: 'Classroom Activities & Learning' },
-    { src: lkgProgImg, caption: 'Interactive Group Discussions & Games' },
-    { src: ukgProgImg, caption: 'Creative Workshops & Storytelling' },
-    { src: heroImg, caption: 'Campus Life & Everyday Explorations' },
-    { src: smartClassImg, caption: 'Smart Classroom & Technology Learning' },
-    { src: paintingImg, caption: 'Art & Expressive Craft Sessions' },
+    { src: academicProgImg, caption: 'Classroom Learning & Interactive Academic Sessions' },
+    { src: sports1Img, caption: 'Annual Sports Day March Past & Athletic Track Events' },
+    { src: annualFunc1Img, caption: 'Annual Cultural Day Stage Performances & Dances' },
+    { src: puja1Img, caption: 'Saraswati Puja Celebrations & Traditional Festivities' },
+    { src: academicProg1Img, caption: 'Phonics, Reading & Early Language Practice' },
+    { src: awards1Img, caption: 'Student Academic Merit & Excellence Award Ceremony' },
+    { src: healthyEnv1Img, caption: 'Green Campus Gardens & Outdoor Learning Play' },
   ];
 
   const slides = images && images.length > 0 ? images : defaultImages;

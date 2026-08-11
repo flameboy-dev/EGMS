@@ -4,10 +4,11 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import FacilityHero from './FacilityHero';
 import FacilitySlider from './FacilitySlider';
-import smartClassImg from '@/assets/images/Smart Class.png';
-import nurseryProgImg from '@/assets/images/NurseryPrograms.png';
-import lkgProgImg from '@/assets/images/LKGPrograms.png';
-import ukgProgImg from '@/assets/images/UKGPrograms.png';
+import academicProgImg from '@/assets/images/Academic_Programs.jpg';
+import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
+import academicProg3Img from '@/assets/images/Academic_Programs3.jpg';
+import academicProg4Img from '@/assets/images/Academic_Programs4.jpg';
+import academicProg5Img from '@/assets/images/Academic_Programs5.jpg';
 import { Tv, Film, MessageCircle, Calculator, MonitorCheck, Zap, Sparkles } from 'lucide-react';
 
 function SmartClass() {
@@ -22,24 +23,29 @@ function SmartClass() {
 
   const smartClassPhotos = [
     {
-      src: smartClassImg,
+      src: academicProgImg,
       caption: 'Digital Animation & Visual Concept Demonstration',
       tag: 'Smart Screen',
     },
     {
-      src: ukgProgImg,
-      caption: 'Interactive Spoken English Online Class Sessions',
+      src: academicProg1Img,
+      caption: 'Interactive Classroom Visual Phonics Session',
+      tag: 'Phonics & Reading',
+    },
+    {
+      src: academicProg5Img,
+      caption: 'Digital Geography & Interactive Map Learning',
+      tag: 'Interactive Maps',
+    },
+    {
+      src: academicProg3Img,
+      caption: 'Teacher Guided Audio-Visual Concept Explanation',
+      tag: 'Visual Teaching',
+    },
+    {
+      src: academicProg4Img,
+      caption: 'Interactive Spoken English Online Class Modules',
       tag: 'Spoken English',
-    },
-    {
-      src: lkgProgImg,
-      caption: 'Quick Math Problem Solving & Mental Calculation',
-      tag: 'Math Tricks',
-    },
-    {
-      src: nurseryProgImg,
-      caption: 'Audio-Visual Phonics & Animated Rhymes',
-      tag: 'Phonics & Rhymes',
     },
   ];
 

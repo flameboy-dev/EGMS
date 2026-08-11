@@ -15,6 +15,11 @@ import boardGamesImg from '@/assets/images/Board Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
+import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
+import healthyEnv4Img from '@/assets/images/Healthy_Environment4.jpg';
+import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
+import sports6Img from '@/assets/images/sports6.jpg';
+import annualFunc14Img from '@/assets/images/Annual_Function14.jpg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function Nursery() {
@@ -118,6 +123,14 @@ function Nursery() {
     },
   ];
 
+  const nurseryGalleryPhotos = [
+    { src: academicProg1Img, caption: 'Nursery Early Phonics & Rhymes Class' },
+    { src: healthyEnv4Img, caption: 'Garden Exploring & Outdoor Activity' },
+    { src: sports6Img, caption: 'Junior Fun Games & Spoon Marble Race' },
+    { src: annualFunc14Img, caption: 'Nursery Group Dance in Festive Costumes' },
+    { src: healthyEnv2Img, caption: 'Playgroup Storytelling & Clean Learning Space' },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
@@ -148,6 +161,7 @@ function Nursery() {
         />
         <ProgramGallery
           subtitle="A glimpse into the joyful moments, activities, and learning experiences of our Nursery students."
+          images={nurseryGalleryPhotos}
         />
         <TeacherProfiles teachers={nurseryTeachers} />
       </div>

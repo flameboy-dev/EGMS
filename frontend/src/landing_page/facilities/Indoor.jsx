@@ -4,9 +4,11 @@ import Footer from '../Footer';
 import FacilityHero from './FacilityHero';
 import FacilitySlider from './FacilitySlider';
 import FacilityApplicationModal from './FacilityApplicationModal';
-import boardGamesImg from '@/assets/images/Board Games.png';
-import familyImg from '@/assets/images/Family.png';
-import nurseryProgImg from '@/assets/images/NurseryPrograms.png';
+import indoorGamesImg from '@/assets/images/Indoor_gmaes.jpg';
+import sports1Img from '@/assets/images/sports1.jpg';
+import sports5Img from '@/assets/images/sports5.jpg';
+import sports6Img from '@/assets/images/sports6.jpg';
+import healthyEnv3Img from '@/assets/images/Healthy_Environment3.jpg';
 import { Gamepad2, Puzzle, Sparkles, Smile, Sun, Trophy } from 'lucide-react';
 
 function Indoor() {
@@ -23,19 +25,29 @@ function Indoor() {
 
   const indoorPhotos = [
     {
-      src: boardGamesImg,
-      caption: 'Puzzle Boxes, Chess & Mind Strategy Games',
+      src: indoorGamesImg,
+      caption: 'Indoor Games, Chess & Brain Strategy Session',
+      tag: 'Indoor Games',
+    },
+    {
+      src: sports6Img,
+      caption: 'Junior Brain Puzzles & Interactive Games',
       tag: 'Cognitive Play',
     },
     {
-      src: familyImg,
-      caption: 'Sunday Special Yoga & Meditation Practice',
-      tag: 'Sunday Yoga',
+      src: sports1Img,
+      caption: 'Annual Sports & Physical Fitness Drill Showcase',
+      tag: 'Physical Fitness',
     },
     {
-      src: nurseryProgImg,
-      caption: 'Indoor Slide Down Play Station & Fun Zone',
-      tag: 'Indoor Slides',
+      src: sports5Img,
+      caption: 'Fun Obstacle Course & Indoor Balance Play',
+      tag: 'Balance & Motor',
+    },
+    {
+      src: healthyEnv3Img,
+      caption: 'Sunday Special Yoga & Outdoor Mindfulness',
+      tag: 'Sunday Yoga',
     },
   ];
 

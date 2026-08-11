@@ -15,6 +15,11 @@ import boardGamesImg from '@/assets/images/Board Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
+import academicProg2Img from '@/assets/images/Academic_Programs2.jpg';
+import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
+import art1Img from '@/assets/images/Art1.jpg';
+import sports3Img from '@/assets/images/sports3.jpg';
+import annualFunc5Img from '@/assets/images/Annual_Function5.jpg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function UKG() {
@@ -121,6 +126,14 @@ function UKG() {
     },
   ];
 
+  const ukgGalleryPhotos = [
+    { src: academicProg2Img, caption: 'UKG Dual Math & Abacus Practice Class' },
+    { src: art1Img, caption: 'Creative Art & Sunday Drawing School Session' },
+    { src: sports3Img, caption: 'Relay Race & Outdoor Sports Readiness' },
+    { src: annualFunc5Img, caption: 'UKG Costume Drama & Stage Performance' },
+    { src: academicProg1Img, caption: 'Paper Folding & Phonics Workshop Showcase' },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
@@ -151,6 +164,7 @@ function UKG() {
         />
         <ProgramGallery
           subtitle="A glimpse into the joyful moments, activities, and learning experiences of our U.K.G. students."
+          images={ukgGalleryPhotos}
         />
         <TeacherProfiles teachers={ukgTeachers} />
       </div>

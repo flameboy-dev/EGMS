@@ -15,6 +15,11 @@ import boardGamesImg from '@/assets/images/Board Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
+import academicProgImg from '@/assets/images/Academic_Programs.jpg';
+import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
+import sports5Img from '@/assets/images/sports5.jpg';
+import annualFunc13Img from '@/assets/images/Annual_Function13.jpg';
+import art1Img from '@/assets/images/Art1.jpg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function LKG() {
@@ -123,6 +128,14 @@ function LKG() {
     },
   ];
 
+  const lkgGalleryPhotos = [
+    { src: academicProgImg, caption: 'LKG Early Vocabulary & Interactive Reading Session' },
+    { src: healthyEnv2Img, caption: 'Clean Classroom Learning & Activity Environment' },
+    { src: sports5Img, caption: 'Junior Obstacle Play & Balance Training' },
+    { src: annualFunc13Img, caption: 'LKG Student Rhyme Recitation & Stage Performance' },
+    { src: art1Img, caption: 'Word Book Practice & Creative Workshop' },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
@@ -153,6 +166,7 @@ function LKG() {
         />
         <ProgramGallery
           subtitle="A glimpse into the joyful moments, activities, and learning experiences of our L.K.G. students."
+          images={lkgGalleryPhotos}
         />
         <TeacherProfiles teachers={lkgTeachers} />
       </div>

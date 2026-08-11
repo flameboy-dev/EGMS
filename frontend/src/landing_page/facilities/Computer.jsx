@@ -4,9 +4,10 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import FacilityHero from './FacilityHero';
 import FacilitySlider from './FacilitySlider';
-import codingImg from '@/assets/images/Coding.png';
-import nurseryProgImg from '@/assets/images/NurseryPrograms.png';
-import ukgProgImg from '@/assets/images/UKGPrograms.png';
+import academicProgImg from '@/assets/images/Academic_Programs.jpg';
+import academicProg2Img from '@/assets/images/Academic_Programs2.jpg';
+import academicProg6Img from '@/assets/images/Academic_Programs6.jpg';
+import academicProg7Img from '@/assets/images/Academic_Programs7.jpg';
 import { Monitor, Keyboard, FileText, Terminal, Palette, Grid, Presentation, Sparkles } from 'lucide-react';
 
 function Computer() {
@@ -21,19 +22,24 @@ function Computer() {
 
   const computerPhotos = [
     {
-      src: codingImg,
+      src: academicProg6Img,
       caption: 'Computer Fundamentals & Hardware Exploration',
       tag: 'Hardware Basics',
     },
     {
-      src: ukgProgImg,
-      caption: 'Hands-on Software Practice: MS Paint, Word & Excel',
+      src: academicProg2Img,
+      caption: 'Practical Computer Lab Session & Software Practice',
       tag: 'Software Lab',
     },
     {
-      src: nurseryProgImg,
-      caption: 'Introductory Command Prompt (CMD) & Keyboard Typing',
-      tag: 'CMD & Typing',
+      src: academicProg7Img,
+      caption: 'Interactive Abacus & Computer Logic Training',
+      tag: 'Logic & Computation',
+    },
+    {
+      src: academicProgImg,
+      caption: 'Hands-on Software Practice: MS Paint, Word & Excel',
+      tag: 'MS Office Basics',
     },
   ];
 

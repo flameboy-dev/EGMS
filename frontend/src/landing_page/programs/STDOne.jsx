@@ -15,6 +15,11 @@ import boardGamesImg from '@/assets/images/Board Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
+import academicProg3Img from '@/assets/images/Academic_Programs3.jpg';
+import academicProg4Img from '@/assets/images/Academic_Programs4.jpg';
+import sports2Img from '@/assets/images/sports2.jpg';
+import annualFunc4Img from '@/assets/images/Annual_Function4.jpg';
+import puja2Img from '@/assets/images/swaraswatipuja2.jpg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDOne() {
@@ -119,6 +124,14 @@ function STDOne() {
     },
   ];
 
+  const std1GalleryPhotos = [
+    { src: academicProg4Img, caption: 'STD I Interactive Reading & Language Arts Practice' },
+    { src: academicProg3Img, caption: 'Science Lab & Environmental Study Projects' },
+    { src: sports2Img, caption: 'Annual Sports Sprint & Athletic Track Events' },
+    { src: annualFunc4Img, caption: 'STD I Choir & Group Song Performance on Stage' },
+    { src: puja2Img, caption: 'Saraswati Puja Student Anjali & Prayers' },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
@@ -149,6 +162,7 @@ function STDOne() {
         />
         <ProgramGallery
           subtitle="A glimpse into the joyful moments, activities, and learning experiences of our STD - I students."
+          images={std1GalleryPhotos}
         />
         <TeacherProfiles teachers={std1Teachers} />
       </div>

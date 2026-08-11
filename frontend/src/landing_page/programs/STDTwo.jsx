@@ -15,6 +15,11 @@ import boardGamesImg from '@/assets/images/Board Games.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
+import academicProg4Img from '@/assets/images/Academic_Programs4.jpg';
+import academicProgImg from '@/assets/images/Academic_Programs.jpg';
+import sports7Img from '@/assets/images/sports7.jpg';
+import annualFunc2Img from '@/assets/images/Annual_Function2.jpg';
+import talentExamImg from '@/assets/images/TalentExamAwards.jpg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDTwo() {
@@ -23,20 +28,20 @@ function STDTwo() {
       At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, Class II builds strong analytical and linguistic foundations through comprehensive grammar, dual mathematics, science, and humanities.
     </>,
     <>
-      Students study Bengali & Bengali Grammar, English Reader & English Grammar, Bengali Math & English Math, Science, History, Geography, Bengali G.K., Conversation practice, Computer lab, and Drawing.
+      The Class II syllabus covers Bengali & English Reader, Practice English, Grammar, Dual Math (Bengali & English Math), Science, Geography, History, Bengali G.K., Conversation practice, Computer lab, and Drawing activities.
     </>,
   ];
 
   const std2Subjects = [
-    'Bengali',
-    'Bengali Grammar',
+    'Bengali Reader',
     'English Reader',
-    'English Grammar',
+    'Practice English',
+    'Grammar',
     'Bengali Math',
     'English Math',
     'Science',
-    'History',
     'Geography',
+    'History',
     'Bengali G.K. (B.G.K.)',
     'Conversation',
     'Computer',
@@ -45,50 +50,50 @@ function STDTwo() {
 
   const std2Activities = [
     {
-      id: 'std2-grammar',
-      title: 'Grammar & Creative Writing',
+      id: 'std2-reading',
+      title: 'Grammar & Writing',
       description:
-        'Simple English & Bengali grammar, short paragraph writing, and spelling practice.',
+        'Learning English & Bengali grammar rules, writing short essays, and reading comprehension.',
       image: teacherImg,
       icon: UserCheck,
-    },
-    {
-      id: 'std2-performing',
-      title: 'Recitation & Speech',
-      description:
-        'Poem recitation competitions, group reading, and speaking confidently in class.',
-      image: smartClassImg,
-      icon: BookOpen,
     },
     {
       id: 'std2-math',
       title: 'Mental Math & Logic',
       description:
-        'Multiplication tables, division concepts, mental math quizzes, and logic games.',
+        'Multiplication tables, division puzzles, word problems, and mental math quick tricks.',
+      image: smartClassImg,
+      icon: BookOpen,
+    },
+    {
+      id: 'std2-science',
+      title: 'Science & History Projects',
+      description:
+        'Conducting simple plant growth experiments and studying early human history timeline.',
       image: boardGamesImg,
       icon: ShieldCheck,
     },
     {
       id: 'std2-art',
-      title: 'Drawing & Craft Work',
+      title: 'Pastel Art & Origami',
       description:
-        'Coloring landscapes, paper craft models, greeting cards, and drawing.',
+        'Mastering oil pastel color blending, drawing landscapes, and making 3D paper crafts.',
       image: paintingImg,
       icon: Palette,
     },
     {
-      id: 'std2-science',
-      title: 'Science & Nature Study',
+      id: 'std2-tech',
+      title: 'MS Paint & Typing',
       description:
-        'Plant growth, water conservation, body health hygiene, and environmental awareness.',
+        'Drawing digital art in MS Paint, keyboard typing practice in Wordpad, and simple computer commands.',
       image: growthImg,
       icon: Sprout,
     },
     {
-      id: 'std2-tech',
-      title: 'Computer Practice & Games',
+      id: 'std2-sports',
+      title: 'Sports & Team Relays',
       description:
-        'Typing practice in MS Word, computer games, outdoor sports, and physical games.',
+        'Running 100m races, high jump basics, team sports, and outdoor playground fun.',
       image: familyImg,
       icon: Heart,
     },
@@ -96,27 +101,19 @@ function STDTwo() {
 
   const std2InfoCards = [
     { title: "Age Group", value: "7 - 8 years" },
-    { title: "Learning Approach", value: "Inquiry & Application-Based" },
+    { title: "Learning Approach", value: "Analytical & Concept-Driven" },
     { title: "Medium of Instruction", value: "English & Bengali" },
-    { title: "Class Environment", value: "Analytical & Engaging" },
+    { title: "Class Environment", value: "Encouraging & Disciplined" },
   ];
 
   const std2Teachers = [
     {
-      name: 'Goutam Giri',
-      image: 'https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=400',
-    },
-    {
-      name: 'Soma Jana Giri',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400',
-    },
-    {
-      name: 'Suparna Jana',
-      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
-    },
-    {
       name: 'Moumita Bera',
       image: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=400',
+    },
+    {
+      name: 'Swapan Mondal',
+      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
     },
     {
       name: 'Ankita Pandit Rout',
@@ -132,13 +129,21 @@ function STDTwo() {
     },
   ];
 
+  const std2GalleryPhotos = [
+    { src: academicProgImg, caption: 'STD II Bengali & English Rhyme Recitation' },
+    { src: academicProg4Img, caption: 'Board Exercise & Grammar Concept Practice' },
+    { src: sports7Img, caption: 'Tug of War Team Effort & Athletics Meet' },
+    { src: annualFunc2Img, caption: 'Cultural Drama & Student Performance Showcase' },
+    { src: talentExamImg, caption: 'Talent Search Exam Certificate & Awards' },
+  ];
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
         <Navbar defaultBg="bg-[#F6FAEF]" />
         <Hero
           title="STD - II Program"
-          subTagline="Age: 7+ | Advanced language grammar, dual math, science, history, and geography."
+          subTagline="Age: 7+ | Advanced primary curriculum focusing on grammar, science, and math."
           aboutTitle="About STD - II"
           aboutParagraphs={std2Paragraphs}
           image={std2Img}
@@ -147,12 +152,12 @@ function STDTwo() {
         />
         <Curriculum
           title="STD - II Curriculum & Subjects"
-          subtitle="Enriching academic syllabus covering grammar, mathematics, natural sciences, and social studies."
+          subtitle="A comprehensive curriculum covering languages, mathematics, social studies, and computers."
           subjects={std2Subjects}
         />
         <Activities
           title="STD - II Class Activities"
-          subtitle="Simple, effective classroom activities focusing on grammar, mental math, science, and computer practice."
+          subtitle="Interactive learning activities combining language practice, science, and computer skills."
           activities={std2Activities}
         />
         <ClassInfo
@@ -162,6 +167,7 @@ function STDTwo() {
         />
         <ProgramGallery
           subtitle="A glimpse into the joyful moments, activities, and learning experiences of our STD - II students."
+          images={std2GalleryPhotos}
         />
         <TeacherProfiles teachers={std2Teachers} />
       </div>

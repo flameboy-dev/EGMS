@@ -4,9 +4,9 @@ import Footer from '../Footer';
 import FacilityHero from './FacilityHero';
 import FacilitySlider from './FacilitySlider';
 import FacilityApplicationModal from './FacilityApplicationModal';
-import schoolBusImg from '@/assets/images/School Bus.png';
-import heroImg from '@/assets/images/HeroImage.png';
-import nurseryProgImg from '@/assets/images/NurseryPrograms.png';
+import transpotImg from '@/assets/images/Transpot.jpg';
+import transport2Img from '@/assets/images/Transport2.jpg';
+import healthyEnv1Img from '@/assets/images/Healthy_Environment1.jpg';
 import { Car, ShieldCheck, Flag, MapPin, Clock, UserCheck, Sparkles } from 'lucide-react';
 
 function Transport() {
@@ -23,19 +23,19 @@ function Transport() {
 
   const transportPhotos = [
     {
-      src: schoolBusImg,
-      caption: 'Dedicated School Cars with Evergreen Banner',
-      tag: 'Evergreen Banner Cars',
+      src: transpotImg,
+      caption: 'Dedicated School Cars Fleet with Official Evergreen Banner',
+      tag: 'Evergreen Car Fleet',
     },
     {
-      src: heroImg,
-      caption: 'Safe Student Pickup & Doorstep Route Drop',
-      tag: 'Personalized Transit',
-    },
-    {
-      src: nurseryProgImg,
-      caption: 'Attendant Guided Safe Boarding & Commute',
+      src: transport2Img,
+      caption: 'Attendant Guided Safe Student Boarding & Transit',
       tag: 'Child Safety First',
+    },
+    {
+      src: healthyEnv1Img,
+      caption: 'Campus Route & Doorstep Transport Drop Area',
+      tag: 'Doorstep Transit',
     },
   ];
 
