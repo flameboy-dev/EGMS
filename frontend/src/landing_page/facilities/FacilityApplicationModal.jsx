@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { X, CheckCircle, Sparkles, AlertCircle, Loader2, Send, GraduationCap } from 'lucide-react';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
@@ -449,6 +450,12 @@ function FacilityApplicationModal({
                     <span>Submit Application</span>
                   )}
                 </button>
+                <p className="mt-2 text-center font-poppins text-[11px] sm:text-xs text-[#1E3F20]/75">
+                  Handled according to our{' '}
+                  <Link to="/privacy" onClick={onClose} className="font-semibold text-[#1E3F20] underline underline-offset-2 hover:text-[#000000]">
+                    Privacy Policy
+                  </Link>.
+                </p>
               </div>
             </form>
           </div>

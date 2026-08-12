@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { ChevronDown, CheckCircle2, AlertCircle, Loader2, Send, X } from 'lucide-react';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
@@ -394,17 +395,26 @@ function ContactForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="mt-2 flex h-[56px] w-full items-center justify-center rounded-[16px] bg-[#1E3F20] px-6 font-fredoka text-lg font-medium text-white shadow-md transition-all duration-200 hover:bg-[#152e17] active:scale-[0.99] md:text-[20px] cursor-pointer disabled:opacity-50"
+        className="mt-2 flex min-h-[52px] sm:min-h-[56px] w-full items-center justify-center gap-2 rounded-[16px] bg-[#1E3F20] px-4 py-3 sm:px-6 font-fredoka text-sm sm:text-base md:text-lg font-medium text-white shadow-md transition-all duration-200 hover:bg-[#152e17] active:scale-[0.99] cursor-pointer disabled:opacity-50 text-center leading-snug"
       >
         {submitting ? (
           <div className="flex items-center space-x-2">
-            <Loader2 className="h-5 w-5 animate-spin" />
+            <Loader2 className="h-5 w-5 animate-spin text-[#B9FF66]" />
             <span>Sending Inquiry...</span>
           </div>
         ) : (
-          'Request Admission Information'
+          <>
+            <Send className="h-4 w-4 sm:h-5 sm:w-5 text-[#B9FF66] shrink-0" />
+            <span>Request Admission Information</span>
+          </>
         )}
       </button>
+      <p className="text-center font-poppins text-xs text-[#1E3F20]/75">
+        By submitting, you agree to our{' '}
+        <Link to="/privacy" className="font-semibold text-[#1E3F20] underline underline-offset-2 hover:text-[#000000]">
+          Privacy Policy
+        </Link>.
+      </p>
 
       {/* Floating Bottom-Right Toast Alert Popup */}
       {formError && (
