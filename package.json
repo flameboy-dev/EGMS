@@ -1,6 +1,7 @@
 {
   "name": "egms-monorepo",
   "private": true,
+  "type": "module",
   "workspaces": [
     "frontend",
     "backend"
@@ -11,5 +12,15 @@
     "dev:backend": "bun --filter backend dev",
     "build": "bun --filter frontend build",
     "lint": "bun --filter '*' lint"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-rate-limit": "^7.5.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.10.0",
+    "zod": "^3.24.2"
   }
 }

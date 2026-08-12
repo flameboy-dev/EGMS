@@ -30,6 +30,7 @@ app.use(express.urlencoded({ extended: true }));
 const globalLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 100,
+  validate: false,
   message: { status: 'error', message: 'Too many requests. Please try again later.' },
 });
 app.use('/api/', globalLimiter);
@@ -38,6 +39,7 @@ app.use('/api/', globalLimiter);
 const otpLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
   max: 5,
+  validate: false,
   message: { status: 'error', message: 'Too many verification requests. Please wait 15 minutes.' },
 });
 
@@ -69,12 +71,31 @@ function createTransporter() {
     return null;
   }
 
+  const host = process.env.SMTP_HOST || 'smtp.gmail.com';
+  const port = parseInt(process.env.SMTP_PORT || '587', 10);
+  const secure = process.env.SMTP_SECURE === 'true' || port === 465;
+
   return nodemailer.createTransport({
-    host: process.env.SMTP_HOST || 'smtp.gmail.com',
-    port: parseInt(process.env.SMTP_PORT || '465', 10),
-    secure: process.env.SMTP_SECURE !== 'false',
+    host,
+    port,
+    secure,
     auth: { user, pass },
+    connectionTimeout: 5000,
+    greetingTimeout: 5000,
+    socketTimeout: 5000,
   });
+}
+
+// Helper for sending email with timeout to prevent serverless function hanging
+async function sendMailWithTimeout(transporter, mailOptions, timeoutMs = 8000) {
+  if (!transporter) return;
+
+  const sendPromise = transporter.sendMail(mailOptions);
+  const timeoutPromise = new Promise((_, reject) =>
+    setTimeout(() => reject(new Error('Email server connection timed out. Please check SMTP credentials and host settings.')), timeoutMs)
+  );
+
+  return Promise.race([sendPromise, timeoutPromise]);
 }
 
 // ----------------------------------------------------
@@ -115,7 +136,7 @@ app.post('/api/otp/send', otpLimiter, async (req, res) => {
     const transporter = createTransporter();
 
     if (transporter) {
-      await transporter.sendMail({
+      await sendMailWithTimeout(transporter, {
         from: `"Ever Green Model School" <${process.env.SMTP_USER}>`,
         to: email,
         subject: '🔒 Email Verification Code - Ever Green Model School Enrollment',
@@ -341,7 +362,7 @@ app.post(
       const transporter = createTransporter();
 
       if (transporter) {
-        await transporter.sendMail({
+        await sendMailWithTimeout(transporter, {
           from: `"EGMS Enrollment Portal" <${process.env.SMTP_USER}>`,
           to: SCHOOL_EMAIL,
           subject: `🎓 New Enrollment Application: ${data.studentName} (${data.studentClass})`,
@@ -421,7 +442,7 @@ app.post('/api/contact', async (req, res) => {
     `;
 
     if (transporter) {
-      await transporter.sendMail({
+      await sendMailWithTimeout(transporter, {
         from: `"EGMS Website Inquiry" <${process.env.SMTP_USER}>`,
         to: SCHOOL_EMAIL,
         subject: `📩 New Admission Inquiry from ${data.parentName} (${data.interestedClass})`,
@@ -506,7 +527,7 @@ app.post('/api/facility-application', async (req, res) => {
     `;
 
     if (transporter) {
-      await transporter.sendMail({
+      await sendMailWithTimeout(transporter, {
         from: `"EGMS Facility Application" <${process.env.SMTP_USER}>`,
         to: SCHOOL_EMAIL,
         subject: `🎨 Facility Application: ${data.studentName} - ${data.programType || data.facilityTitle}`,
