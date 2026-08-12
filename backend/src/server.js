@@ -527,6 +527,19 @@ app.post('/api/facility-application', async (req, res) => {
   }
 });
 
+// Global 404 and Error Handler (Guarantees JSON output)
+app.use('/api/*', (req, res) => {
+  res.status(404).json({ status: 'error', message: 'API endpoint not found.' });
+});
+
+app.use((err, req, res, next) => {
+  console.error('Unhandled Server Error:', err);
+  res.status(500).json({
+    status: 'error',
+    message: err.message || 'A server error occurred. Please try again later.',
+  });
+});
+
 // Export Express App
 export default app;
 

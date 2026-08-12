@@ -24,6 +24,7 @@ import {
   Loader2,
   X,
 } from 'lucide-react';
+import { safeParseJson } from '@/utils/api';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
@@ -136,10 +137,10 @@ function EnrollPage() {
         body: JSON.stringify({ email: formData.email }),
       });
 
-      const resData = await response.json();
+      const resData = await safeParseJson(response, 'Server error sending verification code. Please try again later.');
 
       if (!response.ok || resData.status === 'error') {
-        throw new Error(resData.message || 'Failed to send OTP code.');
+        throw new Error(resData.message || 'Failed to send verification code.');
       }
 
       setOtpState((prev) => ({
@@ -178,7 +179,7 @@ function EnrollPage() {
         }),
       });
 
-      const resData = await response.json();
+      const resData = await safeParseJson(response, 'Verification service error. Please try again.');
 
       if (!response.ok || resData.status === 'error') {
         throw new Error(resData.message || 'Invalid verification code.');
@@ -281,7 +282,7 @@ function EnrollPage() {
         body: bodyFormData,
       });
 
-      const resData = await response.json();
+      const resData = await safeParseJson(response, 'Enrollment service error. Please try again later.');
 
       if (!response.ok || resData.status === 'error') {
         throw new Error(resData.message || 'Enrollment submission failed.');
