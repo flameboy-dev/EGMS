@@ -51,7 +51,7 @@ function PrivacyPage() {
         <Navbar defaultBg="bg-[#EBF1E5]" />
 
         {/* Hero Header Section */}
-        <section className="w-full border-t border-[#191A23]/10 bg-[#EBF1E5] px-6 pb-8 pt-10 md:px-12 md:pb-12 md:pt-12 lg:px-16">
+        <section className="w-full border-t border-[#191A23]/10 bg-[#EBF1E5] px-4 pb-8 pt-8 sm:px-6 sm:pb-10 sm:pt-12 md:px-12 md:pb-12 md:pt-12 lg:px-16">
           <div className="mx-auto max-w-5xl text-center md:text-left">
             <div className="flex flex-col items-center md:items-start space-y-3">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#191A23]/10 bg-[#ECF39E] px-3.5 py-1 font-poppins text-xs font-semibold text-[#1E3F20]">
@@ -71,7 +71,7 @@ function PrivacyPage() {
         </section>
 
         {/* Highlight Bento Cards */}
-        <section className="mx-auto max-w-5xl px-6 pb-8 md:px-12">
+        <section className="mx-auto max-w-5xl px-4 sm:px-6 pb-8 md:px-12">
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {highlights.map((item, idx) => {
               const IconComp = item.icon;
@@ -98,8 +98,8 @@ function PrivacyPage() {
         </section>
 
         {/* Detailed Content Section */}
-        <section className="mx-auto max-w-5xl px-6 pb-16 md:px-12">
-          <div className="rounded-[28px] border border-[#191A23]/10 bg-white p-6 sm:p-10 shadow-xs space-y-10">
+        <section className="mx-auto max-w-5xl px-4 sm:px-6 pb-12 md:px-12 md:pb-16">
+          <div className="rounded-[20px] sm:rounded-[28px] border border-[#191A23]/10 bg-white p-4 sm:p-8 md:p-10 shadow-xs space-y-8 sm:space-y-10">
             
             {/* Section 1 */}
             <div className="space-y-3 border-b border-[#191A23]/10 pb-8">
@@ -294,8 +294,8 @@ function PrivacyPage() {
         </section>
 
         {/* Bottom CTA Section */}
-        <section className="mx-auto max-w-5xl px-6 pb-16 md:px-12">
-          <div className="flex flex-col items-center justify-between rounded-[28px] border border-[#191A23]/10 bg-[#282933] p-8 text-white shadow-md md:flex-row md:p-10">
+        <section className="mx-auto max-w-5xl px-4 sm:px-6 pb-12 md:px-12 md:pb-16">
+          <div className="flex flex-col items-center justify-between rounded-[20px] sm:rounded-[28px] border border-[#191A23]/10 bg-[#282933] p-5 sm:p-8 md:p-10 text-white shadow-md md:flex-row">
             <div className="max-w-xl text-center md:text-left">
               <h3 className="font-fredoka text-2xl font-semibold text-[#B9FF66]">
                 Have Questions About Admissions?
