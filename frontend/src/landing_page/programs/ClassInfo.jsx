@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const cardColorPalette = [
   'bg-[#EAF2A1]', // Soft Yellow
@@ -12,6 +13,8 @@ function ClassInfo({
   subtitle = "Everything parents need to know about the program at a glance.",
   infoCards = [],
 }) {
+  const { t } = useLanguage();
+
   const defaultCards = [
     { title: "Age Group", value: "3 - 4 years" },
     { title: "Learning Approach", value: "Play-Based & Activity-Oriented" },
@@ -27,10 +30,10 @@ function ClassInfo({
         {/* Section Header */}
         <div className="mb-10 flex flex-col items-start space-y-2">
           <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            {title}
+            {t(title)}
           </h2>
           <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
-            {subtitle}
+            {t(subtitle)}
           </p>
         </div>
 
@@ -44,10 +47,10 @@ function ClassInfo({
                 className={`flex flex-col justify-center rounded-[24px] sm:rounded-[32px] border-2 border-[#191A23] ${cardBg} p-5 sm:p-7 shadow-[0_5px_0_0_#191A23] min-h-[140px] sm:min-h-[180px] transition-all duration-200 hover:-translate-y-1`}
               >
                 <h3 className="font-fredoka text-xl font-semibold text-[#000000] sm:text-2xl leading-snug">
-                  {card.title}
+                  {t(card.title)}
                 </h3>
                 <p className="mt-2 font-poppins text-sm font-medium text-[#1E3F20] sm:text-base leading-relaxed">
-                  {card.value}
+                  {t(card.value)}
                 </p>
               </div>
             );

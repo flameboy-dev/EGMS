@@ -25,12 +25,8 @@ import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide
 
 function STDOne() {
   const std1Paragraphs = [
-    <>
-      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, Class I marks the start of formal elementary education with a rich multi-subject curriculum designed for analytical and linguistic growth.
-    </>,
-    <>
-      Our Class I syllabus covers Bengali & Barna Porichoy, English Reader & Practice English, Bengali Math & English Math, Science, Geography, Bengali G.K., Conversation practice, Computer lab, and Drawing activities.
-    </>,
+    "At Ever Green Model School, Class I marks the start of formal elementary education with a rich multi-subject curriculum designed for analytical and linguistic growth.",
+    "Our Class I syllabus covers Bengali & Barna Porichoy, English Reader & Practice English, Bengali Math & English Math, Science, Geography, Bengali G.K., Conversation practice, Computer lab, and Drawing activities.",
   ];
 
   const std1Subjects = [

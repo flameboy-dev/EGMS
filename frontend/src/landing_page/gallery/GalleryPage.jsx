@@ -6,6 +6,7 @@ import GalleryLightboxModal from './GalleryLightboxModal';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
 import { Sparkles, Maximize2, Camera, Calendar, ArrowRight, ChevronDown } from 'lucide-react';
 import galleryManifest from '@/data/galleryManifest.json';
+import { useLanguage } from '@/context/LanguageContext';
 
 // Eagerly resolve image modules from asset directory
 const imageModules = import.meta.glob('@/assets/images/*.jpg', { eager: true });
@@ -38,6 +39,7 @@ const categories = [
 const INITIAL_BATCH_SIZE = 12;
 
 function GalleryPage() {
+  const { t } = useLanguage();
   const [activeCategory, setActiveCategory] = useState('All');
   const [visibleCount, setVisibleCount] = useState(INITIAL_BATCH_SIZE);
   const [lightboxOpen, setLightboxOpen] = useState(false);
@@ -83,13 +85,13 @@ function GalleryPage() {
           <div className="mx-auto max-w-7xl">
             <div className="flex flex-col items-start space-y-3">
               <span className="inline-flex items-center gap-1.5 rounded-full border border-[#191A23]/10 bg-[#ECF39E] px-3.5 py-1 font-poppins text-xs font-semibold text-[#1E3F20]">
-                <Camera className="h-3.5 w-3.5" /> Photo Gallery
+                <Camera className="h-3.5 w-3.5" /> {t("Photo Gallery")}
               </span>
               <h1 className="font-fredoka text-3xl font-semibold text-[#000000] sm:text-4xl md:text-5xl">
-                Life at Ever Green Model School
+                {t("Life at Ever Green Model School")}
               </h1>
               <p className="font-poppins text-base text-[#1E3F20]/90 sm:text-lg lg:max-w-none">
-                Capturing joyful learning, sports events, annual functions, Saraswati Puja, awards, and everyday campus moments.
+                {t("Capturing joyful learning, sports events, annual functions, Saraswati Puja, awards, and everyday campus moments.")}
               </p>
             </div>
 
@@ -113,7 +115,7 @@ function GalleryPage() {
                         : 'border border-[#191A23]/15 bg-white text-[#191A23] hover:bg-[#ECF39E]'
                     }`}
                   >
-                    <span>{cat}</span>
+                    <span>{t(cat)}</span>
                     <span
                       className={`rounded-full px-2 py-0.5 text-[11px] font-bold ${
                         isActive ? 'bg-[#B9FF66] text-[#000000]' : 'bg-[#EBF1E5] text-[#1E3F20]'
@@ -149,7 +151,7 @@ function GalleryPage() {
                   {/* Category Tag Overlay */}
                   <div className="absolute left-3 top-3 z-10">
                     <span className="inline-block rounded-full bg-[#ECF39E]/90 px-3 py-1 font-poppins text-[11px] font-bold text-[#1E3F20] backdrop-blur-xs shadow-xs">
-                      {item.category}
+                      {t(item.category)}
                     </span>
                   </div>
 
@@ -169,7 +171,7 @@ function GalleryPage() {
                 onClick={handleLoadMore}
                 className="inline-flex items-center gap-2 rounded-2xl border-2 border-[#191A23] bg-white px-8 py-3.5 font-fredoka text-base font-medium text-[#1E3F20] shadow-[0_4px_0_0_#191A23] transition-all hover:-translate-y-1 hover:bg-[#ECF39E]"
               >
-                <span>Load More Photos ({filteredItems.length - visibleCount} remaining)</span>
+                <span>{t("Load More Photos")} ({filteredItems.length - visibleCount} {t("remaining")})</span>
                 <ChevronDown className="h-5 w-5" />
               </button>
             </div>
@@ -191,17 +193,17 @@ function GalleryPage() {
           <div className="flex flex-col items-center justify-between rounded-[28px] border border-[#191A23]/10 bg-[#1E3F20] p-8 text-white shadow-md md:flex-row md:p-12">
             <div className="max-w-2xl text-center md:text-left">
               <h3 className="font-fredoka text-2xl font-semibold text-[#B9FF66] sm:text-3xl">
-                Want to Experience EGMS Campus in Person?
+                {t("Want to Experience EGMS Campus in Person?")}
               </h3>
               <p className="mt-2 font-poppins text-sm text-white/90 sm:text-base">
-                Schedule a campus tour to see our Smart Classrooms, Computer Lab, Art Studio, and Play Zone live!
+                {t("Schedule a campus tour to see our Smart Classrooms, Computer Lab, Art Studio, and Play Zone live!")}
               </p>
             </div>
             <Link
               to="/contact"
               className="mt-6 inline-flex shrink-0 items-center justify-center gap-2 rounded-xl bg-[#B9FF66] px-7 py-3.5 font-fredoka text-base font-medium text-[#000000] shadow-sm transition-all hover:bg-white md:mt-0"
             >
-              <span>Schedule a Campus Tour</span>
+              <span>{t("Schedule a Campus Tour")}</span>
               <ArrowRight className="h-4 w-4" />
             </Link>
           </div>

@@ -1,8 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, Sparkles } from 'lucide-react';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
+import { useLanguage } from '@/context/LanguageContext';
 
 function FacilitySlider({ title = "Facility Photo Gallery", subtitle, slides = [] }) {
+  const { t } = useLanguage();
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const touchStartX = useRef(0);
@@ -46,14 +48,14 @@ function FacilitySlider({ title = "Facility Photo Gallery", subtitle, slides = [
         {/* Section Header */}
         <div className="mb-8 flex flex-col items-start space-y-2">
           <div className="inline-flex items-center gap-1.5 rounded-full border border-[#191A23]/20 bg-[#ECF39E] px-3.5 py-1 font-poppins text-xs font-semibold text-[#1E3F20]">
-            <Sparkles className="h-3.5 w-3.5" /> Interactive Photo Showcase
+            <Sparkles className="h-3.5 w-3.5" /> {t("Interactive Photo Showcase")}
           </div>
           <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-3xl md:text-4xl">
-            {title}
+            {t(title)}
           </h2>
           {subtitle && (
             <p className="font-poppins text-sm text-[#1E3F20]/80 sm:text-base lg:max-w-none lg:whitespace-nowrap">
-              {subtitle}
+              {t(subtitle)}
             </p>
           )}
         </div>
@@ -93,12 +95,12 @@ function FacilitySlider({ title = "Facility Photo Gallery", subtitle, slides = [
                     <div className="max-w-2xl space-y-2">
                       {tagText && (
                         <span className="inline-block rounded-full bg-[#B9FF66] px-3 py-1 font-poppins text-xs font-extrabold text-[#000000]">
-                          {tagText}
+                          {t(tagText)}
                         </span>
                       )}
                       {captionText && (
                         <h3 className="font-fredoka text-xl font-bold text-white drop-shadow-md sm:text-2xl md:text-3xl">
-                          {captionText}
+                          {t(captionText)}
                         </h3>
                       )}
                     </div>

@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import ProgramCard from '@/components/custom/ProgramCard';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
+import { useLanguage } from '@/context/LanguageContext';
 
 // Import Illustrations
 import bannerImg from '@/assets/images/STD-III.png';
@@ -24,6 +25,8 @@ import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
 import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
 
 function About() {
+  const { t } = useLanguage();
+
   const authorities = [
     {
       id: 'goutam-giri',
@@ -48,49 +51,55 @@ function About() {
   const features = [
     {
       id: 'teachers',
-      title: 'Qualified & Caring Teachers',
-      description:
-        'Our experienced teachers provide individual attention and create a supportive learning environment.',
+      title: t('Qualified & Caring Teachers'),
+      description: t(
+        'Our experienced teachers provide individual attention and create a supportive learning environment.'
+      ),
       image: teacherImg,
       icon: UserCheck,
     },
     {
       id: 'activity',
-      title: 'Activity-Based Learning',
-      description:
-        'Children learn through stories, games, projects, and hands-on experiences that make education enjoyable.',
+      title: t('Activity-Based Learning'),
+      description: t(
+        'Children learn through stories, games, projects, and hands-on experiences that make education enjoyable.'
+      ),
       image: smartClassImg,
       icon: BookOpen,
     },
     {
       id: 'safety',
-      title: 'Safe & Secure Campus',
-      description:
-        'A child-friendly campus with safety measures that give parents peace of mind.',
+      title: t('Safe & Secure Campus'),
+      description: t(
+        'A child-friendly campus with safety measures that give parents peace of mind.'
+      ),
       image: familyImg,
       icon: ShieldCheck,
     },
     {
       id: 'creative',
-      title: 'Creative Development',
-      description:
-        'Art, music, dance, storytelling, and fun activities help children express themselves confidently.',
+      title: t('Creative Development'),
+      description: t(
+        'Art, music, dance, storytelling, and fun activities help children express themselves confidently.'
+      ),
       image: paintingImg,
       icon: Palette,
     },
     {
       id: 'growth',
-      title: 'Holistic  Growth',
-      description:
-        'We focus on academic excellence, emotional well-being, communication, and social skills.',
+      title: t('Holistic  Growth'),
+      description: t(
+        'We focus on academic excellence, emotional well-being, communication, and social skills.'
+      ),
       image: growthImg,
       icon: Sprout,
     },
     {
       id: 'partnership',
-      title: 'Parent-School Partnership',
-      description:
-        'We believe regular communication with parents helps every child achieve their full potential.',
+      title: t('Parent-School Partnership'),
+      description: t(
+        'We believe regular communication with parents helps every child achieve their full potential.'
+      ),
       image: partnershipImg,
       icon: Heart,
     },
@@ -102,10 +111,10 @@ function About() {
         {/* Top Header & Sub-badge */}
         <div className="mb-6 flex flex-col items-start space-y-2">
           <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            About Us
+            {t("About Us")}
           </h2>
           <span className="font-poppins text-xs sm:text-sm font-medium text-[#1E3F20]/80">
-            🌱 About Ever Green Model School
+            {t("🌱 About Ever Green Model School")}
           </span>
         </div>
 
@@ -115,10 +124,10 @@ function About() {
             {/* Text Column */}
             <div className="z-10 lg:col-span-6 lg:max-w-[550px]">
               <h3 className="font-fredoka text-2xl font-bold leading-tight text-[#000000] sm:text-3xl md:text-[32px]">
-                Nurturing Young Minds Since 2006
+                {t("Nurturing Young Minds Since 2006")}
               </h3>
               <p className="mt-4 font-poppins text-sm leading-relaxed text-[#1E3F20] sm:text-base md:text-[16px]">
-                Ever Green Model School is dedicated to providing a safe, caring, and inspiring learning environment where every child is encouraged to explore, discover, and grow. Since our establishment in 2006, we have focused on building strong academic foundations while nurturing creativity, confidence, and good values. Our experienced teachers, child-friendly classrooms, and activity-based learning approach help every student develop the skills needed for a bright future.
+                {t("Ever Green Model School is dedicated to providing a safe, caring, and inspiring learning environment where every child is encouraged to explore, discover, and grow. Since our establishment in 2006, we have focused on building strong academic foundations while nurturing creativity, confidence, and good values. Our experienced teachers, child-friendly classrooms, and activity-based learning approach help every student develop the skills needed for a bright future.")}
               </p>
             </div>
 
@@ -138,10 +147,10 @@ function About() {
         <div className="mb-20 sm:mb-24">
           <div className="mb-8 sm:mb-10 flex flex-col items-start space-y-2 sm:space-y-3">
             <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-              School Authorities
+              {t("School Authorities")}
             </h2>
             <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
-              Guiding Ever Green Model School towards educational excellence and holistic growth.
+              {t("Guiding Ever Green Model School towards educational excellence and holistic growth.")}
             </p>
           </div>
 
@@ -167,7 +176,7 @@ function About() {
                     {person.name}
                   </h3>
                   <p className="mt-1 font-poppins text-xs sm:text-sm font-medium text-[#1E3F20]/80">
-                    {person.role}
+                    {t(person.role)}
                   </p>
                 </div>
               </div>
@@ -178,10 +187,10 @@ function About() {
         {/* Why Choose Us Section Header */}
         <div className="mb-8 sm:mb-10 flex flex-col items-start space-y-2 sm:space-y-3">
           <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            Why Choose Us?
+            {t("Why Choose Us?")}
           </h2>
           <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
-            We believe every child deserves the best start in life. Our learning environment is designed to help children feel safe, happy, and excited to learn every day.
+            {t("We believe every child deserves the best start in life. Our learning environment is designed to help children feel safe, happy, and excited to learn every day.")}
           </p>
         </div>
 

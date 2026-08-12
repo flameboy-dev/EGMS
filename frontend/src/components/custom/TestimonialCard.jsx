@@ -1,6 +1,9 @@
 import React from 'react';
+import { useLanguage } from '@/context/LanguageContext';
 
 function TestimonialCard({ quote, name, role, width }) {
+  const { t } = useLanguage();
+
   return (
     <div
       className="flex shrink-0 flex-col items-start px-1 sm:px-2"
@@ -9,7 +12,7 @@ function TestimonialCard({ quote, name, role, width }) {
       {/* Speech Bubble Card */}
       <div className="relative min-h-[130px] sm:min-h-[170px] w-full rounded-[20px] sm:rounded-[30px] border-2 border-[#B9FF66] bg-[#191A23] p-4 sm:p-7 md:p-8 shadow-md flex items-center">
         <p className="font-poppins text-xs leading-relaxed text-white sm:text-sm md:text-base">
-          "{quote}"
+          "{t(quote)}"
         </p>
 
         {/* Speech Bubble Tail */}
@@ -36,10 +39,10 @@ function TestimonialCard({ quote, name, role, width }) {
       {/* Author Name and Role */}
       <div className="mt-4 sm:mt-6 ml-6 sm:ml-10 flex flex-col items-start space-y-0.5">
         <h4 className="font-fredoka text-sm font-semibold tracking-wide text-[#B9FF66] sm:text-base md:text-xl">
-          {name}
+          {t(name)}
         </h4>
         <p className="font-poppins text-[11px] font-normal text-white/90 sm:text-xs md:text-sm">
-          {role}
+          {t(role)}
         </p>
       </div>
     </div>

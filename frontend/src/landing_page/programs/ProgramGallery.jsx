@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
+import { useLanguage } from '@/context/LanguageContext';
 
 import academicProgImg from '@/assets/images/Academic_Programs.jpg';
 import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
@@ -15,6 +16,8 @@ function ProgramGallery({
   subtitle = "A glimpse into the joyful moments, activities, and learning experiences of our students.",
   images = [],
 }) {
+  const { t } = useLanguage();
+
   const defaultImages = [
     { src: academicProgImg, caption: 'Classroom Learning & Interactive Academic Sessions' },
     { src: sports1Img, caption: 'Annual Sports Day March Past & Athletic Track Events' },
@@ -71,10 +74,10 @@ function ProgramGallery({
         {/* Section Header */}
         <div className="mb-10 flex flex-col items-start space-y-2">
           <h2 className="font-fredoka text-3xl font-bold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            {title}
+            {t(title)}
           </h2>
           <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
-            {subtitle}
+            {t(subtitle)}
           </p>
         </div>
 
@@ -110,7 +113,7 @@ function ProgramGallery({
                   {captionText && (
                     <div className="absolute bottom-4 left-4 right-4 z-20 sm:bottom-6 sm:left-6 sm:right-auto">
                       <div className="inline-block rounded-xl border-2 border-[#191A23] bg-[#F6FAEF]/95 px-4 py-2 text-xs sm:text-sm font-poppins font-medium text-[#000000] shadow-[0_3px_0_0_#191A23] backdrop-blur-sm">
-                        {captionText}
+                        {t(captionText)}
                       </div>
                     </div>
                   )}

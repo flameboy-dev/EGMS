@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import notFoundImg from '../assets/images/404_Page.png';
+import { useLanguage } from '@/context/LanguageContext';
 
 function NotFound() {
+  const { t } = useLanguage();
+
   return (
     <div className="flex min-h-screen flex-col justify-between bg-[#F6FAEF]">
       <div>
@@ -18,11 +21,11 @@ function NotFound() {
           />
 
           <h1 className="mt-3 text-2xl font-bold tracking-tight text-[#000000] sm:text-3xl md:text-4xl">
-            Oops! Page Not Found
+            {t("Oops! Page Not Found")}
           </h1>
 
           <p className="mt-2 max-w-md font-poppins text-sm text-[#1E3F20]/80 sm:text-base">
-            The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.
+            {t("The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.")}
           </p>
 
           {/* Navigation Action Buttons */}
@@ -31,13 +34,13 @@ function NotFound() {
               to="/"
               className="inline-flex items-center justify-center rounded-2xl bg-[#344E41] px-8 py-3.5 font-poppins text-lg font-medium text-[#F6FAEF] shadow-md transition-all hover:bg-[#1E3F20] hover:shadow-lg active:scale-95"
             >
-              Back to Home
+              {t("Back to Home")}
             </Link>
             <Link
               to="/contact"
               className="inline-flex items-center justify-center rounded-2xl border-2 border-[#1E3F20] bg-transparent px-8 py-3.5 font-poppins text-lg font-medium text-[#1E3F20] transition-all hover:bg-[#1E3F20]/10 active:scale-95"
             >
-              Contact Us
+              {t("Contact Us")}
             </Link>
           </div>
         </main>

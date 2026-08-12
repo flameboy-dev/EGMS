@@ -4,11 +4,14 @@ import { Menu, X } from 'lucide-react';
 import logoImg from '@/assets/images/Logo.png';
 import { scrollToSection } from '@/lib/scrollUtils';
 
+import { useLanguage } from '@/context/LanguageContext';
+
 function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -94,7 +97,7 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
               onClick={(e) => handleNavClick(e, link)}
               className="font-poppins text-base font-medium text-[#000000] transition-colors hover:text-[#344E41] md:text-lg"
             >
-              {link.name}
+              {t(link.name)}
             </Link>
           ))}
         </div>
@@ -105,7 +108,7 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
             to="/enroll"
             className="inline-flex items-center justify-center rounded-2xl border-2 border-[#1E3F20] bg-transparent px-6 py-2.5 font-poppins text-base font-medium text-[#000000] transition-all hover:bg-[#1E3F20] hover:text-[#F6FAEF] md:text-lg"
           >
-            Enroll Now
+            {t('Enroll Now')}
           </Link>
         </div>
 
@@ -132,7 +135,7 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
               }}
               className="font-poppins text-base font-semibold text-[#000000] transition-colors hover:text-[#344E41]"
             >
-              {link.name}
+              {t(link.name)}
             </Link>
           ))}
           <Link
@@ -140,7 +143,7 @@ function Navbar({ defaultBg = 'bg-[#ECF39E]' }) {
             onClick={() => setIsOpen(false)}
             className="mt-2 inline-block w-full text-center rounded-xl border-2 border-[#1E3F20] bg-[#344E41] py-2.5 font-poppins text-[15px] font-medium text-[#F6FAEF] transition-all hover:bg-[#1E3F20]"
           >
-            Enroll Now
+            {t('Enroll Now')}
           </Link>
         </div>
       )}

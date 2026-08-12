@@ -13,6 +13,7 @@ import {
   Sparkles,
   Smile,
 } from 'lucide-react';
+import { useLanguage } from '@/context/LanguageContext';
 
 const getSubjectIcon = (subjectName = '') => {
   const name = subjectName.toLowerCase();
@@ -34,16 +35,18 @@ function Curriculum({
   subtitle = "A well-balanced syllabus designed for holistic learning and academic excellence.",
   subjects = [],
 }) {
+  const { t } = useLanguage();
+
   return (
     <section className="w-full bg-white px-6 py-14 md:px-12 lg:px-16 lg:py-20 border-t border-[#1E3F20]/10">
       <div className="mx-auto max-w-7xl">
         {/* Section Title & Subtitle */}
         <div className="mb-10 flex flex-col items-start space-y-2">
           <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            {title}
+            {t(title)}
           </h2>
           <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
-            {subtitle}
+            {t(subtitle)}
           </p>
         </div>
 
@@ -65,11 +68,11 @@ function Curriculum({
                   </div>
                   <div className="flex flex-col">
                     <h3 className="font-fredoka text-base font-semibold text-[#000000] sm:text-lg leading-snug">
-                      {subjectName}
+                      {t(subjectName)}
                     </h3>
                     {subjectDetail && (
                       <p className="font-poppins text-xs text-[#1E3F20]/75 mt-0.5">
-                        {subjectDetail}
+                        {t(subjectDetail)}
                       </p>
                     )}
                   </div>
@@ -78,7 +81,7 @@ function Curriculum({
             })}
           </div>
         ) : (
-          <p className="font-poppins text-base text-[#1E3F20]">Subject list coming soon.</p>
+          <p className="font-poppins text-base text-[#1E3F20]">{t("Subject list coming soon.")}</p>
         )}
       </div>
     </section>

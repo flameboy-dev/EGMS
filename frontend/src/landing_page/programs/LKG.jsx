@@ -26,12 +26,8 @@ import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide
 
 function LKG() {
   const lkgParagraphs = [
-    <>
-      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, our Lower Kindergarten (L.K.G.) program focuses on expanding vocabulary, early word recognition, and mathematical curiosity in a warm and collaborative setting.
-    </>,
-    <>
-      The L.K.G. syllabus covers Bengali Word Learning, English, Math, Word Book exercises, Bengali & English Rhymes, General Knowledge, and Drawing to foster effective communication, cognitive development, and creative confidence.
-    </>,
+    "At Ever Green Model School, our Lower Kindergarten (L.K.G.) program focuses on expanding vocabulary, early word recognition, and mathematical curiosity in a warm and collaborative setting.",
+    "The L.K.G. syllabus covers Bengali Word Learning, English, Math, Word Book exercises, Bengali & English Rhymes, General Knowledge, and Drawing to foster effective communication, cognitive development, and creative confidence.",
   ];
 
   const lkgSubjects = [

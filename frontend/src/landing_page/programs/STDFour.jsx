@@ -24,12 +24,8 @@ import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide
 
 function STDFour() {
   const std4Paragraphs = [
-    <>
-      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, Class IV represents the pinnacle of primary education, preparing students for middle school through rigorous academics and character building.
-    </>,
-    <>
-      The Class IV syllabus covers Bengali Reader, English Reader, Practice English, Grammar, Dual Math (Bengali & English Math), Science, Geography, History, Bengali G.K., Conversation practice, Computer lab, and Drawing activities.
-    </>,
+    "At Ever Green Model School, Class IV represents the pinnacle of primary education, preparing students for middle school through rigorous academics and character building.",
+    "The Class IV syllabus covers Bengali Reader, English Reader, Practice English, Grammar, Dual Math (Bengali & English Math), Science, Geography, History, Bengali G.K., Conversation practice, Computer lab, and Drawing activities.",
   ];
 
   const std4Subjects = [

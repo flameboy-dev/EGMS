@@ -25,12 +25,8 @@ import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide
 
 function Nursery() {
   const nurseryParagraphs = [
-    <>
-      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, our Nursery Program is thoughtfully designed to provide children with a joyful and nurturing introduction to education. We create a safe, caring, and stimulating environment where every child feels valued, encouraged, and excited to learn.
-    </>,
-    <>
-      Our Nursery curriculum introduces basic Bengali and English Alphabets, Math Numbers, engaging Bengali & English Rhymes, General Knowledge, and Drawing activities to build early language skills, numerical curiosity, and creative expression.
-    </>,
+    "At Ever Green Model School, our Nursery Program is thoughtfully designed to provide children with a joyful and nurturing introduction to education. We create a safe, caring, and stimulating environment where every child feels valued, encouraged, and excited to learn.",
+    "Our Nursery curriculum introduces basic Bengali and English Alphabets, Math Numbers, engaging Bengali & English Rhymes, General Knowledge, and Drawing activities to build early language skills, numerical curiosity, and creative expression.",
   ];
 
   const nurserySubjects = [

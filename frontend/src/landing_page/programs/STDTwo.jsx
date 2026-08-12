@@ -25,12 +25,8 @@ import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide
 
 function STDTwo() {
   const std2Paragraphs = [
-    <>
-      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, Class II builds strong analytical and linguistic foundations through comprehensive grammar, dual mathematics, science, and humanities.
-    </>,
-    <>
-      The Class II syllabus covers Bengali & English Reader, Practice English, Grammar, Dual Math (Bengali & English Math), Science, Geography, History, Bengali G.K., Conversation practice, Computer lab, and Drawing activities.
-    </>,
+    "At Ever Green Model School, Class II builds strong analytical and linguistic foundations through comprehensive grammar, dual mathematics, science, and humanities.",
+    "The Class II syllabus covers Bengali & English Reader, Practice English, Grammar, Dual Math (Bengali & English Math), Science, Geography, History, Bengali G.K., Conversation practice, Computer lab, and Drawing activities.",
   ];
 
   const std2Subjects = [

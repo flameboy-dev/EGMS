@@ -1,6 +1,7 @@
 import React from 'react';
 import FacilityCard from '@/components/custom/FacilityCard';
 import { FacilityCardSkeleton } from '@/components/custom/CardSkeletons';
+import { useLanguage } from '@/context/LanguageContext';
 
 // Import Facility Illustrations
 import smartClassImg from '@/assets/images/Smart_Class.png';
@@ -11,10 +12,12 @@ import boardGamesImg from '@/assets/images/Board_Games.png';
 import familyImg from '@/assets/images/Family.png';
 
 function HomeFacilities({ isLoading = false }) {
+  const { t } = useLanguage();
+
   const facilitiesData = [
     {
       id: 'smart-classrooms',
-      titleLines: ['Smart', 'Classrooms'],
+      titleLines: [t('Smart'), t('Classrooms')],
       titleBadgeBg: 'bg-[#B9FF66]',
       cardBg: 'bg-[#F3F3F3]',
       image: smartClassImg,
@@ -23,7 +26,7 @@ function HomeFacilities({ isLoading = false }) {
     },
     {
       id: 'art-craft',
-      titleLines: ['Art &', 'Craft'],
+      titleLines: [t('Art &'), t('Craft')],
       titleBadgeBg: 'bg-white',
       cardBg: 'bg-[#94ECBE]',
       image: paintingImg,
@@ -32,7 +35,7 @@ function HomeFacilities({ isLoading = false }) {
     },
     {
       id: 'transport-facility',
-      titleLines: ['Transport', 'Facility'],
+      titleLines: [t('Transport'), t('Facility')],
       titleBadgeBg: 'bg-white',
       cardBg: 'bg-[#1E3F20]',
       image: schoolBusImg,
@@ -41,7 +44,7 @@ function HomeFacilities({ isLoading = false }) {
     },
     {
       id: 'computer-basics',
-      titleLines: ['Computer', 'Basics'],
+      titleLines: [t('Computer'), t('Basics')],
       titleBadgeBg: 'bg-[#B9FF66]',
       cardBg: 'bg-[#F3F3F3]',
       image: codingImg,
@@ -50,7 +53,7 @@ function HomeFacilities({ isLoading = false }) {
     },
     {
       id: 'indoor-activities',
-      titleLines: ['Indoor', 'Activities'],
+      titleLines: [t('Indoor'), t('Activities')],
       titleBadgeBg: 'bg-white',
       cardBg: 'bg-[#94ECBE]',
       image: boardGamesImg,
@@ -59,7 +62,7 @@ function HomeFacilities({ isLoading = false }) {
     },
     {
       id: 'yoga-meditation',
-      titleLines: ['Yoga &', 'Meditation'],
+      titleLines: [t('Yoga &'), t('Meditation')],
       titleBadgeBg: 'bg-[#B9FF66]',
       cardBg: 'bg-[#1E3F20]',
       image: familyImg,
@@ -74,10 +77,10 @@ function HomeFacilities({ isLoading = false }) {
         {/* Section Header */}
         <div className="mb-8 sm:mb-12 flex flex-col items-start space-y-2 sm:space-y-3">
           <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            Facilities That We Offer
+            {t("Facilities That We Offer")}
           </h2>
           <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#000000]/80 sm:text-lg lg:max-w-none">
-            Everything your child needs to learn, play, and grow in a safe and nurturing environment.
+            {t("Everything your child needs to learn, play, and grow in a safe and nurturing environment.")}
           </p>
         </div>
 

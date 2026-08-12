@@ -1,6 +1,7 @@
 import React from 'react';
 import ProgramCard from '@/components/custom/ProgramCard';
 import { ProgramCardSkeleton } from '@/components/custom/CardSkeletons';
+import { useLanguage } from '@/context/LanguageContext';
 
 // Import Program Illustrations
 import nurseryImg from '@/assets/images/Nursery.png';
@@ -12,59 +13,61 @@ import std3Img from '@/assets/images/STD-III.png';
 import std4Img from '@/assets/images/STD-IV.png';
 
 function HomePrograms({ isLoading = false }) {
+  const { t } = useLanguage();
+
   const programsData = [
     {
       id: 'nursery',
-      title: 'Nursery',
-      age: 'Age: 3+',
+      title: t('Nursery'),
+      age: t('Age: 3+'),
       image: nurseryImg,
       bgColor: 'bg-[#9CC5A1]',
       linkTo: '/programs/nursery',
     },
     {
       id: 'lkg',
-      title: 'L.K.G.',
-      age: 'Age: 4+',
+      title: t('L.K.G.'),
+      age: t('Age: 4+'),
       image: lkgImg,
       bgColor: 'bg-[#ECF39E]',
       linkTo: '/programs/lkg',
     },
     {
       id: 'ukg',
-      title: 'U.K.G',
-      age: 'Age: 5+',
+      title: t('U.K.G'),
+      age: t('Age: 5+'),
       image: ukgImg,
       bgColor: 'bg-[#9CC5A1]',
       linkTo: '/programs/ukg',
     },
     {
       id: 'std1',
-      title: 'STD - I',
-      age: 'Age: 6+',
+      title: t('STD - I'),
+      age: t('Age: 6+'),
       image: std1Img,
       bgColor: 'bg-[#ECF39E]',
       linkTo: '/programs/stdone',
     },
     {
       id: 'std2',
-      title: 'STD - II',
-      age: 'Age: 7+',
+      title: t('STD - II'),
+      age: t('Age: 7+'),
       image: std2Img,
       bgColor: 'bg-[#9CC5A1]',
       linkTo: '/programs/stdtwo',
     },
     {
       id: 'std3',
-      title: 'STD - III',
-      age: 'Age: 8+',
+      title: t('STD - III'),
+      age: t('Age: 8+'),
       image: std3Img,
       bgColor: 'bg-[#ECF39E]',
       linkTo: '/programs/stdthree',
     },
     {
       id: 'std4',
-      title: 'STD - IV',
-      age: 'Age: 9+',
+      title: t('STD - IV'),
+      age: t('Age: 9+'),
       image: std4Img,
       bgColor: 'bg-[#9CC5A1]',
       linkTo: '/programs/stdfour',
@@ -77,10 +80,10 @@ function HomePrograms({ isLoading = false }) {
         {/* Section Header */}
         <div className="mb-8 sm:mb-12 flex flex-col items-start space-y-2 sm:space-y-3">
           <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            Our Learning Programs
+            {t("Our Learning Programs")}
           </h2>
           <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
-            Every program is thoughtfully designed to help children learn, explore, create, and grow with confidence.
+            {t("Every program is thoughtfully designed to help children learn, explore, create, and grow with confidence.")}
           </p>
         </div>
 

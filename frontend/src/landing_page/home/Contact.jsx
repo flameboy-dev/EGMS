@@ -1,17 +1,20 @@
 import React from 'react';
 import ContactForm from '@/components/custom/ContactForm';
+import { useLanguage } from '@/context/LanguageContext';
 
 function Contact() {
+  const { t } = useLanguage();
+
   return (
     <section className="w-full bg-white px-6 py-10 sm:py-16 md:px-12 lg:px-16 lg:py-24">
       <div className="mx-auto max-w-[1240px]">
         {/* Section Header */}
         <div className="mb-8 sm:mb-12 flex flex-col items-start space-y-2 sm:space-y-3">
           <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            Contact Us
+            {t("Contact Us")}
           </h2>
           <p className="max-w-2xl font-poppins text-sm text-[#000000]/80 sm:text-lg">
-            Let's Build Your Child's Bright Future Together
+            {t("Let's Build Your Child's Bright Future Together")}
           </p>
         </div>
 
@@ -23,10 +26,10 @@ function Contact() {
               {/* Visit Our Campus */}
               <div>
                 <h3 className="font-fredoka text-xl font-semibold text-[#000000] sm:text-2xl md:text-[26px] mb-3">
-                  Visit Our Campus
+                  {t("Visit Our Campus")}
                 </h3>
                 <div className="font-poppins text-base leading-relaxed text-[#000000]/80 sm:text-lg space-y-0.5">
-                  <p>Ever Green Model School</p>
+                  <p>{t("Ever Green Model School")}</p>
                   <p>Narayanpur, South 24 Parganas</p>
                   <p>West Bengal – 743357</p>
                 </div>
@@ -35,19 +38,19 @@ function Contact() {
               {/* School Hours */}
               <div>
                 <h3 className="font-fredoka text-xl font-semibold text-[#000000] sm:text-2xl md:text-[26px] mb-3">
-                  School Hours
+                  {t("School Hours")}
                 </h3>
                 <div className="font-poppins text-base leading-relaxed text-[#000000]/80 sm:text-lg space-y-2">
                   <div>
-                    <p className="font-medium text-[#000000]">Monday – Friday</p>
+                    <p className="font-medium text-[#000000]">{t("Monday – Friday")}</p>
                     <p>8:00 AM – 4:00 PM</p>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000]">Saturday</p>
+                    <p className="font-medium text-[#000000]">{t("Saturday")}</p>
                     <p>8:00 AM – 1:00 PM</p>
                   </div>
                   <div>
-                    <p className="font-medium text-[#000000]">Sunday – Closed</p>
+                    <p className="font-medium text-[#000000]">{t("Sunday – Closed")}</p>
                   </div>
                 </div>
               </div>
@@ -55,17 +58,17 @@ function Contact() {
               {/* Contact Details */}
               <div>
                 <h3 className="font-fredoka text-xl font-semibold text-[#000000] sm:text-2xl md:text-[26px] mb-3">
-                  Contact Details
+                  {t("Contact Details")}
                 </h3>
                 <div className="font-poppins text-base leading-relaxed text-[#000000]/80 sm:text-lg space-y-1">
                   <p>
-                    <span className="font-medium text-[#000000]">Phone:</span>{' '}
+                    <span className="font-medium text-[#000000]">{t("Phone:")}</span>{' '}
                     <a href="tel:9732644550" className="hover:underline text-[#000000]/90">
                       9732644550
                     </a>
                   </p>
                   <p className="break-all">
-                    <span className="font-medium text-[#000000]">Email:</span>{' '}
+                    <span className="font-medium text-[#000000]">{t("Email:")}</span>{' '}
                     <a href="mailto:evergreenmodelschool58@gmail.com" className="hover:underline text-[#000000]/90">
                       evergreenmodelschool58@gmail.com
                     </a>
@@ -76,7 +79,7 @@ function Contact() {
               {/* Follow Us */}
               <div>
                 <h3 className="font-fredoka text-xl font-semibold text-[#000000] sm:text-2xl md:text-[26px] mb-3">
-                  Follow Us
+                  {t("Follow Us")}
                 </h3>
                 <div className="flex items-center space-x-4">
                   {/* Facebook Button */}

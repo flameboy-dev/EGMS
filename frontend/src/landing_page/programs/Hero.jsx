@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
+import { useLanguage } from '@/context/LanguageContext';
 
 // Preload all program images into browser memory to eliminate image loading lag
 import nurseryImg from '@/assets/images/Nursery.png';
@@ -28,21 +29,23 @@ function Hero({
   prevLink = null,
   nextLink = null,
 }) {
+  const { t } = useLanguage();
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [title]);
 
   return (
-    <section className="w-full bg-[#F6FAEF] px-6 pt-8 pb-12 md:px-12 md:pt-10 md:pb-14 lg:px-16 lg:pt-12 lg:pb-16 border-t border-[#191A23]/25">
+    <section className="w-full bg-[#F6FAEF] px-6 pt-8 pb-12 md:px-12 md:pt-10 md:pb-14 lg:px-16 lg:pb-16 lg:pt-12 border-t border-[#191A23]/25">
       <div className="mx-auto max-w-7xl">
         {/* Top Header Row with Title and Prev/Next Navigation */}
         <div className="flex flex-col gap-2 sm:flex-row sm:items-start sm:justify-between">
           <div className="flex flex-col min-h-[72px] justify-center">
             <h1 className="font-fredoka text-2xl font-semibold text-[#000000] sm:text-4xl md:text-[38px]">
-              {title}
+              {t(title)}
             </h1>
             <p className="mt-1 font-poppins text-xs text-[#1E3F20]/90 sm:text-base lg:max-w-none lg:whitespace-nowrap">
-              {subTagline}
+              {t(subTagline)}
             </p>
           </div>
 
@@ -53,7 +56,7 @@ function Hero({
                 to={prevLink}
                 className="inline-flex items-center justify-center rounded-xl border-2 border-[#1E3F20] bg-white px-4 py-2 sm:px-5 sm:py-2.5 font-poppins text-xs sm:text-sm font-medium text-[#1E3F20] shadow-sm transition-all hover:bg-[#1E3F20] hover:text-white"
               >
-                ← Prev
+                ← {t('Prev')}
               </Link>
             ) : (
               <div className="hidden w-[80px] sm:block" />
@@ -63,7 +66,7 @@ function Hero({
                 to={nextLink}
                 className="inline-flex items-center justify-center rounded-xl bg-[#1E3F20] px-4 py-2 sm:px-5 sm:py-2.5 font-poppins text-xs sm:text-sm font-medium text-white shadow-sm transition-all hover:bg-[#344E41]"
               >
-                Next →
+                {t('Next')} →
               </Link>
             ) : (
               <div className="hidden w-[80px] sm:block" />
@@ -90,13 +93,13 @@ function Hero({
           {/* Right Column: About Section Text */}
           <div className="flex flex-col justify-center lg:col-span-7">
             <h2 className="font-fredoka text-2xl font-semibold text-[#000000] sm:text-3xl lg:text-[32px]">
-              {aboutTitle}
+              {t(aboutTitle)}
             </h2>
 
             <div className="mt-3 space-y-3 font-poppins text-sm leading-relaxed text-[#1E3F20]/90 sm:text-base">
               {aboutParagraphs && aboutParagraphs.length > 0 ? (
                 aboutParagraphs.map((pText, idx) => (
-                  <p key={idx}>{pText}</p>
+                  <p key={idx}>{typeof pText === 'string' ? t(pText) : pText}</p>
                 ))
               ) : (
                 <p>

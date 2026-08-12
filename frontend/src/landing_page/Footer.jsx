@@ -2,11 +2,13 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import logoImg from '@/assets/images/Logo.png';
 import { scrollToSection } from '@/lib/scrollUtils';
+import { useLanguage } from '@/context/LanguageContext';
 
 function Footer({ defaultBg = 'bg-white' }) {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
   const navigate = useNavigate();
+  const { t } = useLanguage();
 
   const footerLinks = [
     { name: 'About us', path: '/about', sectionId: 'about' },
@@ -68,7 +70,7 @@ function Footer({ defaultBg = 'bg-white' }) {
                 onClick={(e) => handleNavClick(e, link)}
                 className="font-poppins text-sm sm:text-base font-medium text-white underline underline-offset-4 transition-colors hover:text-[#B9FF66]"
               >
-                {link.name}
+                {t(link.name)}
               </Link>
             ))}
           </div>
@@ -108,18 +110,18 @@ function Footer({ defaultBg = 'bg-white' }) {
           {/* Left Side: Contact Information */}
           <div className="flex flex-col items-start space-y-2 lg:col-span-6">
             <span className="inline-block rounded-[6px] bg-[#B9FF66] px-2.5 py-0.5 font-fredoka text-xs sm:text-sm font-medium text-[#000000] md:text-base">
-              Contact us:
+              {t("Contact us:")}
             </span>
             <div className="font-poppins text-xs leading-relaxed text-white/90 space-y-1 sm:text-sm">
               <p>
-                <span className="font-medium text-white">Email:</span>{' '}
+                <span className="font-medium text-white">{t("Email:")}</span>{' '}
                 evergreenmodelschool58@gmail.com
               </p>
               <p>
-                <span className="font-medium text-white">Phone:</span> 9732644550
+                <span className="font-medium text-white">{t("Phone:")}</span> 9732644550
               </p>
               <p>
-                <span className="font-medium text-white">Address:</span> NH0117, Narayanpur, Kakdwip, South 24 Parganas, West Bengal - 743357
+                <span className="font-medium text-white">{t("Address:")}</span> NH0117, Narayanpur, Kakdwip, South 24 Parganas, West Bengal - 743357
               </p>
             </div>
           </div>
@@ -128,13 +130,13 @@ function Footer({ defaultBg = 'bg-white' }) {
           <div className="lg:col-span-6">
             <div className="flex flex-col items-start justify-between gap-4 rounded-[18px] sm:rounded-[24px] bg-[#282933] p-5 sm:p-7 md:flex-row md:items-center">
               <h3 className="font-fredoka text-lg font-semibold leading-tight text-white sm:text-2xl max-w-xs">
-                Ready to Give Your Child the Best Start?
+                {t("Ready to Give Your Child the Best Start?")}
               </h3>
               <Link
                 to="/enroll"
                 className="inline-flex w-full sm:w-auto items-center justify-center rounded-[12px] bg-[#B9FF66] px-5 py-2.5 font-fredoka text-sm font-medium text-[#000000] transition-all duration-200 hover:bg-[#a3f04b] hover:scale-105 active:scale-95 shrink-0 shadow-md sm:px-6 sm:py-3 sm:text-base"
               >
-                Enroll Now
+                {t("Enroll Now")}
               </Link>
             </div>
           </div>
@@ -145,12 +147,12 @@ function Footer({ defaultBg = 'bg-white' }) {
 
         {/* Bottom Row: Copyright & Legal */}
         <div className="flex flex-col gap-2 sm:flex-row sm:items-center font-poppins text-xs text-white/80 sm:text-sm">
-          <p>© {currentYear} E.G.M.S. All Rights Reserved.</p>
+          <p>© {currentYear} E.G.M.S. {t("All Rights Reserved.")}</p>
           <Link
             to="/privacy"
             className="underline underline-offset-4 transition-colors hover:text-[#B9FF66] sm:ml-8"
           >
-            Privacy Policy
+            {t("Privacy Policy")}
           </Link>
         </div>
       </div>

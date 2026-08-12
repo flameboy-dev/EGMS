@@ -8,6 +8,7 @@ import {
   Heart,
 } from 'lucide-react';
 import ProgramCard from '@/components/custom/ProgramCard';
+import { useLanguage } from '@/context/LanguageContext';
 
 // Import Illustrations
 import teacherImg from '@/assets/images/Teacher.png';
@@ -22,6 +23,8 @@ function Activities({
   subtitle = "Learning becomes more meaningful when children can explore, create, play, and discover through everyday experiences.",
   activities = [],
 }) {
+  const { t } = useLanguage();
+
   const defaultActivities = [
     {
       id: 'storytelling',
@@ -81,10 +84,10 @@ function Activities({
         {/* Section Header */}
         <div className="mb-10 flex flex-col items-start space-y-2">
           <h2 className="font-fredoka text-3xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            {title}
+            {t(title)}
           </h2>
           <p className="max-w-4xl font-poppins text-base text-[#1E3F20]/80 sm:text-lg lg:max-w-none">
-            {subtitle}
+            {t(subtitle)}
           </p>
         </div>
 
@@ -93,8 +96,8 @@ function Activities({
           {itemsToRender.map((item) => (
             <ProgramCard
               key={item.id || item.title}
-              title={item.title}
-              description={item.description}
+              title={t(item.title)}
+              description={t(item.description)}
               image={item.image}
               icon={item.icon || UserCheck}
               bgColor="bg-white"

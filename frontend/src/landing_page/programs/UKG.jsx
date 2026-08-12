@@ -20,18 +20,13 @@ import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
 import art1Img from '@/assets/images/Art1.jpg';
 import sports3Img from '@/assets/images/sports3.jpg';
 import annualFunc5Img from '@/assets/images/Annual_Function5.jpg';
-import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
-
 import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
+import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function UKG() {
   const ukgParagraphs = [
-    <>
-      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, our Upper Kindergarten (U.K.G.) program bridges early childhood learning with structured primary education. Students engage in dual language reading, math, and digital basics.
-    </>,
-    <>
-      The U.K.G. curriculum encompasses Bengali, Barna Porichoy, English & Practice English, Bengali Math & English Math, Bengali G.K., Conversation practice, Computer skills, and Drawing to build comprehensive academic readiness.
-    </>,
+    "At Ever Green Model School, our Upper Kindergarten (U.K.G.) program bridges early childhood learning with structured primary education. Students engage in dual language reading, math, and digital basics.",
+    "The U.K.G. curriculum encompasses Bengali, Barna Porichoy, English & Practice English, Bengali Math & English Math, Bengali G.K., Conversation practice, Computer skills, and Drawing to build comprehensive academic readiness.",
   ];
 
   const ukgSubjects = [

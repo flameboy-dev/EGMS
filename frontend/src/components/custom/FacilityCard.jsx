@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowUpRight } from 'lucide-react';
 import ImageWithSkeleton from './ImageWithSkeleton';
+import { useLanguage } from '@/context/LanguageContext';
 
 function FacilityCard({
   titleLines = [],
@@ -12,6 +13,8 @@ function FacilityCard({
   isDarkCard = false,
   linkTo = null,
 }) {
+  const { t } = useLanguage();
+
   const cardContent = (
     <div className="relative flex h-full w-full flex-col justify-between z-10">
       {/* Top Section: Stacked Title Badges */}
@@ -21,7 +24,7 @@ function FacilityCard({
             key={index}
             className={`inline-block rounded-[7px] px-2.5 py-0.5 font-fredoka text-2xl font-semibold leading-snug text-[#000000] sm:text-3xl md:text-[30px] ${titleBadgeBg}`}
           >
-            {line}
+            {t(line)}
           </span>
         ))}
       </div>
@@ -40,7 +43,7 @@ function FacilityCard({
           className={`font-poppins text-base font-medium md:text-lg ${isDarkCard ? 'text-white' : 'text-[#000000]'
             }`}
         >
-          Learn more
+          {t("Learn more")}
         </span>
       </div>
 

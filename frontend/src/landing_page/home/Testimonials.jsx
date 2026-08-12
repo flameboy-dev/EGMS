@@ -1,7 +1,10 @@
 import React from 'react';
 import TestimonialSlider from '@/components/custom/TestimonialSlider';
+import { useLanguage } from '@/context/LanguageContext';
 
 function Testimonials() {
+  const { t } = useLanguage();
+
   const testimonialsData = [
     {
       id: '1',
@@ -46,10 +49,10 @@ function Testimonials() {
         {/* Section Header */}
         <div className="mb-8 sm:mb-12 flex flex-col items-start space-y-2 sm:space-y-3">
           <h2 className="font-fredoka text-2xl font-semibold tracking-tight text-[#000000] sm:text-4xl md:text-[40px]">
-            Testimonials
+            {t("Testimonials")}
           </h2>
           <p className="max-w-4xl font-poppins text-sm sm:text-base text-[#000000]/80 sm:text-lg lg:max-w-none">
-            Hear what parents have to say about their children’s joyful learning journey at Ever Green Model School.
+            {t("Hear what parents have to say about their children’s joyful learning journey at Ever Green Model School.")}
           </p>
         </div>
 

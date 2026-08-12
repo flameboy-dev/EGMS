@@ -27,12 +27,8 @@ import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide
 
 function STDThree() {
   const std3Paragraphs = [
-    <>
-      At <strong className="font-bold text-[#000000]">Ever Green Model School</strong>, Class III fosters deeper critical thinking and subject mastery across languages, dual mathematics, sciences, and social studies.
-    </>,
-    <>
-      The curriculum includes Bengali & Bengali Grammar, English Reader & English Grammar, Bengali Math & English Math, Science, History, Geography, Bengali G.K., Conversation practice, Computer, and Drawing.
-    </>,
+    "At Ever Green Model School, Class III fosters deeper critical thinking and subject mastery across languages, dual mathematics, sciences, and social studies.",
+    "The curriculum includes Bengali & Bengali Grammar, English Reader & English Grammar, Bengali Math & English Math, Science, History, Geography, Bengali G.K., Conversation practice, Computer, and Drawing.",
   ];
 
   const std3Subjects = [

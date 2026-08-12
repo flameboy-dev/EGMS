@@ -26,43 +26,46 @@ import Yoga from './landing_page/facilities/Yoga'
 
 import ScrollToTop from './components/custom/ScrollToTop'
 import TranslateButton from './components/custom/TranslateButton'
+import { LanguageProvider } from './context/LanguageContext'
 
 createRoot(document.getElementById('root')).render(
-  <BrowserRouter>
-    <ScrollToTop />
-    <Routes>
-      {/* Home & Section Routes */}
-      <Route path="/" element={<HomePage />} />
-      <Route path="/about" element={<HomePage />} />
-      <Route path="/programs" element={<HomePage />} />
-      <Route path="/facilities" element={<HomePage />} />
-      <Route path="/contact" element={<HomePage />} />
+  <LanguageProvider>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Routes>
+        {/* Home & Section Routes */}
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<HomePage />} />
+        <Route path="/programs" element={<HomePage />} />
+        <Route path="/facilities" element={<HomePage />} />
+        <Route path="/contact" element={<HomePage />} />
 
-      {/* Gallery, Enrollment & Privacy Routes */}
-      <Route path="/gallery" element={<GalleryPage />} />
-      <Route path="/enroll" element={<EnrollPage />} />
-      <Route path="/privacy" element={<PrivacyPage />} />
+        {/* Gallery, Enrollment & Privacy Routes */}
+        <Route path="/gallery" element={<GalleryPage />} />
+        <Route path="/enroll" element={<EnrollPage />} />
+        <Route path="/privacy" element={<PrivacyPage />} />
 
-      {/* Program Routes */}
-      <Route path="/programs/nursery" element={<Nursery />} />
-      <Route path="/programs/lkg" element={<LKG />} />
-      <Route path="/programs/ukg" element={<UKG />} />
-      <Route path="/programs/stdone" element={<STDOne />} />
-      <Route path="/programs/stdtwo" element={<STDTwo />} />
-      <Route path="/programs/stdthree" element={<STDThree />} />
-      <Route path="/programs/stdfour" element={<STDFour />} />
+        {/* Program Routes */}
+        <Route path="/programs/nursery" element={<Nursery />} />
+        <Route path="/programs/lkg" element={<LKG />} />
+        <Route path="/programs/ukg" element={<UKG />} />
+        <Route path="/programs/stdone" element={<STDOne />} />
+        <Route path="/programs/stdtwo" element={<STDTwo />} />
+        <Route path="/programs/stdthree" element={<STDThree />} />
+        <Route path="/programs/stdfour" element={<STDFour />} />
 
-      {/* Facility Routes */}
-      <Route path="/facilities/smartclass" element={<SmartClass />} />
-      <Route path="/facilities/art" element={<Art />} />
-      <Route path="/facilities/transport" element={<Transport />} />
-      <Route path="/facilities/computer" element={<Computer />} />
-      <Route path="/facilities/indoor" element={<Indoor />} />
-      <Route path="/facilities/yoga" element={<Yoga />} />
+        {/* Facility Routes */}
+        <Route path="/facilities/smartclass" element={<SmartClass />} />
+        <Route path="/facilities/art" element={<Art />} />
+        <Route path="/facilities/transport" element={<Transport />} />
+        <Route path="/facilities/computer" element={<Computer />} />
+        <Route path="/facilities/indoor" element={<Indoor />} />
+        <Route path="/facilities/yoga" element={<Yoga />} />
 
-      {/* Wildcard 404 Route */}
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-    <TranslateButton />
-  </BrowserRouter>
+        {/* Wildcard 404 Route */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <TranslateButton />
+    </BrowserRouter>
+  </LanguageProvider>
 )
