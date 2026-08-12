@@ -12,6 +12,11 @@ function TestimonialSlider({ testimonials = [] }) {
   const [isAnimate, setIsAnimate] = useState(true);
   const containerRef = useRef(null);
   const [translateX, setTranslateX] = useState(0);
+  const [cardWidth, setCardWidth] = useState(560);
+
+  // Touch Swipe Support for Mobile
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const handlePrev = () => {
     setIsAnimate(true);
@@ -33,23 +38,48 @@ function TestimonialSlider({ testimonials = [] }) {
     }
   };
 
+  const handleTouchStart = (e) => {
+    touchStartX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchMove = (e) => {
+    touchEndX.current = e.targetTouches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    if (!touchStartX.current || !touchEndX.current) return;
+    const distance = touchStartX.current - touchEndX.current;
+    if (distance > 40) {
+      handleNext();
+    } else if (distance < -40) {
+      handlePrev();
+    }
+    touchStartX.current = 0;
+    touchEndX.current = 0;
+  };
+
   useEffect(() => {
     const updatePosition = () => {
       if (!containerRef.current) return;
       const containerWidth = containerRef.current.offsetWidth;
-      let cardWidth = 560;
+      let calculatedCardWidth = 560;
       let gap = 24;
 
       if (window.innerWidth < 640) {
-        cardWidth = Math.min(containerWidth - 32, 480);
-        gap = 16;
+        calculatedCardWidth = Math.max(containerWidth - 28, 250);
+        gap = 12;
       } else if (window.innerWidth < 1024) {
-        cardWidth = 480;
+        calculatedCardWidth = Math.min(containerWidth - 48, 480);
         gap = 20;
+      } else {
+        calculatedCardWidth = 560;
+        gap = 24;
       }
 
+      setCardWidth(calculatedCardWidth);
+
       // Calculate offset so current index card is centered in the container
-      const offset = (containerWidth - cardWidth) / 2 - currentIndex * (cardWidth + gap);
+      const offset = (containerWidth - calculatedCardWidth) / 2 - currentIndex * (calculatedCardWidth + gap);
       setTranslateX(offset);
     };
 
@@ -67,11 +97,17 @@ function TestimonialSlider({ testimonials = [] }) {
   };
 
   return (
-    <div className="relative w-full rounded-[24px] sm:rounded-[40px] md:rounded-[45px] bg-[#1E3F20] py-8 sm:py-12 md:py-16 overflow-hidden shadow-xl border border-[#191A23]">
-      {/* Sliding Track Window */}
-      <div ref={containerRef} className="w-full overflow-hidden">
+    <div className="relative w-full rounded-[24px] sm:rounded-[40px] md:rounded-[45px] bg-[#1E3F20] py-6 sm:py-12 md:py-16 overflow-hidden shadow-xl border border-[#191A23]">
+      {/* Sliding Track Window with Touch Support */}
+      <div
+        ref={containerRef}
+        className="w-full overflow-hidden touch-pan-y"
+        onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
+      >
         <div
-          className={`flex gap-4 sm:gap-5 md:gap-6 ${
+          className={`flex gap-3 sm:gap-5 md:gap-6 ${
             isAnimate ? 'transition-transform duration-500 ease-in-out' : ''
           }`}
           style={{ transform: `translateX(${translateX}px)` }}
@@ -83,18 +119,19 @@ function TestimonialSlider({ testimonials = [] }) {
               quote={testimonial.quote}
               name={testimonial.name}
               role={testimonial.role}
+              width={cardWidth}
             />
           ))}
         </div>
       </div>
 
       {/* Navigation Controls */}
-      <div className="mt-8 sm:mt-12 flex items-center justify-center space-x-6 sm:space-x-8">
+      <div className="mt-6 sm:mt-12 flex items-center justify-center space-x-4 sm:space-x-8">
         {/* Previous Button */}
         <button
           onClick={handlePrev}
           aria-label="Previous Testimonial"
-          className="flex h-10 w-10 items-center justify-center text-white hover:text-[#B9FF66] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
+          className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center text-white hover:text-[#B9FF66] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
         >
           <ArrowLeft className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.5]" />
         </button>
@@ -109,7 +146,7 @@ function TestimonialSlider({ testimonials = [] }) {
               className="p-1 cursor-pointer transition-all duration-200 hover:scale-125 focus:outline-none"
             >
               <Sparkle
-                className={`h-3 w-3 sm:h-5 sm:w-5 transition-all duration-300 ${
+                className={`h-3.5 w-3.5 sm:h-5 sm:w-5 transition-all duration-300 ${
                   idx === activeRealIndex
                     ? 'fill-[#B9FF66] text-[#B9FF66] scale-110'
                     : 'fill-white text-white opacity-70 hover:opacity-100'
@@ -123,7 +160,7 @@ function TestimonialSlider({ testimonials = [] }) {
         <button
           onClick={handleNext}
           aria-label="Next Testimonial"
-          className="flex h-10 w-10 items-center justify-center text-white hover:text-[#B9FF66] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
+          className="flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center text-white hover:text-[#B9FF66] transition-all duration-200 hover:scale-110 active:scale-95 cursor-pointer"
         >
           <ArrowRight className="h-5 w-5 sm:h-6 sm:w-6 stroke-[2.5]" />
         </button>

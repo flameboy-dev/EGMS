@@ -1,22 +1,25 @@
 import React from 'react';
 
-function TestimonialCard({ quote, name, role }) {
+function TestimonialCard({ quote, name, role, width }) {
   return (
-    <div className="flex w-full max-w-[560px] shrink-0 flex-col items-start px-2 sm:px-4">
+    <div
+      className="flex shrink-0 flex-col items-start px-1 sm:px-2"
+      style={{ width: width ? `${width}px` : undefined }}
+    >
       {/* Speech Bubble Card */}
-      <div className="relative min-h-[160px] sm:min-h-[190px] w-full rounded-[20px] sm:rounded-[30px] border-2 border-[#B9FF66] bg-[#191A23] p-5 sm:p-8 md:p-9 shadow-md flex items-center">
-        <p className="font-poppins text-[13px] leading-relaxed text-white sm:text-base md:text-[16px]">
+      <div className="relative min-h-[130px] sm:min-h-[170px] w-full rounded-[20px] sm:rounded-[30px] border-2 border-[#B9FF66] bg-[#191A23] p-4 sm:p-7 md:p-8 shadow-md flex items-center">
+        <p className="font-poppins text-xs leading-relaxed text-white sm:text-sm md:text-base">
           "{quote}"
         </p>
 
         {/* Speech Bubble Tail */}
         <svg
-          width="26"
-          height="18"
+          width="22"
+          height="15"
           viewBox="0 0 26 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
-          className="absolute -bottom-[17px] left-8 sm:left-12 z-10"
+          className="absolute -bottom-[14px] left-6 sm:left-10 z-10"
         >
           <path
             d="M1 0L13 16L25 0"
@@ -31,11 +34,11 @@ function TestimonialCard({ quote, name, role }) {
       </div>
 
       {/* Author Name and Role */}
-      <div className="mt-6 sm:mt-7 ml-8 sm:ml-12 flex flex-col items-start space-y-0.5">
-        <h4 className="font-fredoka text-base font-semibold tracking-wide text-[#B9FF66] sm:text-lg md:text-xl">
+      <div className="mt-4 sm:mt-6 ml-6 sm:ml-10 flex flex-col items-start space-y-0.5">
+        <h4 className="font-fredoka text-sm font-semibold tracking-wide text-[#B9FF66] sm:text-base md:text-xl">
           {name}
         </h4>
-        <p className="font-poppins text-xs font-normal text-white sm:text-sm md:text-[14px]">
+        <p className="font-poppins text-[11px] font-normal text-white/90 sm:text-xs md:text-sm">
           {role}
         </p>
       </div>
