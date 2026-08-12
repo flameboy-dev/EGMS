@@ -4,6 +4,7 @@ import './index.css'
 import HomePage from './landing_page/home/HomePage'
 import GalleryPage from './landing_page/gallery/GalleryPage'
 import EnrollPage from './landing_page/enroll/EnrollPage'
+import PrivacyPage from './landing_page/privacy/PrivacyPage'
 import NotFound from './landing_page/NotFound'
 
 // Individual Program Pages
@@ -36,9 +37,10 @@ createRoot(document.getElementById('root')).render(
       <Route path="/facilities" element={<HomePage />} />
       <Route path="/contact" element={<HomePage />} />
 
-      {/* Gallery & Enrollment Routes */}
+      {/* Gallery, Enrollment & Privacy Routes */}
       <Route path="/gallery" element={<GalleryPage />} />
       <Route path="/enroll" element={<EnrollPage />} />
+      <Route path="/privacy" element={<PrivacyPage />} />
 
       {/* Program Routes */}
       <Route path="/programs/nursery" element={<Nursery />} />
