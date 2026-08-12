@@ -716,7 +716,7 @@ function EnrollPage() {
                     4. Required Document Uploads
                   </h2>
                   <p className="font-poppins text-xs text-[#1E3F20]/75">
-                    Accepted formats: PDF, JPG, PNG, WEBP (Max 5MB each).
+                    Accepted formats: PDF, JPG, PNG, WEBP (Max 2MB per file, 3.8MB total). Photos are auto-compressed.
                   </p>
                 </div>
               </div>
@@ -735,7 +735,7 @@ function EnrollPage() {
                         Upload Profile Photo
                       </span>
                       <span className="font-poppins text-[10px] sm:text-[11px] text-[#1E3F20]/70 mt-0.5">
-                        JPG, PNG, WEBP (Max 5MB)
+                        JPG, PNG, WEBP (Max 2MB)
                       </span>
                       <input
                         type="file"
@@ -782,7 +782,7 @@ function EnrollPage() {
                         Upload Birth Certificate
                       </span>
                       <span className="font-poppins text-[10px] sm:text-[11px] text-[#1E3F20]/70 mt-0.5">
-                        PDF or clear scan (Max 5MB)
+                        PDF or clear scan (Max 2MB)
                       </span>
                       <input
                         type="file"
@@ -829,7 +829,7 @@ function EnrollPage() {
                         Upload Aadhaar Card
                       </span>
                       <span className="font-poppins text-[10px] sm:text-[11px] text-[#1E3F20]/70 mt-0.5">
-                        PDF or clear scan (Max 5MB)
+                        PDF or clear scan (Max 2MB)
                       </span>
                       <input
                         type="file"
