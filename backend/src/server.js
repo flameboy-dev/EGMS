@@ -213,6 +213,7 @@ const enrollmentSchema = z.object({
     .min(2, 'Student Name must be at least 2 characters')
     .regex(/^[a-zA-Z\s.-]+$/, 'Student Name must contain only letters, dots, and spaces (no numbers or special characters)'),
   dob: z.string().min(1, 'Date of Birth is required'),
+  gender: z.string().min(1, "Student's Gender is required"),
   studentClass: z.enum(['Nursery', 'L.K.G', 'U.K.G', 'STD I', 'STD II', 'STD III', 'STD IV'], {
     errorMap: () => ({ message: 'Invalid class selected' }),
   }),
@@ -309,6 +310,7 @@ app.post(
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 20px;">
               <tr><td style="padding: 6px 0; font-weight: bold; width: 40%;">Student Full Name:</td><td>${data.studentName}</td></tr>
               <tr><td style="padding: 6px 0; font-weight: bold;">Date of Birth:</td><td>${data.dob}</td></tr>
+              <tr><td style="padding: 6px 0; font-weight: bold;">Gender:</td><td>${data.gender}</td></tr>
               <tr><td style="padding: 6px 0; font-weight: bold;">Applying For Class:</td><td><span style="background: #ECF39E; padding: 3px 8px; border-radius: 6px; font-weight: bold;">${data.studentClass}</span></td></tr>
               <tr><td style="padding: 6px 0; font-weight: bold;">Child Aadhaar Number:</td><td>${data.studentAadhaar}</td></tr>
             </table>

@@ -31,6 +31,7 @@ function EnrollPage() {
   const [formData, setFormData] = useState({
     studentName: '',
     dob: '',
+    gender: '',
     studentClass: '',
     studentAadhaar: '',
     guardianName: '',
@@ -220,6 +221,11 @@ function EnrollPage() {
       return;
     }
 
+    if (!formData.gender) {
+      setFormError("Please select the student's gender.");
+      return;
+    }
+
     if (!/^\d{12}$/.test(formData.studentAadhaar.trim())) {
       setFormError("Student's Aadhaar Number must be exactly 12 numeric digits.");
       return;
@@ -256,6 +262,7 @@ function EnrollPage() {
       const bodyFormData = new FormData();
       bodyFormData.append('studentName', formData.studentName.trim());
       bodyFormData.append('dob', formData.dob);
+      bodyFormData.append('gender', formData.gender);
       bodyFormData.append('studentClass', formData.studentClass);
       bodyFormData.append('studentAadhaar', formData.studentAadhaar.trim());
       bodyFormData.append('guardianName', formData.guardianName.trim());
@@ -331,6 +338,7 @@ function EnrollPage() {
                 <FileCheck className="h-4 w-4 text-[#1E3F20]" />
                 <span>Application Summary & Reference:</span>
               </div>
+              <p>• Student: {formData.studentName} ({formData.gender}, DOB: {formData.dob})</p>
               <p>• Guardian: {formData.guardianName} ({formData.guardianOccupation})</p>
               <p>• Verified Email: {formData.email}</p>
               <p>• Phone: {formData.mobileNumber}</p>
@@ -398,6 +406,26 @@ function EnrollPage() {
                     onChange={handleInputChange}
                     className="h-11 sm:h-12 w-full rounded-xl border-2 border-[#191A23] bg-[#F6FAEF] px-3.5 sm:px-4 font-poppins text-xs sm:text-sm text-[#000000] outline-none transition-all focus:border-[#1E3F20] focus:bg-white cursor-pointer"
                   />
+                </div>
+
+                {/* Gender */}
+                <div className="flex flex-col space-y-1">
+                  <label htmlFor="gender" className="font-poppins text-xs font-semibold text-[#000000] sm:text-sm">
+                    Student's Gender *
+                  </label>
+                  <select
+                    id="gender"
+                    name="gender"
+                    required
+                    value={formData.gender}
+                    onChange={handleInputChange}
+                    className="h-11 sm:h-12 w-full rounded-xl border-2 border-[#191A23] bg-[#F6FAEF] px-3.5 sm:px-4 font-poppins text-xs sm:text-sm text-[#000000] outline-none transition-all focus:border-[#1E3F20] focus:bg-white cursor-pointer"
+                  >
+                    <option value="" disabled>-- Select Gender --</option>
+                    <option value="Boy (Male)">Boy (Male)</option>
+                    <option value="Girl (Female)">Girl (Female)</option>
+                    <option value="Other">Other</option>
+                  </select>
                 </div>
 
                 {/* Class / Grade Applying For */}
@@ -840,7 +868,10 @@ function EnrollPage() {
               </button>
 
               <p className="mt-2.5 text-center font-poppins text-[11px] sm:text-xs text-[#1E3F20]/75">
-                🔒 All submitted data is encrypted and sent directly to Ever Green Model School's official inbox.
+                🔒 All submitted data is encrypted and handled in accordance with our{' '}
+                <Link to="/privacy" className="font-semibold text-[#1E3F20] underline underline-offset-2 hover:text-[#000000]">
+                  Privacy Policy
+                </Link>.
               </p>
             </div>
           </form>
