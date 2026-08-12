@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import { Languages, ChevronUp, Check, Globe } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 
@@ -8,6 +9,7 @@ const languages = [
 ];
 
 export default function TranslateButton() {
+  const location = useLocation();
   const [isOpen, setIsOpen] = useState(false);
   const { language, setLanguage } = useLanguage();
   const dropdownRef = useRef(null);
@@ -21,6 +23,11 @@ export default function TranslateButton() {
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
+
+  // Unconditional hook calls must come before any early returns (React Rules of Hooks)
+  if (location.pathname && location.pathname.startsWith('/enroll')) {
+    return null;
+  }
 
   const handleSelectLanguage = (langCode) => {
     setLanguage(langCode);

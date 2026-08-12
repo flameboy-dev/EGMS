@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import { useLanguage } from '@/context/LanguageContext';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
@@ -29,6 +30,13 @@ import { safeParseJson, compressImage } from '@/utils/api';
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
 function EnrollPage() {
+  const { setLanguage } = useLanguage();
+
+  // Reset website language to English on enrollment page
+  useEffect(() => {
+    setLanguage('en');
+  }, [setLanguage]);
+
   const [formData, setFormData] = useState({
     studentName: '',
     dob: '',
