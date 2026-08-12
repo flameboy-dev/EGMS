@@ -21,6 +21,10 @@ import sports2Img from '@/assets/images/sports2.jpg';
 import annualFunc4Img from '@/assets/images/Annual_Function4.jpg';
 import puja2Img from '@/assets/images/swaraswatipuja2.jpg';
 import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
+import swapanMondalImg from '@/assets/images/Swapan Mondal.jpeg';
+import ankitaPanditRoutImg from '@/assets/images/Ankita Pandit Rout.jpeg';
+import madhusudanMaityImg from '@/assets/images/Madhusudan Maity.jpeg';
+import shrabaniGuchhaitImg from '@/assets/images/Shrabani Guchhait.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDOne() {
@@ -109,15 +113,19 @@ function STDOne() {
     },
     {
       name: 'Swapan Mondal',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+      image: swapanMondalImg,
     },
     {
       name: 'Ankita Pandit Rout',
-      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400',
+      image: ankitaPanditRoutImg,
     },
     {
       name: 'Modhusudan Maity',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
+      image: madhusudanMaityImg,
+    },
+    {
+      name: 'Shrabani Guchhait',
+      image: shrabaniGuchhaitImg,
     },
   ];
 

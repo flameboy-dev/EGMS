@@ -23,6 +23,7 @@ import partnershipImg from '@/assets/images/Partnership.png';
 // Import Authority Images
 import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
 import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
+import pankajSamantaImg from '@/assets/images/Pankaj Samanta.jpg';
 
 function About() {
   const { t } = useLanguage();
@@ -44,7 +45,7 @@ function About() {
       id: 'pankaj-samanta',
       name: 'Pankaj Samanta',
       role: 'School Authority',
-      image: partnershipImg,
+      image: pankajSamantaImg,
     },
   ];
 

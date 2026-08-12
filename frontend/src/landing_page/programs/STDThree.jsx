@@ -23,6 +23,10 @@ import talentExam1Img from '@/assets/images/TalentExamAwards1.jpg';
 import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
 import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
 import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
+import suparnaJanaImg from '@/assets/images/Suparna Jana.jpeg';
+import swapanMondalImg from '@/assets/images/Swapan Mondal.jpeg';
+import ankitaPanditRoutImg from '@/assets/images/Ankita Pandit Rout.jpeg';
+import madhusudanMaityImg from '@/assets/images/Madhusudan Maity.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDThree() {
@@ -116,7 +120,7 @@ function STDThree() {
     },
     {
       name: 'Suparna Jana',
-      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
+      image: suparnaJanaImg,
     },
     {
       name: 'Moumita Bera',
@@ -124,15 +128,15 @@ function STDThree() {
     },
     {
       name: 'Swapan Mondal',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+      image: swapanMondalImg,
     },
     {
       name: 'Ankita Pandit Rout',
-      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400',
+      image: ankitaPanditRoutImg,
     },
     {
       name: 'Modhusudan Maity',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
+      image: madhusudanMaityImg,
     },
   ];
 

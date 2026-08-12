@@ -9,7 +9,7 @@ import paintingImg from '@/assets/images/Painting.png';
 import schoolBusImg from '@/assets/images/School_Bus.png';
 import codingImg from '@/assets/images/Coding.png';
 import boardGamesImg from '@/assets/images/Board_Games.png';
-import familyImg from '@/assets/images/Family.png';
+import yogaImg from '@/assets/images/Yoga.png';
 
 function HomeFacilities({ isLoading = false }) {
   const { t } = useLanguage();
@@ -65,7 +65,7 @@ function HomeFacilities({ isLoading = false }) {
       titleLines: [t('Yoga &'), t('Meditation')],
       titleBadgeBg: 'bg-[#B9FF66]',
       cardBg: 'bg-[#1E3F20]',
-      image: familyImg,
+      image: yogaImg,
       isDarkCard: true,
       linkTo: '/facilities/yoga',
     },

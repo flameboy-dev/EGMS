@@ -21,6 +21,10 @@ import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
 import sports6Img from '@/assets/images/sports6.jpg';
 import annualFunc14Img from '@/assets/images/Annual_Function14.jpg';
 import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
+import suparnaJanaImg from '@/assets/images/Suparna Jana.jpeg';
+import ankitaPanditRoutImg from '@/assets/images/Ankita Pandit Rout.jpeg';
+import madhusudanMaityImg from '@/assets/images/Madhusudan Maity.jpeg';
+import shrabaniGuchhaitImg from '@/assets/images/Shrabani Guchhait.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function Nursery() {
@@ -104,19 +108,19 @@ function Nursery() {
     },
     {
       name: 'Suparna Jana',
-      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
+      image: suparnaJanaImg,
     },
     {
       name: 'Ankita Pandit Rout',
-      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400',
+      image: ankitaPanditRoutImg,
     },
     {
       name: 'Modhusudan Maity',
-      image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=400',
+      image: madhusudanMaityImg,
     },
     {
       name: 'Shrabani Guchhait',
-      image: 'https://images.unsplash.com/photo-1548142813-c348350df52b?auto=format&fit=crop&q=80&w=400',
+      image: shrabaniGuchhaitImg,
     },
   ];
 

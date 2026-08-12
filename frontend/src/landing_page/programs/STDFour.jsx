@@ -19,7 +19,12 @@ import academicProg7Img from '@/assets/images/Academic_Programs7.jpg';
 import sports8Img from '@/assets/images/sports8.jpg';
 import annualFunc17Img from '@/assets/images/Annual_Function17.jpg';
 import awards2Img from '@/assets/images/Awards2.jpg';
+import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
+import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
+import suparnaJanaImg from '@/assets/images/Suparna Jana.jpeg';
 import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
+import swapanMondalImg from '@/assets/images/Swapan Mondal.jpeg';
+import ankitaPanditRoutImg from '@/assets/images/Ankita Pandit Rout.jpeg';
 import { UserCheck, BookOpen, ShieldCheck, Palette, Sprout, Heart } from 'lucide-react';
 
 function STDFour() {
@@ -104,16 +109,28 @@ function STDFour() {
 
   const std4Teachers = [
     {
+      name: 'Goutam Giri',
+      image: goutamGiriImg,
+    },
+    {
+      name: 'Soma Jana Giri',
+      image: somaJanaGiriImg,
+    },
+    {
+      name: 'Suparna Jana',
+      image: suparnaJanaImg,
+    },
+    {
       name: 'Moumita Bera',
       image: moumitaBeraImg,
     },
     {
       name: 'Swapan Mondal',
-      image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=400',
+      image: swapanMondalImg,
     },
     {
       name: 'Ankita Pandit Rout',
-      image: 'https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?auto=format&fit=crop&q=80&w=400',
+      image: ankitaPanditRoutImg,
     },
   ];
 

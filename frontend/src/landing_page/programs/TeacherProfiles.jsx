@@ -4,7 +4,13 @@ import ImageWithSkeleton from '@/components/custom/ImageWithSkeleton';
 import { useLanguage } from '@/context/LanguageContext';
 import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
 import somaJanaGiriImg from '@/assets/images/Soma_Jana_Giri.jpeg';
+import pankajSamantaImg from '@/assets/images/Pankaj Samanta.jpg';
 import moumitaBeraImg from '@/assets/images/Moumita_Bera.jpeg';
+import suparnaJanaImg from '@/assets/images/Suparna Jana.jpeg';
+import swapanMondalImg from '@/assets/images/Swapan Mondal.jpeg';
+import ankitaPanditRoutImg from '@/assets/images/Ankita Pandit Rout.jpeg';
+import madhusudanMaityImg from '@/assets/images/Madhusudan Maity.jpeg';
+import shrabaniGuchhaitImg from '@/assets/images/Shrabani Guchhait.jpeg';
 
 function TeacherProfiles({
   title = "MEET YOUR TEACHERS",
@@ -23,12 +29,32 @@ function TeacherProfiles({
       image: somaJanaGiriImg,
     },
     {
+      name: 'Pankaj Samanta',
+      image: pankajSamantaImg,
+    },
+    {
       name: 'Moumita Bera',
       image: moumitaBeraImg,
     },
     {
       name: 'Suparna Jana',
-      image: 'https://images.unsplash.com/photo-1580894732413-b7ce40807dbe?auto=format&fit=crop&q=80&w=400',
+      image: suparnaJanaImg,
+    },
+    {
+      name: 'Swapan Mondal',
+      image: swapanMondalImg,
+    },
+    {
+      name: 'Ankita Pandit Rout',
+      image: ankitaPanditRoutImg,
+    },
+    {
+      name: 'Modhusudan Maity',
+      image: madhusudanMaityImg,
+    },
+    {
+      name: 'Shrabani Guchhait',
+      image: shrabaniGuchhaitImg,
     },
   ];
 

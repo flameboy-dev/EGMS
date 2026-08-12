@@ -9,7 +9,7 @@ import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
 import healthyEnv3Img from '@/assets/images/Healthy_Environment3.jpg';
 import healthyEnv5Img from '@/assets/images/Healthy_Environment5.jpg';
 import healthyEnv6Img from '@/assets/images/Healthy_Environment6.jpg';
-import familyImg from '@/assets/images/Family.png';
+import yogaImg from '@/assets/images/Yoga.png';
 import { Sun, Heart, Sparkles, Smile, ShieldCheck, Flame } from 'lucide-react';
 import { useLanguage } from '@/context/LanguageContext';
 
@@ -121,7 +121,7 @@ function Yoga() {
           subTagline={t("Dedicated Sunday sessions for physical flexibility, breathing control, and mental focus.")}
           aboutTitle={t("Nurturing Mind, Body & Spirit Every Sunday")}
           aboutParagraphs={yogaParagraphs}
-          image={familyImg}
+          image={yogaImg}
           prevLink="/facilities/indoor"
           nextLink="/facilities/smartclass"
           badgeText={t("Wellness & Mindfulness")}
