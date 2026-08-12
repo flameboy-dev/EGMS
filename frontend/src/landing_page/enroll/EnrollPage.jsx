@@ -24,7 +24,7 @@ import {
   Loader2,
   X,
 } from 'lucide-react';
-import { safeParseJson } from '@/utils/api';
+import { safeParseJson, compressImage } from '@/utils/api';
 
 const API_BASE_URL = import.meta.env.VITE_API_URL || '/api';
 
@@ -96,15 +96,9 @@ function EnrollPage() {
   };
 
   // Handle File Selection with Type & Size Validation
-  const handleFileChange = (e, fieldName) => {
+  const handleFileChange = async (e, fieldName) => {
     const selectedFile = e.target.files[0];
     if (!selectedFile) return;
-
-    // Validate size (max 5MB)
-    if (selectedFile.size > 5 * 1024 * 1024) {
-      setFormError(`The file "${selectedFile.name}" exceeds the maximum 5MB size limit.`);
-      return;
-    }
 
     // Validate mime type
     const allowedTypes = ['application/pdf', 'image/jpeg', 'image/jpg', 'image/png', 'image/webp'];
@@ -113,8 +107,20 @@ function EnrollPage() {
       return;
     }
 
+    // Automatically compress images client-side
+    let finalFile = selectedFile;
+    if (selectedFile.type.startsWith('image/')) {
+      finalFile = await compressImage(selectedFile);
+    }
+
+    // Validate size after compression (max 2MB per file)
+    if (finalFile.size > 2 * 1024 * 1024) {
+      setFormError(`The file "${selectedFile.name}" exceeds the 2MB size limit. Please upload a smaller file.`);
+      return;
+    }
+
     setFormError('');
-    setFiles((prev) => ({ ...prev, [fieldName]: selectedFile }));
+    setFiles((prev) => ({ ...prev, [fieldName]: finalFile }));
   };
 
   const removeFile = (fieldName) => {
@@ -273,9 +279,20 @@ function EnrollPage() {
       bodyFormData.append('verificationToken', otpState.verificationToken);
       bodyFormData.append('address', formData.address.trim());
 
-      bodyFormData.append('studentPhoto', files.studentPhoto);
-      bodyFormData.append('birthCertificate', files.birthCertificate);
-      bodyFormData.append('aadhaarCard', files.aadhaarCard);
+      const photoCompressed = await compressImage(files.studentPhoto);
+      const birthCompressed = await compressImage(files.birthCertificate);
+      const aadhaarCompressed = await compressImage(files.aadhaarCard);
+
+      const totalSize = (photoCompressed?.size || 0) + (birthCompressed?.size || 0) + (aadhaarCompressed?.size || 0);
+      if (totalSize > 3.8 * 1024 * 1024) {
+        setFormError('The total size of uploaded files exceeds 3.8 MB. Please select smaller image or PDF files.');
+        setSubmitting(false);
+        return;
+      }
+
+      bodyFormData.append('studentPhoto', photoCompressed);
+      bodyFormData.append('birthCertificate', birthCompressed);
+      bodyFormData.append('aadhaarCard', aadhaarCompressed);
 
       const response = await fetch(`${API_BASE_URL}/enroll`, {
         method: 'POST',

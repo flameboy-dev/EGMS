@@ -163,7 +163,7 @@ app.post('/api/otp/send', otpLimiter, async (req, res) => {
     });
   } catch (error) {
     console.error('Error sending OTP:', error);
-    return res.status(500).json({ status: 'error', message: 'Failed to send verification email. Please try again.' });
+    return res.status(500).json({ status: 'error', message: 'Unable to send verification code right now. Please try again shortly.' });
   }
 });
 
@@ -380,7 +380,7 @@ app.post(
       });
     } catch (error) {
       console.error('Error submitting enrollment:', error);
-      return res.status(500).json({ status: 'error', message: error.message || 'Server error occurred during enrollment submission.' });
+      return res.status(500).json({ status: 'error', message: 'Unable to process enrollment right now. Please try again in a few moments.' });
     }
   }
 );
@@ -557,7 +557,7 @@ app.use((err, req, res, next) => {
   console.error('Unhandled Server Error:', err);
   res.status(500).json({
     status: 'error',
-    message: err.message || 'A server error occurred. Please try again later.',
+    message: 'Our service is temporarily busy. Please try again in a few moments.',
   });
 });
 
