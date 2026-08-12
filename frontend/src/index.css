@@ -129,8 +129,25 @@
   }
   body {
     @apply bg-background text-foreground font-sans;
+    top: 0px !important;
+    position: static !important;
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-heading);
   }
+}
+
+/* Hide Google Translate top banner, tooltips & branding frames */
+.goog-te-banner-frame,
+.goog-te-banner-frame.skiptranslate,
+.goog-te-balloon-frame,
+#goog-gt-tt,
+.goog-te-spinner-pos,
+iframe.skiptranslate {
+  display: none !important;
+}
+
+.goog-text-highlight {
+  background-color: transparent !important;
+  box-shadow: none !important;
 }

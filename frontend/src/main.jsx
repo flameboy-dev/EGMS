@@ -25,6 +25,7 @@ import Indoor from './landing_page/facilities/Indoor'
 import Yoga from './landing_page/facilities/Yoga'
 
 import ScrollToTop from './components/custom/ScrollToTop'
+import TranslateButton from './components/custom/TranslateButton'
 
 createRoot(document.getElementById('root')).render(
   <BrowserRouter>
@@ -62,5 +63,6 @@ createRoot(document.getElementById('root')).render(
       {/* Wildcard 404 Route */}
       <Route path="*" element={<NotFound />} />
     </Routes>
+    <TranslateButton />
   </BrowserRouter>
 )
