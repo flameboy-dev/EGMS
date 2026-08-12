@@ -251,34 +251,34 @@ function PrivacyPage() {
                 If you have questions, concerns, or requests regarding this Privacy Policy or your family's personal data, please reach out to our administrative team:
               </p>
               
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3 pt-2 font-poppins text-xs sm:text-sm">
-                <div className="flex items-start gap-2.5">
+              <div className="grid grid-cols-1 gap-5 sm:grid-cols-12 pt-2 font-poppins text-xs sm:text-sm">
+                <div className="flex items-start gap-2.5 sm:col-span-5">
                   <Mail className="h-4 w-4 text-[#B9FF66] shrink-0 mt-1" />
                   <div>
                     <span className="font-semibold text-white block">Email Us</span>
                     <a
                       href="mailto:evergreenmodelschool58@gmail.com"
-                      className="text-white/80 hover:text-[#B9FF66] underline underline-offset-2 break-all"
+                      className="text-white/80 hover:text-[#B9FF66] underline underline-offset-2 break-all sm:break-normal"
                     >
                       evergreenmodelschool58@gmail.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-2.5">
+                <div className="flex items-start gap-2.5 sm:col-span-3">
                   <Phone className="h-4 w-4 text-[#B9FF66] shrink-0 mt-1" />
                   <div>
                     <span className="font-semibold text-white block">Call Us</span>
                     <a
                       href="tel:9732644550"
-                      className="text-white/80 hover:text-[#B9FF66] underline underline-offset-2"
+                      className="text-white/80 hover:text-[#B9FF66] underline underline-offset-2 whitespace-nowrap"
                     >
                       +91 9732644550
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-2.5">
+                <div className="flex items-start gap-2.5 sm:col-span-4">
                   <MapPin className="h-4 w-4 text-[#B9FF66] shrink-0 mt-1" />
                   <div>
                     <span className="font-semibold text-white block">Address</span>
