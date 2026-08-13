@@ -470,6 +470,15 @@ export const translations = {
   "Welcome Address during Annual Parent Conference": "অভিভাবক সম্মেলনে স্বাগত ভাষণ",
   "Dedicated Transport Car Fleet with EGMS Banner": "ইজিএমএস ব্যানারে নিজস্ব কার পরিবহন সেবা",
   "Safe Commute Pick-up & Drop-off Car Service": "নিরাপদ যাতায়াত পিক-আপ ও ড্রপ কার সেবা",
+  "Interactive Group Discussion & Classroom Learning": "ইন্টারেক্টিভ গ্রুপ আলোচনা ও ক্লাসরুম শিক্ষা",
+  "Guided Creative Writing & Class Notes Activity": "নির্দেশিত সৃজনশীল লেখা ও ক্লাস নোট কার্যক্রম",
+  "Activity-Based Foundation Learning for Young Learners": "ছোটদের জন্য কার্যক্রম-ভিত্তিক বুনিয়াদি শিক্ষা",
+  "Smart Board Visual Teaching & Interactive Session": "স্মার্ট বোর্ড ভিজ্যুয়াল টিচিং ও ইন্টারেক্টিভ সেশন",
+  "Student Problem Solving & Guidance Session": "শিক্ষার্থীদের সমস্যা সমাধান ও দিকনির্দেশনা সেশন",
+  "Coloring & Creative Craft Workshop": "রং তৈরি ও সৃজনশীল ক্রাফট কর্মশালা",
+  "Handmade Origami & Art Exhibition Showcase": "হাতে তৈরি অরিগামি ও শিল্প প্রদর্শনী",
+  "Children Clay Modeling & Creative Sculpting": "শিশুদের মাটি দিয়ে মডেলিং ও সৃজনশীল ভাস্কর্য",
+  "Annual Merit Medal & Certificate Felicitation": "বার্ষিক মেধা মেডেল ও শংসাপত্র সংবর্ধনা",
 
   // Testimonials Quotes, Names & Roles
   "Ever Green Model School has provided my child with such a supportive and joyful environment. The teachers are incredibly caring and dedicated, and I have seen amazing growth in both confidence and academics.": "এভার গ্রীন মডেল স্কুল আমার সন্তানকে অত্যন্ত সহায়ক ও আনন্দময় পরিবেশ প্রদান করেছে। শিক্ষক-শিক্ষিকারা খুবই যত্নশীল ও নিবেদিতপ্রাণ।",

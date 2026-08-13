@@ -9,7 +9,7 @@ import galleryManifest from '@/data/galleryManifest.json';
 import { useLanguage } from '@/context/LanguageContext';
 
 // Eagerly resolve image modules from asset directory
-const imageModules = import.meta.glob('@/assets/images/*.jpg', { eager: true });
+const imageModules = import.meta.glob('@/assets/images/*.{jpg,jpeg,png}', { eager: true });
 const imageMap = {};
 Object.keys(imageModules).forEach((key) => {
   const filename = key.split('/').pop();

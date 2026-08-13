@@ -59,5 +59,14 @@
   { "id": 58, "filename": "ParentsAndTeachers2.jpg", "caption": "Teacher Guidance & Parent Consultation Day", "category": "Parents & Teachers" },
   { "id": 59, "filename": "Art1.jpg", "caption": "Sunday Academic Drawing School Studio Practice", "category": "Art & Craft" },
   { "id": 60, "filename": "Transpot.jpg", "caption": "Dedicated Evergreen Banner Cars Fleet", "category": "Transport & Facilities" },
-  { "id": 61, "filename": "Transport2.jpg", "caption": "Attendant Guided Safe Student Boarding", "category": "Transport & Facilities" }
+  { "id": 61, "filename": "Transport2.jpg", "caption": "Attendant Guided Safe Student Boarding", "category": "Transport & Facilities" },
+  { "id": 62, "filename": "Academic_Programs8.jpg", "caption": "Interactive Group Discussion & Classroom Learning", "category": "Academic Programs" },
+  { "id": 63, "filename": "Academic_Programs9.jpg", "caption": "Guided Creative Writing & Class Notes Activity", "category": "Academic Programs" },
+  { "id": 64, "filename": "Academic_Programs10.jpg", "caption": "Activity-Based Foundation Learning for Young Learners", "category": "Academic Programs" },
+  { "id": 65, "filename": "Academic_Programs11.jpg", "caption": "Smart Board Visual Teaching & Interactive Session", "category": "Academic Programs" },
+  { "id": 66, "filename": "Academic_Programs12.jpg", "caption": "Student Problem Solving & Guidance Session", "category": "Academic Programs" },
+  { "id": 67, "filename": "Art2.jpeg", "caption": "Coloring & Creative Craft Workshop", "category": "Art & Craft" },
+  { "id": 68, "filename": "Art3.jpeg", "caption": "Handmade Origami & Art Exhibition Showcase", "category": "Art & Craft" },
+  { "id": 69, "filename": "Art4.jpeg", "caption": "Children Clay Modeling & Creative Sculpting", "category": "Art & Craft" },
+  { "id": 70, "filename": "Awards3.jpeg", "caption": "Annual Merit Medal & Certificate Felicitation", "category": "Awards & Achievements" }
 ]
