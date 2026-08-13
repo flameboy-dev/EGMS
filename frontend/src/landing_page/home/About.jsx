@@ -174,7 +174,7 @@ function About() {
                 {/* Profile Details */}
                 <div className="flex flex-col items-center p-5 sm:p-6 text-center">
                   <h3 className="font-fredoka text-xl sm:text-2xl font-semibold text-[#000000]">
-                    {person.name}
+                    {t(person.name)}
                   </h3>
                   <p className="mt-1 font-poppins text-xs sm:text-sm font-medium text-[#1E3F20]/80">
                     {t(person.role)}

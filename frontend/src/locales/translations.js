@@ -51,6 +51,7 @@ export const translations = {
   "Suparna Jana": "সুপর্ণা জানা",
   "Swapan Mondal": "স্বপন মন্ডল",
   "Modhusudan Maity": "মধুসূদন মাইতি",
+  "Madhusudan Maity": "মধুসূদন মাইতি",
   "Shrabani Guchhait": "শ্রাবণী গুচ্ছাইত",
   "Ankita Pandit Rout": "অঙ্কিতা পণ্ডিত রাউত",
 

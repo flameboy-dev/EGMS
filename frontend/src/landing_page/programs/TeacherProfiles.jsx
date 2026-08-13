@@ -128,14 +128,14 @@ function TeacherProfiles({
                   />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center bg-[#EAF2A1] font-fredoka text-xl font-bold text-[#1C3A1F]/60 px-4 text-center">
-                    {teacher.name}
+                    {t(teacher.name)}
                   </div>
                 )}
               </div>
 
               {/* Teacher Name Label */}
               <h3 className="mt-3 font-poppins text-base font-semibold text-[#000000] sm:text-lg text-center leading-snug">
-                {teacher.name}
+                {t(teacher.name)}
               </h3>
             </div>
           ))}
