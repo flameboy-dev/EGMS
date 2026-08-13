@@ -9,11 +9,13 @@ import ProgramGallery from './ProgramGallery';
 import TeacherProfiles from './TeacherProfiles';
 import lkgImg from '@/assets/images/L.K.G.png';
 
-import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart_Class.png';
-import boardGamesImg from '@/assets/images/Board_Games.png';
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import rhymesMusicsImg from '@/assets/images/Rhymes_Musics.png';
+import playingBlocksImg from '@/assets/images/Playing_Blocks.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
+import sportsActivityImg from '@/assets/images/SportsActivity.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProgImg from '@/assets/images/Academic_Programs.jpg';
 import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
@@ -51,7 +53,7 @@ function LKG() {
       title: 'Phonics & Word Reading',
       description:
         'Learning letter sounds, matching pictures to words, and reading simple words from the Word Book.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -59,7 +61,7 @@ function LKG() {
       title: 'Action Songs & Rhymes',
       description:
         'Singing Bengali and English rhymes with fun actions, hand gestures, and playful music.',
-      image: smartClassImg,
+      image: rhymesMusicsImg,
       icon: BookOpen,
     },
     {
@@ -67,7 +69,7 @@ function LKG() {
       title: 'Memory & Number Puzzles',
       description:
         'Fun memory cards, counting blocks, and simple pattern matching games to build thinking skills.',
-      image: boardGamesImg,
+      image: playingBlocksImg,
       icon: ShieldCheck,
     },
     {
@@ -91,7 +93,7 @@ function LKG() {
       title: 'Fun Sports & Relays',
       description:
         'Soft ball games, walking on low balance beams, running simple relays, and outdoor playground fun.',
-      image: familyImg,
+      image: sportsActivityImg,
       icon: Heart,
     },
   ];

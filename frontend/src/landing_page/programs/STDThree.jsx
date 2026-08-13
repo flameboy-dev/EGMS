@@ -9,10 +9,15 @@ import ProgramGallery from './ProgramGallery';
 import TeacherProfiles from './TeacherProfiles';
 import std3Img from '@/assets/images/STD-III.png';
 
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import rhymesMusicsImg from '@/assets/images/Rhymes_Musics.png';
+import playingBlocksImg from '@/assets/images/Playing_Blocks.png';
+import paintingImg from '@/assets/images/Painting.png';
+import scienceImg from '@/assets/images/Science.png';
+import codingImg from '@/assets/images/Coding.png';
 import teacherImg from '@/assets/images/Teacher.png';
 import smartClassImg from '@/assets/images/Smart_Class.png';
 import boardGamesImg from '@/assets/images/Board_Games.png';
-import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg5Img from '@/assets/images/Academic_Programs5.jpg';
@@ -57,7 +62,7 @@ function STDThree() {
       title: 'Essay Writing & Reading',
       description:
         'Prose literature, Bengali & English grammar exercises, essay writing, and story reviews.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -65,7 +70,7 @@ function STDThree() {
       title: 'Poetry Recitation & Music',
       description:
         'Stage poem recitation, patriotic songs, group music, and cultural performance practice.',
-      image: smartClassImg,
+      image: rhymesMusicsImg,
       icon: BookOpen,
     },
     {
@@ -73,7 +78,7 @@ function STDThree() {
       title: 'Math Problems & Logic Games',
       description:
         'Long multiplication & division, fraction exercises, word problems, and math games.',
-      image: boardGamesImg,
+      image: playingBlocksImg,
       icon: ShieldCheck,
     },
     {
@@ -89,7 +94,7 @@ function STDThree() {
       title: 'Science & Social Studies',
       description:
         'Simple science experiments, history timelines, map reading, and geography facts.',
-      image: growthImg,
+      image: scienceImg,
       icon: Sprout,
     },
     {
@@ -97,7 +102,7 @@ function STDThree() {
       title: 'Computer Lab & Sports',
       description:
         'Computer lab practice, typing exercises, track games, and playground sports.',
-      image: familyImg,
+      image: codingImg,
       icon: Heart,
     },
   ];

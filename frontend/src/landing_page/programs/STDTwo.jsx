@@ -9,10 +9,15 @@ import ProgramGallery from './ProgramGallery';
 import TeacherProfiles from './TeacherProfiles';
 import std2Img from '@/assets/images/STD-II.png';
 
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import playingBlocksImg from '@/assets/images/Playing_Blocks.png';
+import scienceImg from '@/assets/images/Science.png';
+import paintingImg from '@/assets/images/Painting.png';
+import codingImg from '@/assets/images/Coding.png';
+import sportsActivityImg from '@/assets/images/SportsActivity.png';
 import teacherImg from '@/assets/images/Teacher.png';
 import smartClassImg from '@/assets/images/Smart_Class.png';
 import boardGamesImg from '@/assets/images/Board_Games.png';
-import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg4Img from '@/assets/images/Academic_Programs4.jpg';
@@ -57,7 +62,7 @@ function STDTwo() {
       title: 'Grammar & Writing',
       description:
         'Learning English & Bengali grammar rules, writing short essays, and reading comprehension.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -65,7 +70,7 @@ function STDTwo() {
       title: 'Mental Math & Logic',
       description:
         'Multiplication tables, division puzzles, word problems, and mental math quick tricks.',
-      image: smartClassImg,
+      image: playingBlocksImg,
       icon: BookOpen,
     },
     {
@@ -73,7 +78,7 @@ function STDTwo() {
       title: 'Science & History Projects',
       description:
         'Conducting simple plant growth experiments and studying early human history timeline.',
-      image: boardGamesImg,
+      image: scienceImg,
       icon: ShieldCheck,
     },
     {
@@ -89,7 +94,7 @@ function STDTwo() {
       title: 'MS Paint & Typing',
       description:
         'Drawing digital art in MS Paint, keyboard typing practice in Wordpad, and simple computer commands.',
-      image: growthImg,
+      image: codingImg,
       icon: Sprout,
     },
     {
@@ -97,7 +102,7 @@ function STDTwo() {
       title: 'Sports & Team Relays',
       description:
         'Running 100m races, high jump basics, team sports, and outdoor playground fun.',
-      image: familyImg,
+      image: sportsActivityImg,
       icon: Heart,
     },
   ];

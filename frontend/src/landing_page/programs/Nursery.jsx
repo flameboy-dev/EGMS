@@ -9,11 +9,12 @@ import ProgramGallery from './ProgramGallery';
 import TeacherProfiles from './TeacherProfiles';
 import nurseryImg from '@/assets/images/Nursery.png';
 
-import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart_Class.png';
-import boardGamesImg from '@/assets/images/Board_Games.png';
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import rhymesMusicsImg from '@/assets/images/Rhymes_Musics.png';
+import playingBlocksImg from '@/assets/images/Playing_Blocks.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
 import healthyEnv4Img from '@/assets/images/Healthy_Environment4.jpg';
@@ -49,7 +50,7 @@ function Nursery() {
       title: 'Storytelling & Picture Books',
       description:
         'Little ones listen to fun stories, look at colorful picture books, and learn new words in a cozy setting.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -57,7 +58,7 @@ function Nursery() {
       title: 'Nursery Rhymes & Music',
       description:
         'Singing along to Bengali and English rhymes, clapping hands, and dancing to fun music beats.',
-      image: smartClassImg,
+      image: rhymesMusicsImg,
       icon: BookOpen,
     },
     {
@@ -65,7 +66,7 @@ function Nursery() {
       title: 'Puzzles & Playing Blocks',
       description:
         'Shape sorters, big colorful building blocks, and fun matching games to play and learn together.',
-      image: boardGamesImg,
+      image: playingBlocksImg,
       icon: ShieldCheck,
     },
     {
@@ -88,8 +89,8 @@ function Nursery() {
       id: 'nursery-play',
       title: 'Fun Indoor & Outdoor Games',
       description:
-        'Sandpit fun, running around safely, tossing soft balls, and playing happy group games.',
-      image: familyImg,
+        'Board games, sandpit fun, running around safely, tossing soft balls, and playing happy group games.',
+      image: boardGamesImg,
       icon: Heart,
     },
   ];

@@ -9,10 +9,15 @@ import ProgramGallery from './ProgramGallery';
 import TeacherProfiles from './TeacherProfiles';
 import std1Img from '@/assets/images/STD-I.png';
 
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import rhymesMusicsImg from '@/assets/images/Rhymes_Musics.png';
+import playingBlocksImg from '@/assets/images/Playing_Blocks.png';
+import paintingImg from '@/assets/images/Painting.png';
+import scienceImg from '@/assets/images/Science.png';
+import codingImg from '@/assets/images/Coding.png';
 import teacherImg from '@/assets/images/Teacher.png';
 import smartClassImg from '@/assets/images/Smart_Class.png';
 import boardGamesImg from '@/assets/images/Board_Games.png';
-import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg3Img from '@/assets/images/Academic_Programs3.jpg';
@@ -54,7 +59,7 @@ function STDOne() {
       title: 'Reading & Storytelling',
       description:
         'Reading prose stories, English & Bengali poem recitation, and guided class conversation practice.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -62,7 +67,7 @@ function STDOne() {
       title: 'Group Recitation & Songs',
       description:
         'Group singing, rhymes, national anthem practice, and classroom recitation.',
-      image: smartClassImg,
+      image: rhymesMusicsImg,
       icon: BookOpen,
     },
     {
@@ -70,7 +75,7 @@ function STDOne() {
       title: 'Math Practice & Puzzles',
       description:
         'Addition and subtraction exercises, number puzzles, shapes, and counting games.',
-      image: boardGamesImg,
+      image: playingBlocksImg,
       icon: ShieldCheck,
     },
     {
@@ -86,7 +91,7 @@ function STDOne() {
       title: 'Science & Geography Basics',
       description:
         'Learning about plants, animals, weather charts, and basic map reading.',
-      image: growthImg,
+      image: scienceImg,
       icon: Sprout,
     },
     {
@@ -94,7 +99,7 @@ function STDOne() {
       title: 'Computer Basics & Sports',
       description:
         'Learning computer parts, MS Paint drawing practice, running games, and sports.',
-      image: familyImg,
+      image: codingImg,
       icon: Heart,
     },
   ];

@@ -9,6 +9,8 @@ import ProgramGallery from './ProgramGallery';
 import TeacherProfiles from './TeacherProfiles';
 import ukgImg from '@/assets/images/U.K.G.png';
 
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import codingImg from '@/assets/images/Coding.png';
 import teacherImg from '@/assets/images/Teacher.png';
 import smartClassImg from '@/assets/images/Smart_Class.png';
 import boardGamesImg from '@/assets/images/Board_Games.png';
@@ -52,7 +54,7 @@ function UKG() {
       title: 'Reading & Conversation',
       description:
         'Reading short sentences, Barna Porichoy stories, and speaking confidently in daily class dialogues.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -92,7 +94,7 @@ function UKG() {
       title: 'Computer & Active Games',
       description:
         'Simple computer mouse games, basic typing practice, running games, and active team play.',
-      image: familyImg,
+      image: codingImg,
       icon: Heart,
     },
   ];

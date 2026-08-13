@@ -11,11 +11,12 @@ import ProgramCard from '@/components/custom/ProgramCard';
 import { useLanguage } from '@/context/LanguageContext';
 
 // Import Illustrations
-import teacherImg from '@/assets/images/Teacher.png';
-import smartClassImg from '@/assets/images/Smart_Class.png';
-import boardGamesImg from '@/assets/images/Board_Games.png';
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import rhymesMusicsImg from '@/assets/images/Rhymes_Musics.png';
+import playingBlocksImg from '@/assets/images/Playing_Blocks.png';
 import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
+import boardGamesImg from '@/assets/images/Board_Games.png';
 import familyImg from '@/assets/images/Family.png';
 
 function Activities({
@@ -31,7 +32,7 @@ function Activities({
       title: 'Storytelling & Picture Reading',
       description:
         'Children listen to stories, explore picture books, and participate in conversations that develop their imagination, vocabulary, and listening skills.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -39,7 +40,7 @@ function Activities({
       title: 'Music, Rhymes & Movement',
       description:
         'Children enjoy nursery rhymes, action songs, music, and simple movements that make learning fun and interactive.',
-      image: smartClassImg,
+      image: rhymesMusicsImg,
       icon: BookOpen,
     },
     {
@@ -47,7 +48,7 @@ function Activities({
       title: 'Puzzles & Learning Games',
       description:
         'Age-appropriate puzzles, matching games, building blocks, and educational games introduce children to concepts through hands-on exploration.',
-      image: boardGamesImg,
+      image: playingBlocksImg,
       icon: ShieldCheck,
     },
     {
@@ -70,8 +71,8 @@ function Activities({
       id: 'indoor-outdoor',
       title: 'Indoor & Outdoor Play',
       description:
-        'A combination of indoor and outdoor games helps children stay active while developing balance, coordination, teamwork, and confidence.',
-      image: familyImg,
+        'A combination of board games, indoor, and outdoor games helps children stay active while developing balance, coordination, teamwork, and confidence.',
+      image: boardGamesImg,
       icon: Heart,
     },
   ];

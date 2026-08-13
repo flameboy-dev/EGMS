@@ -9,10 +9,15 @@ import ProgramGallery from './ProgramGallery';
 import TeacherProfiles from './TeacherProfiles';
 import std4Img from '@/assets/images/STD-IV.png';
 
+import pictureBooksImg from '@/assets/images/Picture_Books.png';
+import playingBlocksImg from '@/assets/images/Playing_Blocks.png';
+import scienceImg from '@/assets/images/Science.png';
+import paintingImg from '@/assets/images/Painting.png';
+import codingImg from '@/assets/images/Coding.png';
+import sportsActivityImg from '@/assets/images/SportsActivity.png';
 import teacherImg from '@/assets/images/Teacher.png';
 import smartClassImg from '@/assets/images/Smart_Class.png';
 import boardGamesImg from '@/assets/images/Board_Games.png';
-import paintingImg from '@/assets/images/Painting.png';
 import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg7Img from '@/assets/images/Academic_Programs7.jpg';
@@ -55,7 +60,7 @@ function STDFour() {
       title: 'Advanced Grammar & Writing',
       description:
         'Advanced English & Bengali grammar, essay composition, and public speaking confidence.',
-      image: teacherImg,
+      image: pictureBooksImg,
       icon: UserCheck,
     },
     {
@@ -63,7 +68,7 @@ function STDFour() {
       title: 'Advanced Math Logic',
       description:
         'Complex word problems, fractions, geometry basics, and competitive math puzzle solving.',
-      image: smartClassImg,
+      image: playingBlocksImg,
       icon: BookOpen,
     },
     {
@@ -71,7 +76,7 @@ function STDFour() {
       title: 'Science & Geography Projects',
       description:
         'Hands-on science experiments, geographical map reading, and environmental projects.',
-      image: boardGamesImg,
+      image: scienceImg,
       icon: ShieldCheck,
     },
     {
@@ -87,7 +92,7 @@ function STDFour() {
       title: 'Computer Lab & Typing',
       description:
         'Creating Word documents, PowerPoint presentations, Excel tables, and Windows CMD commands.',
-      image: growthImg,
+      image: codingImg,
       icon: Sprout,
     },
     {
@@ -95,7 +100,7 @@ function STDFour() {
       title: 'Athletics & Team Leadership',
       description:
         'Track events, relay races, football, and physical leadership development.',
-      image: familyImg,
+      image: sportsActivityImg,
       icon: Heart,
     },
   ];
