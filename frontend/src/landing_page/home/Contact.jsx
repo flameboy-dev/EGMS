@@ -84,7 +84,7 @@ function Contact() {
                 <div className="flex items-center space-x-4">
                   {/* Facebook Button */}
                   <a
-                    href="https://facebook.com"
+                    href="https://www.facebook.com/goutam.giri.98499123"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -97,7 +97,7 @@ function Contact() {
 
                   {/* YouTube Button */}
                   <a
-                    href="https://youtube.com"
+                    href="https://www.youtube.com/@goutamgiri6647"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="YouTube"

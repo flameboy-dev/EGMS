@@ -79,7 +79,7 @@ function Footer({ defaultBg = 'bg-white' }) {
           <div className="flex items-center space-x-3">
             {/* YouTube */}
             <a
-              href="https://youtube.com"
+              href="https://www.youtube.com/@goutamgiri6647"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
@@ -92,7 +92,7 @@ function Footer({ defaultBg = 'bg-white' }) {
 
             {/* Facebook */}
             <a
-              href="https://facebook.com"
+              href="https://www.facebook.com/goutam.giri.98499123"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
