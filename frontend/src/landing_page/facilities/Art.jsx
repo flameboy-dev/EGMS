@@ -5,6 +5,9 @@ import FacilityHero from './FacilityHero';
 import FacilitySlider from './FacilitySlider';
 import FacilityApplicationModal from './FacilityApplicationModal';
 import art1Img from '@/assets/images/Art1.jpg';
+import art2Img from '@/assets/images/Art2.jpeg';
+import art3Img from '@/assets/images/Art3.jpeg';
+import art4Img from '@/assets/images/Art4.jpeg';
 import awards1Img from '@/assets/images/Awards1.jpg';
 import annualFunc15Img from '@/assets/images/Annual_Function15.jpg';
 import annualFunc11Img from '@/assets/images/Annual_Function11.jpg';
@@ -33,9 +36,19 @@ function Art() {
       tag: t('Academic Art'),
     },
     {
-      src: annualFunc11Img,
-      caption: t('Annual Cultural Festival Traditional Costume & Stage Art'),
-      tag: t('Festive Art'),
+      src: art2Img,
+      caption: t('Student Fine Art & Color Blending Practice'),
+      tag: t('Art Studio'),
+    },
+    {
+      src: art3Img,
+      caption: t('Creative Sketching & Drawing Competition Session'),
+      tag: t('Drawing School'),
+    },
+    {
+      src: art4Img,
+      caption: t('Young Artists Landscape Painting Workshop'),
+      tag: t('Creative Workshop'),
     },
     {
       src: awards1Img,

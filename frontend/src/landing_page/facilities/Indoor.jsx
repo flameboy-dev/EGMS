@@ -6,6 +6,7 @@ import FacilitySlider from './FacilitySlider';
 import FacilityApplicationModal from './FacilityApplicationModal';
 import indoorGamesImg from '@/assets/images/Indoor_gmaes.jpg';
 import sports1Img from '@/assets/images/sports1.jpg';
+import sports2Img from '@/assets/images/sports2.jpg';
 import sports5Img from '@/assets/images/sports5.jpg';
 import sports6Img from '@/assets/images/sports6.jpg';
 import healthyEnv3Img from '@/assets/images/Healthy_Environment3.jpg';
@@ -36,6 +37,11 @@ function Indoor() {
       src: sports6Img,
       caption: t('Junior Brain Puzzles & Interactive Games'),
       tag: t('Cognitive Play'),
+    },
+    {
+      src: sports2Img,
+      caption: t('Indoor Group Relays & Teamwork Drill'),
+      tag: t('Team Building'),
     },
     {
       src: sports1Img,
