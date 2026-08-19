@@ -3,7 +3,13 @@
 
 <head>
   <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Primary Meta Tags -->
@@ -26,6 +32,7 @@
   <meta property="og:description"
     content="Quality primary education (Nursery to STD-IV), Smart Classrooms, Sunday Drawing Classes, and online enrollment for Ever Green Model School." />
   <meta property="og:site_name" content="Ever Green Model School (E.G.M.S)" />
+  <meta property="og:image" content="https://egms-website.vercel.app/favicon-512x512.png" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -33,19 +40,37 @@
   <meta name="twitter:title" content="Ever Green Model School (E.G.M.S)" />
   <meta name="twitter:description"
     content="Official portal of Ever Green Model School (E.G.M.S). Apply online for student enrollment and admissions." />
+  <meta name="twitter:image" content="https://egms-website.vercel.app/favicon-512x512.png" />
 
-  <!-- Google Structured Data (JSON-LD) for School Knowledge Panel -->
+  <!-- Google Structured Data (JSON-LD) for Site Name & School Knowledge Panel -->
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "School",
-      "name": "Ever Green Model School (E.G.M.S)",
-      "alternateName": "EGMS",
-      "url": "https://egms-website.vercel.app/",
-      "logo": "https://egms-website.vercel.app/favicon.svg",
-      "description": "Ever Green Model School (E.G.M.S) provides quality primary education, smart classrooms, drawing school, and holistic child development.",
-      "telephone": "+919732644550",
-      "email": "evergreenmodelschool58@gmail.com"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://egms-website.vercel.app/#website",
+          "name": "Ever Green Model School",
+          "alternateName": [
+            "Ever Green Model School (E.G.M.S)",
+            "EGMS",
+            "E.G.M.S"
+          ],
+          "url": "https://egms-website.vercel.app/"
+        },
+        {
+          "@type": "School",
+          "@id": "https://egms-website.vercel.app/#organization",
+          "name": "Ever Green Model School (E.G.M.S)",
+          "alternateName": "EGMS",
+          "url": "https://egms-website.vercel.app/",
+          "logo": "https://egms-website.vercel.app/favicon-512x512.png",
+          "image": "https://egms-website.vercel.app/favicon-512x512.png",
+          "description": "Ever Green Model School (E.G.M.S) provides quality primary education, smart classrooms, drawing school, and holistic child development.",
+          "telephone": "+919732644550",
+          "email": "evergreenmodelschool58@gmail.com"
+        }
+      ]
     }
   </script>
 </head>
