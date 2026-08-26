@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap Location
-Sitemap: https://egms-website.vercel.app/sitemap.xml
+Sitemap: https://evergreenmodelschool.in/sitemap.xml
