@@ -88,7 +88,7 @@ function Contact() {
                 <div className="flex items-center space-x-4">
                   {/* Facebook Button */}
                   <a
-                    href="https://www.facebook.com/evergreenmodelschool2006"
+                    href="https://www.facebook.com/EverGreenModelSchoolOfficial/"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"

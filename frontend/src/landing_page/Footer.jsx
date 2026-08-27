@@ -92,7 +92,7 @@ function Footer({ defaultBg = 'bg-white' }) {
 
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/evergreenmodelschool2006"
+              href="https://www.facebook.com/EverGreenModelSchoolOfficial/"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"

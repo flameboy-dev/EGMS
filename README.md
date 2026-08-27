@@ -105,7 +105,7 @@ bun dev    # or: npm run dev
 - **Email**: [evergreenmodelschool58@gmail.com](mailto:evergreenmodelschool58@gmail.com)
 - **Official Socials**:
   - 📺 **YouTube**: [@evergreenmodelschool6216](https://www.youtube.com/@evergreenmodelschool6216)
-  - 📘 **Facebook**: [evergreenmodelschool2006](https://www.facebook.com/evergreenmodelschool2006)
+  - 📘 **Facebook**: [EverGreenModelSchoolOfficial](https://www.facebook.com/EverGreenModelSchoolOfficial/)
 
 ---
 
