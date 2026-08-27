@@ -66,6 +66,10 @@ function Contact() {
                     <a href="tel:9732644550" className="hover:underline text-[#000000]/90">
                       9732644550
                     </a>
+                    {', '}
+                    <a href="tel:9932285255" className="hover:underline text-[#000000]/90">
+                      9932285255
+                    </a>
                   </p>
                   <p className="break-all">
                     <span className="font-medium text-[#000000]">{t("Email:")}</span>{' '}
@@ -84,7 +88,7 @@ function Contact() {
                 <div className="flex items-center space-x-4">
                   {/* Facebook Button */}
                   <a
-                    href="https://www.facebook.com/goutam.giri.98499123"
+                    href="https://www.facebook.com/evergreenmodelschool2006"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"
@@ -97,7 +101,7 @@ function Contact() {
 
                   {/* YouTube Button */}
                   <a
-                    href="https://www.youtube.com/@goutamgiri6647"
+                    href="https://www.youtube.com/@evergreenmodelschool6216"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="YouTube"

@@ -79,7 +79,7 @@ function Footer({ defaultBg = 'bg-white' }) {
           <div className="flex items-center space-x-3">
             {/* YouTube */}
             <a
-              href="https://www.youtube.com/@goutamgiri6647"
+              href="https://www.youtube.com/@evergreenmodelschool6216"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="YouTube"
@@ -92,7 +92,7 @@ function Footer({ defaultBg = 'bg-white' }) {
 
             {/* Facebook */}
             <a
-              href="https://www.facebook.com/goutam.giri.98499123"
+              href="https://www.facebook.com/evergreenmodelschool2006"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Facebook"
@@ -118,7 +118,14 @@ function Footer({ defaultBg = 'bg-white' }) {
                 evergreenmodelschool58@gmail.com
               </p>
               <p>
-                <span className="font-medium text-white">{t("Phone:")}</span> 9732644550
+                <span className="font-medium text-white">{t("Phone:")}</span>{' '}
+                <a href="tel:9732644550" className="hover:underline text-white/90">
+                  9732644550
+                </a>
+                {', '}
+                <a href="tel:9932285255" className="hover:underline text-white/90">
+                  9932285255
+                </a>
               </p>
               <p>
                 <span className="font-medium text-white">{t("Address:")}</span> NH0117, Narayanpur, Kakdwip, South 24 Parganas, West Bengal - 743357

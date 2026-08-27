@@ -277,9 +277,15 @@ function PrivacyPage() {
                     <span className="font-semibold text-white block">{t("Call Us")}</span>
                     <a
                       href="tel:9732644550"
-                      className="text-white/80 hover:text-[#B9FF66] underline underline-offset-2 whitespace-nowrap"
+                      className="text-white/80 hover:text-[#B9FF66] underline underline-offset-2 whitespace-nowrap block"
                     >
                       +91 9732644550
+                    </a>
+                    <a
+                      href="tel:9932285255"
+                      className="text-white/80 hover:text-[#B9FF66] underline underline-offset-2 whitespace-nowrap block"
+                    >
+                      +91 9932285255
                     </a>
                   </div>
                 </div>
