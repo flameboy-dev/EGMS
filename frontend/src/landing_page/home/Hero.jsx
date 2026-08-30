@@ -45,6 +45,7 @@ function Hero() {
             <ImageWithSkeleton
               src={heroImage}
               alt="Ever Green Model School Classroom Illustration"
+              fetchPriority="high"
               wrapperClassName="h-auto w-full max-w-md max-h-[560px] sm:max-w-lg lg:max-w-xl"
               className="h-auto w-full max-w-md max-h-[560px] object-contain sm:max-w-lg lg:max-w-xl"
             />

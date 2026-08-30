@@ -7,12 +7,16 @@ function ImageWithSkeleton({
   className = '',
   wrapperClassName = '',
   skeletonClassName = 'rounded-2xl bg-gray-300/60 dark:bg-gray-700/60',
-  loading = 'lazy',
+  loading,
   decoding = 'async',
+  fetchPriority,
   ...props
 }) {
   const imgRef = useRef(null);
   const [isLoaded, setIsLoaded] = useState(false);
+
+  // If fetchPriority is high, default loading to 'eager' instead of 'lazy'
+  const computedLoading = loading || (fetchPriority === 'high' ? 'eager' : 'lazy');
 
   useEffect(() => {
     if (imgRef.current && imgRef.current.complete) {
@@ -31,8 +35,9 @@ function ImageWithSkeleton({
         ref={imgRef}
         src={src}
         alt={alt}
-        loading={loading}
+        loading={computedLoading}
         decoding={decoding}
+        fetchPriority={fetchPriority}
         onLoad={() => setIsLoaded(true)}
         onError={() => setIsLoaded(true)}
         className={`transition-opacity duration-300 ${

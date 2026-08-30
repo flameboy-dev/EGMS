@@ -1,28 +1,32 @@
+import { lazy, Suspense } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css'
-import HomePage from './landing_page/home/HomePage'
-import GalleryPage from './landing_page/gallery/GalleryPage'
-import EnrollPage from './landing_page/enroll/EnrollPage'
-import PrivacyPage from './landing_page/privacy/PrivacyPage'
-import NotFound from './landing_page/NotFound'
+import PageSkeleton from './components/custom/PageSkeleton'
+
+// Lazy-loaded page components for route-level code splitting
+const HomePage = lazy(() => import('./landing_page/home/HomePage'))
+const GalleryPage = lazy(() => import('./landing_page/gallery/GalleryPage'))
+const EnrollPage = lazy(() => import('./landing_page/enroll/EnrollPage'))
+const PrivacyPage = lazy(() => import('./landing_page/privacy/PrivacyPage'))
+const NotFound = lazy(() => import('./landing_page/NotFound'))
 
 // Individual Program Pages
-import Nursery from './landing_page/programs/Nursery'
-import LKG from './landing_page/programs/LKG'
-import UKG from './landing_page/programs/UKG'
-import STDOne from './landing_page/programs/STDOne'
-import STDTwo from './landing_page/programs/STDTwo'
-import STDThree from './landing_page/programs/STDThree'
-import STDFour from './landing_page/programs/STDFour'
+const Nursery = lazy(() => import('./landing_page/programs/Nursery'))
+const LKG = lazy(() => import('./landing_page/programs/LKG'))
+const UKG = lazy(() => import('./landing_page/programs/UKG'))
+const STDOne = lazy(() => import('./landing_page/programs/STDOne'))
+const STDTwo = lazy(() => import('./landing_page/programs/STDTwo'))
+const STDThree = lazy(() => import('./landing_page/programs/STDThree'))
+const STDFour = lazy(() => import('./landing_page/programs/STDFour'))
 
 // Individual Facility Pages
-import SmartClass from './landing_page/facilities/SmartClass'
-import Art from './landing_page/facilities/Art'
-import Transport from './landing_page/facilities/Transport'
-import Computer from './landing_page/facilities/Computer'
-import Indoor from './landing_page/facilities/Indoor'
-import Yoga from './landing_page/facilities/Yoga'
+const SmartClass = lazy(() => import('./landing_page/facilities/SmartClass'))
+const Art = lazy(() => import('./landing_page/facilities/Art'))
+const Transport = lazy(() => import('./landing_page/facilities/Transport'))
+const Computer = lazy(() => import('./landing_page/facilities/Computer'))
+const Indoor = lazy(() => import('./landing_page/facilities/Indoor'))
+const Yoga = lazy(() => import('./landing_page/facilities/Yoga'))
 
 import ScrollToTop from './components/custom/ScrollToTop'
 import TranslateButton from './components/custom/TranslateButton'
@@ -32,39 +36,41 @@ createRoot(document.getElementById('root')).render(
   <LanguageProvider>
     <BrowserRouter>
       <ScrollToTop />
-      <Routes>
-        {/* Home & Section Routes */}
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<HomePage />} />
-        <Route path="/programs" element={<HomePage />} />
-        <Route path="/facilities" element={<HomePage />} />
-        <Route path="/contact" element={<HomePage />} />
+      <Suspense fallback={<PageSkeleton />}>
+        <Routes>
+          {/* Home & Section Routes */}
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<HomePage />} />
+          <Route path="/programs" element={<HomePage />} />
+          <Route path="/facilities" element={<HomePage />} />
+          <Route path="/contact" element={<HomePage />} />
 
-        {/* Gallery, Enrollment & Privacy Routes */}
-        <Route path="/gallery" element={<GalleryPage />} />
-        <Route path="/enroll" element={<EnrollPage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
+          {/* Gallery, Enrollment & Privacy Routes */}
+          <Route path="/gallery" element={<GalleryPage />} />
+          <Route path="/enroll" element={<EnrollPage />} />
+          <Route path="/privacy" element={<PrivacyPage />} />
 
-        {/* Program Routes */}
-        <Route path="/programs/nursery" element={<Nursery />} />
-        <Route path="/programs/lkg" element={<LKG />} />
-        <Route path="/programs/ukg" element={<UKG />} />
-        <Route path="/programs/stdone" element={<STDOne />} />
-        <Route path="/programs/stdtwo" element={<STDTwo />} />
-        <Route path="/programs/stdthree" element={<STDThree />} />
-        <Route path="/programs/stdfour" element={<STDFour />} />
+          {/* Program Routes */}
+          <Route path="/programs/nursery" element={<Nursery />} />
+          <Route path="/programs/lkg" element={<LKG />} />
+          <Route path="/programs/ukg" element={<UKG />} />
+          <Route path="/programs/stdone" element={<STDOne />} />
+          <Route path="/programs/stdtwo" element={<STDTwo />} />
+          <Route path="/programs/stdthree" element={<STDThree />} />
+          <Route path="/programs/stdfour" element={<STDFour />} />
 
-        {/* Facility Routes */}
-        <Route path="/facilities/smartclass" element={<SmartClass />} />
-        <Route path="/facilities/art" element={<Art />} />
-        <Route path="/facilities/transport" element={<Transport />} />
-        <Route path="/facilities/computer" element={<Computer />} />
-        <Route path="/facilities/indoor" element={<Indoor />} />
-        <Route path="/facilities/yoga" element={<Yoga />} />
+          {/* Facility Routes */}
+          <Route path="/facilities/smartclass" element={<SmartClass />} />
+          <Route path="/facilities/art" element={<Art />} />
+          <Route path="/facilities/transport" element={<Transport />} />
+          <Route path="/facilities/computer" element={<Computer />} />
+          <Route path="/facilities/indoor" element={<Indoor />} />
+          <Route path="/facilities/yoga" element={<Yoga />} />
 
-        {/* Wildcard 404 Route */}
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+          {/* Wildcard 404 Route */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </Suspense>
       <TranslateButton />
     </BrowserRouter>
   </LanguageProvider>

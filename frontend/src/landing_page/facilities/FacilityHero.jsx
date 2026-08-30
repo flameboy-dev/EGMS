@@ -70,6 +70,7 @@ function FacilityHero({
                 <ImageWithSkeleton
                   src={image}
                   alt={title}
+                  fetchPriority="high"
                   wrapperClassName="w-full max-w-sm sm:max-w-md h-[180px] xs:h-[200px] sm:h-[300px] lg:h-[340px] flex items-center justify-center mx-auto"
                   className="h-full max-h-full w-full object-contain pointer-events-none"
                 />
