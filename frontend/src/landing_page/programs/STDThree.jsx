@@ -22,7 +22,6 @@ import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg5Img from '@/assets/images/Academic_Programs5.jpg';
 import academicProg3Img from '@/assets/images/Academic_Programs3.jpg';
-import sports9Img from '@/assets/images/sports9.jpg';
 import annualFunc6Img from '@/assets/images/Annual_Function6.jpg';
 import talentExam1Img from '@/assets/images/TalentExamAwards1.jpg';
 import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
@@ -146,11 +145,10 @@ function STDThree() {
   ];
 
   const std3GalleryPhotos = [
-    { src: academicProg3Img, caption: 'STD III Environmental Science & Nature Exploration' },
-    { src: academicProg5Img, caption: 'Interactive Geography & World Map Learning' },
-    { src: sports9Img, caption: 'Football Match & Outdoor Physical Play' },
-    { src: annualFunc6Img, caption: 'Folk Dance & Stage Rhythm Celebration' },
-    { src: talentExam1Img, caption: 'State Level Talent Search Exam Achievers' },
+    { src: academicProg3Img, caption: 'Environmental Science' },
+    { src: academicProg5Img, caption: 'Map & Geography Learning' },
+    { src: annualFunc6Img, caption: 'Folk Dance Celebration' },
+    { src: talentExam1Img, caption: 'State Talent Achievers' },
   ];
 
   return (

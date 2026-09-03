@@ -22,7 +22,6 @@ import growthImg from '@/assets/images/Growth.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg4Img from '@/assets/images/Academic_Programs4.jpg';
 import academicProgImg from '@/assets/images/Academic_Programs.jpg';
-import sports7Img from '@/assets/images/sports7.jpg';
 import annualFunc2Img from '@/assets/images/Annual_Function2.jpg';
 import talentExamImg from '@/assets/images/TalentExamAwards.jpg';
 import goutamGiriImg from '@/assets/images/Goutam_Giri.jpg';
@@ -146,11 +145,10 @@ function STDTwo() {
   ];
 
   const std2GalleryPhotos = [
-    { src: academicProgImg, caption: 'STD II Bengali & English Rhyme Recitation' },
-    { src: academicProg4Img, caption: 'Board Exercise & Grammar Concept Practice' },
-    { src: sports7Img, caption: 'Tug of War Team Effort & Athletics Meet' },
-    { src: annualFunc2Img, caption: 'Cultural Drama & Student Performance Showcase' },
-    { src: talentExamImg, caption: 'Talent Search Exam Certificate & Awards' },
+    { src: academicProgImg, caption: 'Poetry & Recitation' },
+    { src: academicProg4Img, caption: 'Grammar & Board Practice' },
+    { src: annualFunc2Img, caption: 'Cultural Stage Drama' },
+    { src: talentExamImg, caption: 'Talent Exam Awards' },
   ];
 
   return (

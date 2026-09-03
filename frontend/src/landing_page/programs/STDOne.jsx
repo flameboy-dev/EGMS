@@ -135,11 +135,11 @@ function STDOne() {
   ];
 
   const std1GalleryPhotos = [
-    { src: academicProg4Img, caption: 'STD I Interactive Reading & Language Arts Practice' },
-    { src: academicProg3Img, caption: 'Science Lab & Environmental Study Projects' },
-    { src: sports2Img, caption: 'Annual Sports Sprint & Athletic Track Events' },
-    { src: annualFunc4Img, caption: 'STD I Choir & Group Song Performance on Stage' },
-    { src: puja2Img, caption: 'Saraswati Puja Student Anjali & Prayers' },
+    { src: academicProg4Img, caption: 'Interactive Reading' },
+    { src: academicProg3Img, caption: 'Science Lab & Projects' },
+    { src: sports2Img, caption: 'Annual Sports Sprint' },
+    { src: annualFunc4Img, caption: 'Choir & Group Song' },
+    { src: puja2Img, caption: 'Saraswati Puja Anjali' },
   ];
 
   return (

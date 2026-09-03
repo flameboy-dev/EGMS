@@ -140,10 +140,10 @@ function STDFour() {
   ];
 
   const std4GalleryPhotos = [
-    { src: academicProg7Img, caption: 'STD IV Mathematical Logic & Primary Assessment Exam' },
-    { src: sports8Img, caption: 'Sports Day Victory Lap & Medal Parade' },
-    { src: annualFunc17Img, caption: 'Talented Senior Students Receiving Trophies on Stage' },
-    { src: awards2Img, caption: 'Academic Merit & Excellence Championship Awards' },
+    { src: academicProg7Img, caption: 'Math Logic & Assessment' },
+    { src: sports8Img, caption: 'Sports Victory Lap' },
+    { src: annualFunc17Img, caption: 'Stage Trophy Felicitation' },
+    { src: awards2Img, caption: 'Academic Merit Awards' },
   ];
 
   return (

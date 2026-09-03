@@ -901,11 +901,10 @@ export const translations = {
   "Bengali & English": "বাংলা ও ইংরেজি",
   "Child-Friendly & Interactive": "শিশুবান্ধব ও ইন্টারেক্টিভ",
   // Nursery gallery captions
-  "Nursery Early Phonics & Rhymes Class": "নার্সারি আর্লি ফোনিক্স ও ছড়া ক্লাস",
-  "Garden Exploring & Outdoor Activity": "বাগান অন্বেষণ ও আউটডোর কার্যক্রম",
-  "Junior Fun Games & Spoon Marble Race": "জুনিয়র মজার খেলা ও চামচ মার্বেল রেস",
-  "Nursery Group Dance in Festive Costumes": "উৎসবের পোশাকে নার্সারি দলীয় নৃত্য",
-  "Playgroup Storytelling & Clean Learning Space": "প্লেগ্রুপ গল্প বলা ও পরিষ্কার শিক্ষার পরিবেশ",
+  "Early Phonics & Rhymes": "আর্লি ফোনিক্স ও ছড়া",
+  "Fun Games & Races": "মজার খেলা ও দৌড়",
+  "Annual Day Dance": "বার্ষিক দিনের নৃত্য",
+  "Storytelling & Play": "গল্প বলা ও খেলা",
 
   // ── L.K.G. ───────────────────────────────────────────────────────────────
   "L.K.G. Program": "এল.কে.জি. প্রোগ্রাম",
@@ -943,11 +942,11 @@ export const translations = {
   "Activity & Inquiry-Based": "কার্যক্রম ও অনুসন্ধান-ভিত্তিক",
   "Creative & Collaborative": "সৃজনশীল ও সহযোগিতামূলক",
   // LKG gallery captions
-  "LKG Early Vocabulary & Interactive Reading Session": "এল.কে.জি. আর্লি ভোকাবুলারি ও ইন্টারেক্টিভ রিডিং সেশন",
-  "Clean Classroom Learning & Activity Environment": "পরিষ্কার শ্রেণিকক্ষে শিক্ষা ও কার্যক্রমের পরিবেশ",
-  "Junior Obstacle Play & Balance Training": "জুনিয়র অবস্ট্যাকল খেলা ও ব্যালেন্স প্রশিক্ষণ",
-  "LKG Student Rhyme Recitation & Stage Performance": "এল.কে.জি. শিক্ষার্থীর ছড়া আবৃত্তি ও মঞ্চ পরিবেশনা",
-  "Word Book Practice & Creative Workshop": "ওয়ার্ড বুক অনুশীলন ও সৃজনশীল কর্মশালা",
+  "Vocabulary & Reading": "শব্দভাণ্ডার ও পড়া",
+  "Classroom Learning": "শ্রেণিকক্ষে শিক্ষা",
+  "Obstacle & Balance Play": "অবস্ট্যাকল ও ব্যালেন্স খেলা",
+  "Rhyme Recitation": "ছড়া আবৃত্তি",
+  "Word Book & Craft": "ওয়ার্ড বুক ও কারুকাজ",
 
   // ── U.K.G. ───────────────────────────────────────────────────────────────
   "U.K.G. Program": "ইউ.কে.জি. প্রোগ্রাম",
@@ -988,11 +987,10 @@ export const translations = {
   "Primary Readiness & Practical": "প্রাথমিক প্রস্তুতি ও ব্যবহারিক",
   "Interactive & Digital": "ইন্টারেক্টিভ ও ডিজিটাল",
   // UKG gallery captions
-  "UKG Dual Math & Abacus Practice Class": "ইউ.কে.জি. দ্বৈত গণিত ও অ্যাবাকাস অনুশীলন ক্লাস",
-  "Creative Art & Sunday Drawing School Session": "সৃজনশীল শিল্পকলা ও রোববারের আঁকা ক্লাস",
-  "Relay Race & Outdoor Sports Readiness": "রিলে রেস ও আউটডোর স্পোর্টস প্রস্তুতি",
-  "UKG Costume Drama & Stage Performance": "ইউ.কে.জি. কস্টিউম নাটক ও মঞ্চ পরিবেশনা",
-  "Paper Folding & Phonics Workshop Showcase": "কাগজ ভাঁজ ও ফোনিক্স ওয়ার্কশপ প্রদর্শনী",
+  "Math & Abacus Practice": "গণিত ও অ্যাবাকাস অনুশীলন",
+  "Art & Drawing Workshop": "সৃজনশীল শিল্পকলা ও আঁকা কর্মশালা",
+  "Relay & Track Sports": "রিলে ও ট্র্যাক খেলাধুলা",
+  "Costume Stage Drama": "কস্টিউম নাটক ও মঞ্চ পরিবেশনা",
 
   // ── STD - I ───────────────────────────────────────────────────────────────
   "STD - I Program": "এসটিডি - ১ প্রোগ্রাম",
@@ -1032,11 +1030,11 @@ export const translations = {
   "English & Bengali": "ইংরেজি ও বাংলা",
   "Structured & Supportive": "কাঠামোগত ও সহায়ক",
   // STD I gallery captions
-  "STD I Interactive Reading & Language Arts Practice": "এসটিডি ১ ইন্টারেক্টিভ রিডিং ও ল্যাঙ্গুয়েজ আর্টস অনুশীলন",
-  "Science Lab & Environmental Study Projects": "বিজ্ঞান ল্যাব ও পরিবেশ গবেষণা প্রকল্প",
-  "Annual Sports Sprint & Athletic Track Events": "বার্ষিক ক্রীড়া স্প্রিন্ট ও অ্যাথলেটিক ট্র্যাক ইভেন্ট",
-  "STD I Choir & Group Song Performance on Stage": "এসটিডি ১ কয়্যার ও মঞ্চে দলীয় সংগীত পরিবেশনা",
-  "Saraswati Puja Student Anjali & Prayers": "সরস্বতী পূজায় শিক্ষার্থীদের অঞ্জলি ও প্রার্থনা",
+  "Interactive Reading": "ইন্টারেক্টিভ রিডিং ও ভাষা অনুশীলন",
+  "Science Lab & Projects": "বিজ্ঞান ল্যাব ও পরিবেশ গবেষণা প্রকল্প",
+  "Annual Sports Sprint": "বার্ষিক ক্রীড়া স্প্রিন্ট ও অ্যাথলেটিক্স",
+  "Choir & Group Song": "কয়্যার ও দলীয় সংগীত পরিবেশনা",
+  "Saraswati Puja Anjali": "সরস্বতী পূজায় অঞ্জলি ও প্রার্থনা",
 
   // ── STD - II ──────────────────────────────────────────────────────────────
   "STD - II Program": "এসটিডি - ২ প্রোগ্রাম",
@@ -1072,11 +1070,10 @@ export const translations = {
   "Analytical & Concept-Driven": "বিশ্লেষণাত্মক ও ধারণা-চালিত",
   "Encouraging & Disciplined": "উৎসাহমূলক ও শৃঙ্খলাবদ্ধ",
   // STD II gallery captions
-  "STD II Bengali & English Rhyme Recitation": "এসটিডি ২ বাংলা ও ইংরেজি ছড়া আবৃত্তি",
-  "Board Exercise & Grammar Concept Practice": "বোর্ড অনুশীলন ও ব্যাকরণ ধারণার অনুশীলন",
-  "Tug of War Team Effort & Athletics Meet": "দলীয় প্রচেষ্টায় টাগ অফ ওয়ার ও অ্যাথলেটিক্স মিট",
-  "Cultural Drama & Student Performance Showcase": "সাংস্কৃতিক নাটক ও শিক্ষার্থীর পরিবেশনা প্রদর্শনী",
-  "Talent Search Exam Certificate & Awards": "প্রতিভা অনুসন্ধান পরীক্ষার সার্টিফিকেট ও পুরস্কার",
+  "Poetry & Recitation": "কবিতা ও ছড়া আবৃত্তি",
+  "Grammar & Board Practice": "বোর্ড অনুশীলন ও ব্যাকরণ ধারণা",
+  "Cultural Stage Drama": "সাংস্কৃতিক নাটক ও মঞ্চ পরিবেশনা",
+  "Talent Exam Awards": "প্রতিভা অনুসন্ধান পরীক্ষার পুরস্কার",
 
   // ── STD - III ─────────────────────────────────────────────────────────────
   "STD - III Program": "এসটিডি - ৩ প্রোগ্রাম",
@@ -1111,11 +1108,10 @@ export const translations = {
   "Problem-Solving & Analytical": "সমস্যা সমাধান ও বিশ্লেষণাত্মক",
   "Tech-Enabled & Disciplined": "প্রযুক্তি-সক্ষম ও শৃঙ্খলাবদ্ধ",
   // STD III gallery captions
-  "STD III Environmental Science & Nature Exploration": "এসটিডি ৩ পরিবেশ বিজ্ঞান ও প্রকৃতি অন্বেষণ",
-  "Interactive Geography & World Map Learning": "ইন্টারেক্টিভ ভূগোল ও বিশ্ব মানচিত্র শিক্ষা",
-  "Football Match & Outdoor Physical Play": "ফুটবল ম্যাচ ও আউটডোর শারীরিক খেলা",
-  "Folk Dance & Stage Rhythm Celebration": "লোকনৃত্য ও মঞ্চে তাল উৎসব",
-  "State Level Talent Search Exam Achievers": "রাজ্য স্তরের প্রতিভা অনুসন্ধান পরীক্ষায় কৃতি শিক্ষার্থী",
+  "Environmental Science": "পরিবেশ বিজ্ঞান ও প্রকৃতি অন্বেষণ",
+  "Map & Geography Learning": "মানচিত্র ও ভূগোল শিক্ষা",
+  "Folk Dance Celebration": "লোকনৃত্য ও মঞ্চে তাল উৎসব",
+  "State Talent Achievers": "রাজ্য স্তরের কৃতি শিক্ষার্থী",
 
   // ── STD - IV ──────────────────────────────────────────────────────────────
   "STD - IV Program": "এসটিডি - ৪ প্রোগ্রাম",
@@ -1147,10 +1143,10 @@ export const translations = {
   "Graduation Readiness & Leadership": "স্নাতক প্রস্তুতি ও নেতৃত্ব",
   "Rigorous & Empowering": "কঠোর ও ক্ষমতায়নমূলক",
   // STD IV gallery captions
-  "STD IV Mathematical Logic & Primary Assessment Exam": "এসটিডি ৪ গাণিতিক যুক্তি ও প্রাথমিক মূল্যায়ন পরীক্ষা",
-  "Sports Day Victory Lap & Medal Parade": "ক্রীড়া দিবসের বিজয় ল্যাপ ও পদক কুচকাওয়াজ",
-  "Talented Senior Students Receiving Trophies on Stage": "মেধাবী সিনিয়র শিক্ষার্থীরা মঞ্চে ট্রফি গ্রহণ করছে",
-  "Academic Merit & Excellence Championship Awards": "একাডেমিক মেধা ও শ্রেষ্ঠত্বের চ্যাম্পিয়নশিপ পুরস্কার",
+  "Math Logic & Assessment": "গাণিতিক যুক্তি ও মূল্যায়ন পরীক্ষা",
+  "Sports Victory Lap": "ক্রীড়া দিবসের বিজয় ল্যাপ",
+  "Stage Trophy Felicitation": "মঞ্চে ট্রফি ও সম্মাননা গ্রহণ",
+  "Academic Merit Awards": "একাডেমিক মেধা ও শ্রেষ্ঠত্ব পুরস্কার",
 
   // ── Default gallery captions (ProgramGallery defaults) ────────────────────
   "Classroom Learning & Interactive Academic Sessions": "শ্রেণিকক্ষে শিক্ষা ও ইন্টারেক্টিভ একাডেমিক সেশন",

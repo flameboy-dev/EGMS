@@ -17,7 +17,6 @@ import growthImg from '@/assets/images/Growth.png';
 import boardGamesImg from '@/assets/images/Board_Games.png';
 import familyImg from '@/assets/images/Family.png';
 import academicProg1Img from '@/assets/images/Academic_Programs1.jpg';
-import healthyEnv4Img from '@/assets/images/Healthy_Environment4.jpg';
 import healthyEnv2Img from '@/assets/images/Healthy_Environment2.jpg';
 import sports6Img from '@/assets/images/sports6.jpg';
 import annualFunc14Img from '@/assets/images/Annual_Function14.jpg';
@@ -126,11 +125,10 @@ function Nursery() {
   ];
 
   const nurseryGalleryPhotos = [
-    { src: academicProg1Img, caption: 'Nursery Early Phonics & Rhymes Class' },
-    { src: healthyEnv4Img, caption: 'Garden Exploring & Outdoor Activity' },
-    { src: sports6Img, caption: 'Junior Fun Games & Spoon Marble Race' },
-    { src: annualFunc14Img, caption: 'Nursery Group Dance in Festive Costumes' },
-    { src: healthyEnv2Img, caption: 'Playgroup Storytelling & Clean Learning Space' },
+    { src: academicProg1Img, caption: 'Early Phonics & Rhymes' },
+    { src: sports6Img, caption: 'Fun Games & Races' },
+    { src: annualFunc14Img, caption: 'Annual Day Dance' },
+    { src: healthyEnv2Img, caption: 'Storytelling & Play' },
   ];
 
   return (

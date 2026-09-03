@@ -133,11 +133,11 @@ function LKG() {
   ];
 
   const lkgGalleryPhotos = [
-    { src: academicProgImg, caption: 'LKG Early Vocabulary & Interactive Reading Session' },
-    { src: healthyEnv2Img, caption: 'Clean Classroom Learning & Activity Environment' },
-    { src: sports5Img, caption: 'Junior Obstacle Play & Balance Training' },
-    { src: annualFunc13Img, caption: 'LKG Student Rhyme Recitation & Stage Performance' },
-    { src: art1Img, caption: 'Word Book Practice & Creative Workshop' },
+    { src: academicProgImg, caption: 'Vocabulary & Reading' },
+    { src: healthyEnv2Img, caption: 'Classroom Learning' },
+    { src: sports5Img, caption: 'Obstacle & Balance Play' },
+    { src: annualFunc13Img, caption: 'Rhyme Recitation' },
+    { src: art1Img, caption: 'Word Book & Craft' },
   ];
 
   return (
